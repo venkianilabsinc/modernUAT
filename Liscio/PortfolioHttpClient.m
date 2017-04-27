@@ -18,9 +18,9 @@
 
 //static NSString* const kBaseUrlStr = @"https://liscioapistage.herokuapp.com/api/v1/";//Dev
 
-static NSString* const kBaseUrlStr = @"https://liscioapi.herokuapp.com/api/v1/"; // integration
+//static NSString* const kBaseUrlStr = @"https://liscioapi.herokuapp.com/api/v1/"; // integration
 
-//static NSString* const kBaseUrlStr = @"http://demoapi.liscio.me/api/v1/"; //UAT
+static NSString* const kBaseUrlStr = @"http://demoapi.liscio.me/api/v1/"; //UAT
 
 //static NSString* const kBaseUrlStr = @"http://rootscpa.liscio.me/api/v1/"; //Roots UAT
 
