@@ -7,6 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081E417E078F46E799B91ED7 /* libPods-LiscioUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B75CA525EB7DE7D14C1196E /* libPods-LiscioUITests.a */; };
+		0C615E67E47DF879FFEDAD2E /* libPods-Liscio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2EF4699C6B7F537681E2CFB /* libPods-Liscio.a */; };
+		5E08A7621EA9051E008219DB /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E08A7611EA9051E008219DB /* avatar.png */; };
+		5E11A44C1EA8EDB7005588CC /* TeamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E11A44B1EA8EDB7005588CC /* TeamDetailViewController.m */; };
+		5E11A44F1EA8EDCE005588CC /* TeamDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E11A44E1EA8EDCE005588CC /* TeamDetailTableViewCell.m */; };
+		5E37F9B41EAE74D400E3F308 /* root_advisor_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E37F9B31EAE74D400E3F308 /* root_advisor_logo.png */; };
+		5E57BA391E9FD82E007C0DDD /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E57BA371E9FD82E007C0DDD /* checked.png */; };
+		5E57BA3A1E9FD82E007C0DDD /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E57BA381E9FD82E007C0DDD /* unchecked.png */; };
+		5ED7274E1EADCE7F00918968 /* login_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ED7274D1EADCE7F00918968 /* login_logo.png */; };
+		5EF54E591E9B78060029CF1E /* team_40x40_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF54E581E9B78060029CF1E /* team_40x40_inactive.png */; };
+		5EF54E5B1E9B78280029CF1E /* team_40x40_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF54E5A1E9B78280029CF1E /* team_40x40_active.png */; };
+		5EF54E601E9D0B370029CF1E /* login_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF54E5E1E9D0B370029CF1E /* login_bg.png */; };
+		5EF54E641E9D4F680029CF1E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF54E631E9D4F680029CF1E /* WebViewController.m */; };
+		5EF54E671E9DFD880029CF1E /* always.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF54E661E9DFD880029CF1E /* always.ttf */; };
+		8F17D43F1E82EAA900D64211 /* PortfolioHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F17D43D1E82EAA900D64211 /* PortfolioHttpClient.m */; };
+		8F1D72571E8D4B5100A55E61 /* CommentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D72561E8D4B5100A55E61 /* CommentsTableViewCell.m */; };
+		8F1F47EF1E3D0EFA002461E4 /* NIDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F47EE1E3D0EFA002461E4 /* NIDropDown.m */; };
+		8F34824C1E3A6ACC00D0AD71 /* TeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F34824B1E3A6ACC00D0AD71 /* TeamViewController.m */; };
+		8F34824F1E3A6B6A00D0AD71 /* TeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F34824E1E3A6B6A00D0AD71 /* TeamTableViewCell.m */; };
+		8F3482511E3A6C3F00D0AD71 /* my_acocuntant.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3482501E3A6C3F00D0AD71 /* my_acocuntant.png */; };
+		8F3482541E3A73AB00D0AD71 /* HomeTasksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3482531E3A73AB00D0AD71 /* HomeTasksTableViewCell.m */; };
+		8F3482561E3A77AA00D0AD71 /* news_bullete.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3482551E3A77AA00D0AD71 /* news_bullete.png */; };
+		8F3482591E3A77DF00D0AD71 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3482581E3A77DF00D0AD71 /* NewsTableViewCell.m */; };
+		8F34825C1E3A796200D0AD71 /* MyRelatedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F34825B1E3A796200D0AD71 /* MyRelatedTableViewCell.m */; };
+		8F34825F1E3A808900D0AD71 /* OpenTasksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F34825E1E3A808900D0AD71 /* OpenTasksTableViewCell.m */; };
+		8F3482621E3A832D00D0AD71 /* AccountInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3482611E3A832D00D0AD71 /* AccountInformationViewController.m */; };
+		8F4DD5E51E84D0C50034D9E8 /* TextfieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4DD5E31E84D0C50034D9E8 /* TextfieldViewController.m */; };
+		8F789C731E39FD70006375C8 /* HomeTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F789C721E39FD70006375C8 /* HomeTabViewController.m */; };
+		8F789C761E39FD9A006375C8 /* OpenTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F789C751E39FD9A006375C8 /* OpenTasksViewController.m */; };
+		8F789C791E39FDB4006375C8 /* NewTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F789C781E39FDB4006375C8 /* NewTasksViewController.m */; };
+		8F789C7C1E39FDCB006375C8 /* MyRelatedAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F789C7B1E39FDCB006375C8 /* MyRelatedAccountsViewController.m */; };
+		8F789C7F1E39FDDD006375C8 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F789C7E1E39FDDD006375C8 /* NewsViewController.m */; };
+		8F789C821E3A0533006375C8 /* MainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F789C811E3A0533006375C8 /* MainTabViewController.m */; };
+		8F789C851E3A0972006375C8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F789C841E3A0972006375C8 /* SettingsViewController.m */; };
+		8F836D991E40F330009E4499 /* toggle_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F836D971E40F330009E4499 /* toggle_off.png */; };
+		8F836D9A1E40F330009E4499 /* toggle_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F836D981E40F330009E4499 /* toggle_on.png */; };
+		8F89EE9C1E49BE1B00B66618 /* account_40_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F89EE921E49BE1B00B66618 /* account_40_active.png */; };
+		8F89EE9D1E49BE1B00B66618 /* account_40.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F89EE931E49BE1B00B66618 /* account_40.png */; };
+		8F89EE9E1E49BE1B00B66618 /* addtask_40x40_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F89EE941E49BE1B00B66618 /* addtask_40x40_active.png */; };
+		8F89EE9F1E49BE1B00B66618 /* addtask_40x40_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F89EE951E49BE1B00B66618 /* addtask_40x40_inactive.png */; };
+		8F89EEA01E49BE1B00B66618 /* home_40_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F89EE961E49BE1B00B66618 /* home_40_active.png */; };
+		8F89EEA11E49BE1B00B66618 /* home_40.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F89EE971E49BE1B00B66618 /* home_40.png */; };
+		8F89EEA21E49BE1B00B66618 /* news_40_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F89EE981E49BE1B00B66618 /* news_40_active.png */; };
+		8F89EEA31E49BE1B00B66618 /* news_40.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F89EE991E49BE1B00B66618 /* news_40.png */; };
+		8F89EEA41E49BE1B00B66618 /* tasklist_40_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F89EE9A1E49BE1B00B66618 /* tasklist_40_active.png */; };
+		8F89EEA51E49BE1B00B66618 /* tasklist_40.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F89EE9B1E49BE1B00B66618 /* tasklist_40.png */; };
+		8FDD395E1E3BA97E006E9222 /* TaskDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDD395D1E3BA97E006E9222 /* TaskDetailViewController.m */; };
+		8FDD39751E3BB962006E9222 /* Home1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDD39741E3BB962006E9222 /* Home1ViewController.m */; };
 		8FE732141E366728007A6B1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE732131E366728007A6B1F /* main.m */; };
 		8FE732171E366728007A6B1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE732161E366728007A6B1F /* AppDelegate.m */; };
 		8FE7321A1E366728007A6B1F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE732191E366728007A6B1F /* ViewController.m */; };
@@ -15,6 +63,18 @@
 		8FE732221E366728007A6B1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE732201E366728007A6B1F /* LaunchScreen.storyboard */; };
 		8FE7322D1E366728007A6B1F /* LiscioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE7322C1E366728007A6B1F /* LiscioTests.m */; };
 		8FE732381E366728007A6B1F /* LiscioUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE732371E366728007A6B1F /* LiscioUITests.m */; };
+		8FE7324B1E366796007A6B1F /* icomoon.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 8FE732451E366796007A6B1F /* icomoon.woff2 */; };
+		8FE7324C1E366796007A6B1F /* icomoon.woff in Resources */ = {isa = PBXBuildFile; fileRef = 8FE732461E366796007A6B1F /* icomoon.woff */; };
+		8FE7324D1E366796007A6B1F /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FE732471E366796007A6B1F /* icomoon.ttf */; };
+		8FE7324E1E366796007A6B1F /* icomoon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8FE732481E366796007A6B1F /* icomoon.svg */; };
+		8FE7324F1E366796007A6B1F /* icomoon.eot in Resources */ = {isa = PBXBuildFile; fileRef = 8FE732491E366796007A6B1F /* icomoon.eot */; };
+		8FE732501E366796007A6B1F /* 00_login_screen_640x1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE7324A1E366796007A6B1F /* 00_login_screen_640x1136.png */; };
+		8FE732531E366F73007A6B1F /* ForgotPasswrdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE732521E366F73007A6B1F /* ForgotPasswrdViewController.m */; };
+		8FE732561E36762E007A6B1F /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE732551E36762E007A6B1F /* AlertViewController.m */; };
+		8FE732591E367781007A6B1F /* LiscioAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE732581E367781007A6B1F /* LiscioAlertViewController.m */; };
+		8FE7325B1E367E3B007A6B1F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FE7325A1E367E3B007A6B1F /* Images.xcassets */; };
+		8FF27F571E93FA8F002D48AC /* TaskEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF27F561E93FA8F002D48AC /* TaskEditViewController.m */; };
+		C83E66A06A7CB0D821BDDF6A /* libPods-LiscioTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7E02705D682FB152CA2092 /* libPods-LiscioTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +95,80 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10F53F015666E32EA4B5CDF7 /* Pods-LiscioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiscioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiscioTests/Pods-LiscioTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1AD5E38EA68B08265355F5BC /* Pods-Liscio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liscio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Liscio/Pods-Liscio.release.xcconfig"; sourceTree = "<group>"; };
+		1B75CA525EB7DE7D14C1196E /* libPods-LiscioUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LiscioUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3348A559F865237720C85765 /* Pods-LiscioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiscioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiscioTests/Pods-LiscioTests.release.xcconfig"; sourceTree = "<group>"; };
+		5E08A7611EA9051E008219DB /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
+		5E11A44A1EA8EDB7005588CC /* TeamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamDetailViewController.h; sourceTree = "<group>"; };
+		5E11A44B1EA8EDB7005588CC /* TeamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamDetailViewController.m; sourceTree = "<group>"; };
+		5E11A44D1EA8EDCE005588CC /* TeamDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamDetailTableViewCell.h; sourceTree = "<group>"; };
+		5E11A44E1EA8EDCE005588CC /* TeamDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamDetailTableViewCell.m; sourceTree = "<group>"; };
+		5E37F9B31EAE74D400E3F308 /* root_advisor_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = root_advisor_logo.png; sourceTree = "<group>"; };
+		5E57BA371E9FD82E007C0DDD /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
+		5E57BA381E9FD82E007C0DDD /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
+		5ED7274D1EADCE7F00918968 /* login_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_logo.png; sourceTree = "<group>"; };
+		5EF54E581E9B78060029CF1E /* team_40x40_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = team_40x40_inactive.png; sourceTree = "<group>"; };
+		5EF54E5A1E9B78280029CF1E /* team_40x40_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = team_40x40_active.png; sourceTree = "<group>"; };
+		5EF54E5E1E9D0B370029CF1E /* login_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_bg.png; sourceTree = "<group>"; };
+		5EF54E621E9D4F680029CF1E /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		5EF54E631E9D4F680029CF1E /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		5EF54E661E9DFD880029CF1E /* always.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = always.ttf; sourceTree = "<group>"; };
+		67105DE2975E624C047EC4E1 /* Pods-LiscioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiscioUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiscioUITests/Pods-LiscioUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8F17D43D1E82EAA900D64211 /* PortfolioHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortfolioHttpClient.m; sourceTree = "<group>"; };
+		8F17D43E1E82EAA900D64211 /* PortfolioHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortfolioHttpClient.h; sourceTree = "<group>"; };
+		8F1D72551E8D4B5100A55E61 /* CommentsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsTableViewCell.h; sourceTree = "<group>"; };
+		8F1D72561E8D4B5100A55E61 /* CommentsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsTableViewCell.m; sourceTree = "<group>"; };
+		8F1F47ED1E3D0EFA002461E4 /* NIDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIDropDown.h; sourceTree = "<group>"; };
+		8F1F47EE1E3D0EFA002461E4 /* NIDropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIDropDown.m; sourceTree = "<group>"; };
+		8F34824A1E3A6ACC00D0AD71 /* TeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamViewController.h; sourceTree = "<group>"; };
+		8F34824B1E3A6ACC00D0AD71 /* TeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamViewController.m; sourceTree = "<group>"; };
+		8F34824D1E3A6B6A00D0AD71 /* TeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamTableViewCell.h; sourceTree = "<group>"; };
+		8F34824E1E3A6B6A00D0AD71 /* TeamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamTableViewCell.m; sourceTree = "<group>"; };
+		8F3482501E3A6C3F00D0AD71 /* my_acocuntant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_acocuntant.png; sourceTree = "<group>"; };
+		8F3482521E3A73AB00D0AD71 /* HomeTasksTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTasksTableViewCell.h; sourceTree = "<group>"; };
+		8F3482531E3A73AB00D0AD71 /* HomeTasksTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTasksTableViewCell.m; sourceTree = "<group>"; };
+		8F3482551E3A77AA00D0AD71 /* news_bullete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news_bullete.png; sourceTree = "<group>"; };
+		8F3482571E3A77DF00D0AD71 /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		8F3482581E3A77DF00D0AD71 /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
+		8F34825A1E3A796200D0AD71 /* MyRelatedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRelatedTableViewCell.h; sourceTree = "<group>"; };
+		8F34825B1E3A796200D0AD71 /* MyRelatedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRelatedTableViewCell.m; sourceTree = "<group>"; };
+		8F34825D1E3A808900D0AD71 /* OpenTasksTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenTasksTableViewCell.h; sourceTree = "<group>"; };
+		8F34825E1E3A808900D0AD71 /* OpenTasksTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenTasksTableViewCell.m; sourceTree = "<group>"; };
+		8F3482601E3A832D00D0AD71 /* AccountInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountInformationViewController.h; sourceTree = "<group>"; };
+		8F3482611E3A832D00D0AD71 /* AccountInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountInformationViewController.m; sourceTree = "<group>"; };
+		8F4DD5E31E84D0C50034D9E8 /* TextfieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextfieldViewController.m; sourceTree = "<group>"; };
+		8F4DD5E41E84D0C50034D9E8 /* TextfieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextfieldViewController.h; sourceTree = "<group>"; };
+		8F789C711E39FD70006375C8 /* HomeTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTabViewController.h; sourceTree = "<group>"; };
+		8F789C721E39FD70006375C8 /* HomeTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTabViewController.m; sourceTree = "<group>"; };
+		8F789C741E39FD9A006375C8 /* OpenTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenTasksViewController.h; sourceTree = "<group>"; };
+		8F789C751E39FD9A006375C8 /* OpenTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenTasksViewController.m; sourceTree = "<group>"; };
+		8F789C771E39FDB4006375C8 /* NewTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTasksViewController.h; sourceTree = "<group>"; };
+		8F789C781E39FDB4006375C8 /* NewTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTasksViewController.m; sourceTree = "<group>"; };
+		8F789C7A1E39FDCB006375C8 /* MyRelatedAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRelatedAccountsViewController.h; sourceTree = "<group>"; };
+		8F789C7B1E39FDCB006375C8 /* MyRelatedAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRelatedAccountsViewController.m; sourceTree = "<group>"; };
+		8F789C7D1E39FDDD006375C8 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		8F789C7E1E39FDDD006375C8 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		8F789C801E3A0533006375C8 /* MainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabViewController.h; sourceTree = "<group>"; };
+		8F789C811E3A0533006375C8 /* MainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabViewController.m; sourceTree = "<group>"; };
+		8F789C831E3A0972006375C8 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		8F789C841E3A0972006375C8 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		8F836D971E40F330009E4499 /* toggle_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle_off.png; sourceTree = "<group>"; };
+		8F836D981E40F330009E4499 /* toggle_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle_on.png; sourceTree = "<group>"; };
+		8F89EE921E49BE1B00B66618 /* account_40_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account_40_active.png; sourceTree = "<group>"; };
+		8F89EE931E49BE1B00B66618 /* account_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account_40.png; sourceTree = "<group>"; };
+		8F89EE941E49BE1B00B66618 /* addtask_40x40_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addtask_40x40_active.png; sourceTree = "<group>"; };
+		8F89EE951E49BE1B00B66618 /* addtask_40x40_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addtask_40x40_inactive.png; sourceTree = "<group>"; };
+		8F89EE961E49BE1B00B66618 /* home_40_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_40_active.png; sourceTree = "<group>"; };
+		8F89EE971E49BE1B00B66618 /* home_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_40.png; sourceTree = "<group>"; };
+		8F89EE981E49BE1B00B66618 /* news_40_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news_40_active.png; sourceTree = "<group>"; };
+		8F89EE991E49BE1B00B66618 /* news_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news_40.png; sourceTree = "<group>"; };
+		8F89EE9A1E49BE1B00B66618 /* tasklist_40_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tasklist_40_active.png; sourceTree = "<group>"; };
+		8F89EE9B1E49BE1B00B66618 /* tasklist_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tasklist_40.png; sourceTree = "<group>"; };
+		8FDD395C1E3BA97E006E9222 /* TaskDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskDetailViewController.h; sourceTree = "<group>"; };
+		8FDD395D1E3BA97E006E9222 /* TaskDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskDetailViewController.m; sourceTree = "<group>"; };
+		8FDD39731E3BB962006E9222 /* Home1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home1ViewController.h; sourceTree = "<group>"; };
+		8FDD39741E3BB962006E9222 /* Home1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home1ViewController.m; sourceTree = "<group>"; };
 		8FE7320F1E366728007A6B1F /* Liscio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liscio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE732131E366728007A6B1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8FE732151E366728007A6B1F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +185,25 @@
 		8FE732331E366728007A6B1F /* LiscioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiscioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE732371E366728007A6B1F /* LiscioUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiscioUITests.m; sourceTree = "<group>"; };
 		8FE732391E366728007A6B1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FE732451E366796007A6B1F /* icomoon.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.woff2; sourceTree = "<group>"; };
+		8FE732461E366796007A6B1F /* icomoon.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.woff; sourceTree = "<group>"; };
+		8FE732471E366796007A6B1F /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
+		8FE732481E366796007A6B1F /* icomoon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = icomoon.svg; sourceTree = "<group>"; };
+		8FE732491E366796007A6B1F /* icomoon.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.eot; sourceTree = "<group>"; };
+		8FE7324A1E366796007A6B1F /* 00_login_screen_640x1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 00_login_screen_640x1136.png; sourceTree = "<group>"; };
+		8FE732511E366F73007A6B1F /* ForgotPasswrdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswrdViewController.h; sourceTree = "<group>"; };
+		8FE732521E366F73007A6B1F /* ForgotPasswrdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswrdViewController.m; sourceTree = "<group>"; };
+		8FE732541E36762E007A6B1F /* AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
+		8FE732551E36762E007A6B1F /* AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
+		8FE732571E367781007A6B1F /* LiscioAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiscioAlertViewController.h; sourceTree = "<group>"; };
+		8FE732581E367781007A6B1F /* LiscioAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiscioAlertViewController.m; sourceTree = "<group>"; };
+		8FE7325A1E367E3B007A6B1F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8FF27F551E93FA8F002D48AC /* TaskEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskEditViewController.h; sourceTree = "<group>"; };
+		8FF27F561E93FA8F002D48AC /* TaskEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskEditViewController.m; sourceTree = "<group>"; };
+		94FA0DE0A835E1015E28B07E /* Pods-LiscioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiscioUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiscioUITests/Pods-LiscioUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AD7E02705D682FB152CA2092 /* libPods-LiscioTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LiscioTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2EF4699C6B7F537681E2CFB /* libPods-Liscio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Liscio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F72619A5231908B8B340E496 /* Pods-Liscio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liscio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Liscio/Pods-Liscio.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +211,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C615E67E47DF879FFEDAD2E /* libPods-Liscio.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +219,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83E66A06A7CB0D821BDDF6A /* libPods-LiscioTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +227,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				081E417E078F46E799B91ED7 /* libPods-LiscioUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C2A1F44AA9E755565849FAF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F72619A5231908B8B340E496 /* Pods-Liscio.debug.xcconfig */,
+				1AD5E38EA68B08265355F5BC /* Pods-Liscio.release.xcconfig */,
+				10F53F015666E32EA4B5CDF7 /* Pods-LiscioTests.debug.xcconfig */,
+				3348A559F865237720C85765 /* Pods-LiscioTests.release.xcconfig */,
+				67105DE2975E624C047EC4E1 /* Pods-LiscioUITests.debug.xcconfig */,
+				94FA0DE0A835E1015E28B07E /* Pods-LiscioUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8FE732061E366727007A6B1F = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +254,8 @@
 				8FE7322B1E366728007A6B1F /* LiscioTests */,
 				8FE732361E366728007A6B1F /* LiscioUITests */,
 				8FE732101E366728007A6B1F /* Products */,
+				0C2A1F44AA9E755565849FAF /* Pods */,
+				AF771D91D1299293DBCBEAAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,10 +276,94 @@
 				8FE732161E366728007A6B1F /* AppDelegate.m */,
 				8FE732181E366728007A6B1F /* ViewController.h */,
 				8FE732191E366728007A6B1F /* ViewController.m */,
+				8FE732511E366F73007A6B1F /* ForgotPasswrdViewController.h */,
+				8FE732521E366F73007A6B1F /* ForgotPasswrdViewController.m */,
+				8FE732541E36762E007A6B1F /* AlertViewController.h */,
+				8FE732551E36762E007A6B1F /* AlertViewController.m */,
+				8FE732571E367781007A6B1F /* LiscioAlertViewController.h */,
+				8FE732581E367781007A6B1F /* LiscioAlertViewController.m */,
+				8F789C801E3A0533006375C8 /* MainTabViewController.h */,
+				8F789C811E3A0533006375C8 /* MainTabViewController.m */,
+				8F789C711E39FD70006375C8 /* HomeTabViewController.h */,
+				8F789C721E39FD70006375C8 /* HomeTabViewController.m */,
+				8FDD39731E3BB962006E9222 /* Home1ViewController.h */,
+				8FDD39741E3BB962006E9222 /* Home1ViewController.m */,
+				8F3482521E3A73AB00D0AD71 /* HomeTasksTableViewCell.h */,
+				8F3482531E3A73AB00D0AD71 /* HomeTasksTableViewCell.m */,
+				8F789C741E39FD9A006375C8 /* OpenTasksViewController.h */,
+				8F789C751E39FD9A006375C8 /* OpenTasksViewController.m */,
+				8F34825D1E3A808900D0AD71 /* OpenTasksTableViewCell.h */,
+				8F34825E1E3A808900D0AD71 /* OpenTasksTableViewCell.m */,
+				8FDD395C1E3BA97E006E9222 /* TaskDetailViewController.h */,
+				8FDD395D1E3BA97E006E9222 /* TaskDetailViewController.m */,
+				5EF54E621E9D4F680029CF1E /* WebViewController.h */,
+				5EF54E631E9D4F680029CF1E /* WebViewController.m */,
+				8FF27F551E93FA8F002D48AC /* TaskEditViewController.h */,
+				8FF27F561E93FA8F002D48AC /* TaskEditViewController.m */,
+				8F1D72551E8D4B5100A55E61 /* CommentsTableViewCell.h */,
+				8F1D72561E8D4B5100A55E61 /* CommentsTableViewCell.m */,
+				8F789C771E39FDB4006375C8 /* NewTasksViewController.h */,
+				8F789C781E39FDB4006375C8 /* NewTasksViewController.m */,
+				8F789C7A1E39FDCB006375C8 /* MyRelatedAccountsViewController.h */,
+				8F789C7B1E39FDCB006375C8 /* MyRelatedAccountsViewController.m */,
+				8F34825A1E3A796200D0AD71 /* MyRelatedTableViewCell.h */,
+				8F34825B1E3A796200D0AD71 /* MyRelatedTableViewCell.m */,
+				8F789C7D1E39FDDD006375C8 /* NewsViewController.h */,
+				8F789C7E1E39FDDD006375C8 /* NewsViewController.m */,
+				8F3482571E3A77DF00D0AD71 /* NewsTableViewCell.h */,
+				8F3482581E3A77DF00D0AD71 /* NewsTableViewCell.m */,
+				8F789C831E3A0972006375C8 /* SettingsViewController.h */,
+				8F789C841E3A0972006375C8 /* SettingsViewController.m */,
+				8F34824A1E3A6ACC00D0AD71 /* TeamViewController.h */,
+				8F34824B1E3A6ACC00D0AD71 /* TeamViewController.m */,
+				8F34824D1E3A6B6A00D0AD71 /* TeamTableViewCell.h */,
+				8F34824E1E3A6B6A00D0AD71 /* TeamTableViewCell.m */,
+				5E11A44A1EA8EDB7005588CC /* TeamDetailViewController.h */,
+				5E11A44B1EA8EDB7005588CC /* TeamDetailViewController.m */,
+				5E11A44D1EA8EDCE005588CC /* TeamDetailTableViewCell.h */,
+				5E11A44E1EA8EDCE005588CC /* TeamDetailTableViewCell.m */,
+				8F3482601E3A832D00D0AD71 /* AccountInformationViewController.h */,
+				8F3482611E3A832D00D0AD71 /* AccountInformationViewController.m */,
+				8F1F47ED1E3D0EFA002461E4 /* NIDropDown.h */,
+				8F1F47EE1E3D0EFA002461E4 /* NIDropDown.m */,
 				8FE7321B1E366728007A6B1F /* Main.storyboard */,
+				5E08A7611EA9051E008219DB /* avatar.png */,
+				8F836D971E40F330009E4499 /* toggle_off.png */,
+				8F836D981E40F330009E4499 /* toggle_on.png */,
+				8F3482501E3A6C3F00D0AD71 /* my_acocuntant.png */,
+				5E57BA371E9FD82E007C0DDD /* checked.png */,
+				5E57BA381E9FD82E007C0DDD /* unchecked.png */,
+				8F3482551E3A77AA00D0AD71 /* news_bullete.png */,
+				8F89EE921E49BE1B00B66618 /* account_40_active.png */,
+				8F89EE931E49BE1B00B66618 /* account_40.png */,
+				8F89EE941E49BE1B00B66618 /* addtask_40x40_active.png */,
+				8F89EE951E49BE1B00B66618 /* addtask_40x40_inactive.png */,
+				8F89EE961E49BE1B00B66618 /* home_40_active.png */,
+				5ED7274D1EADCE7F00918968 /* login_logo.png */,
+				8F89EE971E49BE1B00B66618 /* home_40.png */,
+				8F89EE981E49BE1B00B66618 /* news_40_active.png */,
+				8F89EE991E49BE1B00B66618 /* news_40.png */,
+				8F89EE9A1E49BE1B00B66618 /* tasklist_40_active.png */,
+				8F89EE9B1E49BE1B00B66618 /* tasklist_40.png */,
+				5EF54E581E9B78060029CF1E /* team_40x40_inactive.png */,
+				5EF54E5A1E9B78280029CF1E /* team_40x40_active.png */,
+				8F17D43E1E82EAA900D64211 /* PortfolioHttpClient.h */,
+				8F17D43D1E82EAA900D64211 /* PortfolioHttpClient.m */,
+				8F4DD5E41E84D0C50034D9E8 /* TextfieldViewController.h */,
+				8F4DD5E31E84D0C50034D9E8 /* TextfieldViewController.m */,
+				5EF54E5E1E9D0B370029CF1E /* login_bg.png */,
+				5E37F9B31EAE74D400E3F308 /* root_advisor_logo.png */,
+				5EF54E661E9DFD880029CF1E /* always.ttf */,
 				8FE7321E1E366728007A6B1F /* Assets.xcassets */,
 				8FE732201E366728007A6B1F /* LaunchScreen.storyboard */,
+				8FE732451E366796007A6B1F /* icomoon.woff2 */,
+				8FE732461E366796007A6B1F /* icomoon.woff */,
+				8FE732471E366796007A6B1F /* icomoon.ttf */,
+				8FE732481E366796007A6B1F /* icomoon.svg */,
+				8FE732491E366796007A6B1F /* icomoon.eot */,
+				8FE7324A1E366796007A6B1F /* 00_login_screen_640x1136.png */,
 				8FE732231E366728007A6B1F /* Info.plist */,
+				8FE7325A1E367E3B007A6B1F /* Images.xcassets */,
 				8FE732121E366728007A6B1F /* Supporting Files */,
 			);
 			path = Liscio;
@@ -140,6 +395,16 @@
 			path = LiscioUITests;
 			sourceTree = "<group>";
 		};
+		AF771D91D1299293DBCBEAAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2EF4699C6B7F537681E2CFB /* libPods-Liscio.a */,
+				AD7E02705D682FB152CA2092 /* libPods-LiscioTests.a */,
+				1B75CA525EB7DE7D14C1196E /* libPods-LiscioUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +412,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FE7323C1E366728007A6B1F /* Build configuration list for PBXNativeTarget "Liscio" */;
 			buildPhases = (
+				BCB5A939F73E51ABA5BD6796 /* [CP] Check Pods Manifest.lock */,
 				8FE7320B1E366727007A6B1F /* Sources */,
 				8FE7320C1E366727007A6B1F /* Frameworks */,
 				8FE7320D1E366727007A6B1F /* Resources */,
+				578A9794B20479931D652AE1 /* [CP] Embed Pods Frameworks */,
+				5D50456D3AA192E0DC37C52C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +432,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FE7323F1E366728007A6B1F /* Build configuration list for PBXNativeTarget "LiscioTests" */;
 			buildPhases = (
+				FBF665345A642841E83C931A /* [CP] Check Pods Manifest.lock */,
 				8FE732241E366728007A6B1F /* Sources */,
 				8FE732251E366728007A6B1F /* Frameworks */,
 				8FE732261E366728007A6B1F /* Resources */,
+				B1104D4EB3168275254D88CC /* [CP] Embed Pods Frameworks */,
+				91DD43F6C2C219C34999AC37 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +453,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FE732421E366728007A6B1F /* Build configuration list for PBXNativeTarget "LiscioUITests" */;
 			buildPhases = (
+				62E454A4AC30CEDB6E531355 /* [CP] Check Pods Manifest.lock */,
 				8FE7322F1E366728007A6B1F /* Sources */,
 				8FE732301E366728007A6B1F /* Frameworks */,
 				8FE732311E366728007A6B1F /* Resources */,
+				8F35CF80BDAC93D69E532B0B /* [CP] Embed Pods Frameworks */,
+				7ABD1343E06129BD6B411120 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,15 +481,18 @@
 				TargetAttributes = {
 					8FE7320E1E366727007A6B1F = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = X855M4Y35Z;
+						ProvisioningStyle = Manual;
 					};
 					8FE732271E366728007A6B1F = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = X855M4Y35Z;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 8FE7320E1E366727007A6B1F;
 					};
 					8FE732321E366728007A6B1F = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = X855M4Y35Z;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 8FE7320E1E366727007A6B1F;
 					};
@@ -246,9 +523,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F89EE9F1E49BE1B00B66618 /* addtask_40x40_inactive.png in Resources */,
 				8FE732221E366728007A6B1F /* LaunchScreen.storyboard in Resources */,
+				8F89EEA31E49BE1B00B66618 /* news_40.png in Resources */,
+				8F89EE9D1E49BE1B00B66618 /* account_40.png in Resources */,
+				5EF54E591E9B78060029CF1E /* team_40x40_inactive.png in Resources */,
+				5EF54E5B1E9B78280029CF1E /* team_40x40_active.png in Resources */,
+				5E57BA3A1E9FD82E007C0DDD /* unchecked.png in Resources */,
+				8F3482511E3A6C3F00D0AD71 /* my_acocuntant.png in Resources */,
+				8FE7325B1E367E3B007A6B1F /* Images.xcassets in Resources */,
+				5EF54E601E9D0B370029CF1E /* login_bg.png in Resources */,
+				5ED7274E1EADCE7F00918968 /* login_logo.png in Resources */,
+				8F89EE9C1E49BE1B00B66618 /* account_40_active.png in Resources */,
+				8FE7324E1E366796007A6B1F /* icomoon.svg in Resources */,
+				8F3482561E3A77AA00D0AD71 /* news_bullete.png in Resources */,
+				8F89EE9E1E49BE1B00B66618 /* addtask_40x40_active.png in Resources */,
+				5EF54E671E9DFD880029CF1E /* always.ttf in Resources */,
+				5E57BA391E9FD82E007C0DDD /* checked.png in Resources */,
+				5E37F9B41EAE74D400E3F308 /* root_advisor_logo.png in Resources */,
 				8FE7321F1E366728007A6B1F /* Assets.xcassets in Resources */,
 				8FE7321D1E366728007A6B1F /* Main.storyboard in Resources */,
+				8F89EEA51E49BE1B00B66618 /* tasklist_40.png in Resources */,
+				8FE7324D1E366796007A6B1F /* icomoon.ttf in Resources */,
+				8FE7324F1E366796007A6B1F /* icomoon.eot in Resources */,
+				8F89EEA41E49BE1B00B66618 /* tasklist_40_active.png in Resources */,
+				8F89EEA01E49BE1B00B66618 /* home_40_active.png in Resources */,
+				8FE7324B1E366796007A6B1F /* icomoon.woff2 in Resources */,
+				8FE732501E366796007A6B1F /* 00_login_screen_640x1136.png in Resources */,
+				8FE7324C1E366796007A6B1F /* icomoon.woff in Resources */,
+				8F836D9A1E40F330009E4499 /* toggle_on.png in Resources */,
+				5E08A7621EA9051E008219DB /* avatar.png in Resources */,
+				8F89EEA21E49BE1B00B66618 /* news_40_active.png in Resources */,
+				8F89EEA11E49BE1B00B66618 /* home_40.png in Resources */,
+				8F836D991E40F330009E4499 /* toggle_off.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,14 +575,179 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		578A9794B20479931D652AE1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Liscio/Pods-Liscio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D50456D3AA192E0DC37C52C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Liscio/Pods-Liscio-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62E454A4AC30CEDB6E531355 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7ABD1343E06129BD6B411120 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiscioUITests/Pods-LiscioUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F35CF80BDAC93D69E532B0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiscioUITests/Pods-LiscioUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91DD43F6C2C219C34999AC37 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiscioTests/Pods-LiscioTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1104D4EB3168275254D88CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiscioTests/Pods-LiscioTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCB5A939F73E51ABA5BD6796 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FBF665345A642841E83C931A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8FE7320B1E366727007A6B1F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F789C7C1E39FDCB006375C8 /* MyRelatedAccountsViewController.m in Sources */,
+				8F789C821E3A0533006375C8 /* MainTabViewController.m in Sources */,
+				8F1F47EF1E3D0EFA002461E4 /* NIDropDown.m in Sources */,
+				8FE732591E367781007A6B1F /* LiscioAlertViewController.m in Sources */,
+				8FE732531E366F73007A6B1F /* ForgotPasswrdViewController.m in Sources */,
+				5E11A44F1EA8EDCE005588CC /* TeamDetailTableViewCell.m in Sources */,
+				8FE732561E36762E007A6B1F /* AlertViewController.m in Sources */,
+				8F3482541E3A73AB00D0AD71 /* HomeTasksTableViewCell.m in Sources */,
+				8F789C761E39FD9A006375C8 /* OpenTasksViewController.m in Sources */,
+				8F789C7F1E39FDDD006375C8 /* NewsViewController.m in Sources */,
+				8F34824C1E3A6ACC00D0AD71 /* TeamViewController.m in Sources */,
+				8FDD39751E3BB962006E9222 /* Home1ViewController.m in Sources */,
+				8F789C731E39FD70006375C8 /* HomeTabViewController.m in Sources */,
+				8FDD395E1E3BA97E006E9222 /* TaskDetailViewController.m in Sources */,
 				8FE7321A1E366728007A6B1F /* ViewController.m in Sources */,
+				8F3482621E3A832D00D0AD71 /* AccountInformationViewController.m in Sources */,
+				5EF54E641E9D4F680029CF1E /* WebViewController.m in Sources */,
+				8F3482591E3A77DF00D0AD71 /* NewsTableViewCell.m in Sources */,
+				8F4DD5E51E84D0C50034D9E8 /* TextfieldViewController.m in Sources */,
+				8F34824F1E3A6B6A00D0AD71 /* TeamTableViewCell.m in Sources */,
+				8FF27F571E93FA8F002D48AC /* TaskEditViewController.m in Sources */,
+				8F34825C1E3A796200D0AD71 /* MyRelatedTableViewCell.m in Sources */,
+				8F34825F1E3A808900D0AD71 /* OpenTasksTableViewCell.m in Sources */,
+				5E11A44C1EA8EDB7005588CC /* TeamDetailViewController.m in Sources */,
+				8F789C791E39FDB4006375C8 /* NewTasksViewController.m in Sources */,
 				8FE732171E366728007A6B1F /* AppDelegate.m in Sources */,
+				8F17D43F1E82EAA900D64211 /* PortfolioHttpClient.m in Sources */,
+				8F1D72571E8D4B5100A55E61 /* CommentsTableViewCell.m in Sources */,
 				8FE732141E366728007A6B1F /* main.m in Sources */,
+				8F789C851E3A0972006375C8 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,9 +823,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = X855M4Y35Z;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -370,9 +844,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -398,9 +873,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = X855M4Y35Z;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -411,8 +888,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -420,28 +898,45 @@
 		};
 		8FE7323D1E366728007A6B1F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F72619A5231908B8B340E496 /* Pods-Liscio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = X855M4Y35Z;
 				INFOPLIST_FILE = Liscio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.anilabsinc.Liscio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anilabsinc.liscio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1f9de0ae-4607-444c-aa74-522f9f2c9b34";
+				PROVISIONING_PROFILE_SPECIFIER = "liscio enterprise";
 			};
 			name = Debug;
 		};
 		8FE7323E1E366728007A6B1F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AD5E38EA68B08265355F5BC /* Pods-Liscio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = X855M4Y35Z;
 				INFOPLIST_FILE = Liscio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.anilabsinc.Liscio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anilabsinc.liscio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1f9de0ae-4607-444c-aa74-522f9f2c9b34";
+				PROVISIONING_PROFILE_SPECIFIER = "liscio enterprise";
 			};
 			name = Release;
 		};
 		8FE732401E366728007A6B1F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10F53F015666E32EA4B5CDF7 /* Pods-LiscioTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = LiscioTests/Info.plist;
@@ -454,6 +949,7 @@
 		};
 		8FE732411E366728007A6B1F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3348A559F865237720C85765 /* Pods-LiscioTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = LiscioTests/Info.plist;
@@ -466,6 +962,7 @@
 		};
 		8FE732431E366728007A6B1F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67105DE2975E624C047EC4E1 /* Pods-LiscioUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = LiscioUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -477,6 +974,7 @@
 		};
 		8FE732441E366728007A6B1F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94FA0DE0A835E1015E28B07E /* Pods-LiscioUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = LiscioUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -505,6 +1003,7 @@
 				8FE7323E1E366728007A6B1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FE7323F1E366728007A6B1F /* Build configuration list for PBXNativeTarget "LiscioTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +1012,7 @@
 				8FE732411E366728007A6B1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FE732421E366728007A6B1F /* Build configuration list for PBXNativeTarget "LiscioUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +1021,7 @@
 				8FE732441E366728007A6B1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
