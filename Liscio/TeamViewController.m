@@ -109,7 +109,7 @@
     TeamTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     cell.titleLbl.text  = [NSString stringWithFormat:@"%@ %@", dict[@"first_name"], dict[@"last_name"]];
-    cell.subTitleLbl.text  = [NSString stringWithFormat:@"%@ %@", @"Entity Type :", dict[@"entity_type"]];
+//    cell.subTitleLbl.text  = [NSString stringWithFormat:@"%@ %@", @"Entity Type :", dict[@"entity_type"]];
 
 //    [cell.phoneImgLbl setFont:[UIFont fontWithName:@"icomoon" size:25]];
 //    [cell.phoneImgLbl setText:[NSString stringWithUTF8String:"\ue933"]];

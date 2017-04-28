@@ -102,7 +102,7 @@
     
     MyRelatedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     cell.titleLbl.text = [[self.accountsArray valueForKey:@"label"] objectAtIndex:indexPath.row];
-    cell.subTitleLbl.text = [NSString stringWithFormat:@"Entity Type: %@", [[self.accountsArray valueForKey:@"entity_type"] objectAtIndex:indexPath.row]];
+//    cell.subTitleLbl.text = [NSString stringWithFormat:@"Entity Type: %@", [[self.accountsArray valueForKey:@"entity_type"] objectAtIndex:indexPath.row]];
 
     
     return cell;

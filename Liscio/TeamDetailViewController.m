@@ -10,8 +10,10 @@
 #import "PortfolioHttpClient.h"
 #import "TeamDetailTableViewCell.h"
 #import "SettingsViewController.h"
+#import <MessageUI/MessageUI.h>
 
-@interface TeamDetailViewController ()
+
+@interface TeamDetailViewController ()<MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong, nonatomic) NSMutableArray *teamDetailArray;
@@ -150,6 +152,115 @@
     [self.navigationController pushViewController:settingsVC animated:YES];
 }
 
+
+-(IBAction)phoneBtnClicked:(id)sender
+{
+    TeamDetailTableViewCell *cell;// = (SPConferenceScheduleTableViewCell *)[[[sender superview] superview] superview];
+    NSIndexPath *indexPath; //= [self.conferenceScheduleTable indexPathForCell:cell];
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 8.0)
+    {
+        cell = (TeamDetailTableViewCell *)[[[sender superview] superview] superview];
+        indexPath = [self.teamDetailTableView indexPathForCell:cell];
+    }
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+    {
+        cell = (TeamDetailTableViewCell *)[[sender superview] superview];
+        indexPath = [self.teamDetailTableView indexPathForCell:cell];
+    }
+    
+    NSLog(@"indexpath is%@", indexPath);
+    
+    NSString *phoneStr = [[self.teamDetailArray valueForKey:@"phone"] objectAtIndex:indexPath.row];
+    
+    if (phoneStr == nil || [phoneStr isEqual:[NSNull null]])
+    {
+        phoneStr = @"";
+    }
+
+    
+//    NSString *phNo = @"+919876543210";
+    NSString *phoneNumberString;
+    phoneNumberString = [phoneStr stringByReplacingOccurrencesOfString:@" " withString:@""];
+//    phoneNumberString = [NSString stringWithFormat@"tel:%@", phoneStr];
+
+    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"tel:%@",phoneNumberString]];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
+        [[UIApplication sharedApplication] openURL:phoneUrl];
+    }
+
+}
+
+-(IBAction)mailBtnClicked:(id)sender
+{
+    
+    TeamDetailTableViewCell *cell;// = (SPConferenceScheduleTableViewCell *)[[[sender superview] superview] superview];
+    NSIndexPath *indexPath; //= [self.conferenceScheduleTable indexPathForCell:cell];
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 8.0)
+    {
+        cell = (TeamDetailTableViewCell *)[[[sender superview] superview] superview];
+        indexPath = [self.teamDetailTableView indexPathForCell:cell];
+    }
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+    {
+        cell = (TeamDetailTableViewCell *)[[sender superview] superview];
+        indexPath = [self.teamDetailTableView indexPathForCell:cell];
+    }
+    
+    NSLog(@"indexpath is%@", indexPath);
+    
+    NSString *mailStr = [[self.teamDetailArray valueForKey:@"email"] objectAtIndex:indexPath.row];
+    
+    if (mailStr == nil || [mailStr isEqual:[NSNull null]])
+    {
+        mailStr = @"";
+    }
+    
+
+    NSString *emailTitle = @"Test Email";
+    // Email Content
+    NSString *messageBody = @"Liscio";
+    // To address
+//    NSArray *toRecipents = [NSArray arrayWithObject:@"support@appcoda.com"];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:NO]; 
+    [mc setToRecipients:@[mailStr]];
+    
+    // Present mail view controller on screen
+    [self presentViewController:mc animated:YES completion:NULL];
+
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 
 
 /*

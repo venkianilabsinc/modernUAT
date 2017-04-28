@@ -90,7 +90,7 @@
              NSLog(@"My responseObject \n%@", responseObject);
              self.totalDict = (NSMutableDictionary *)responseObject;
              self.templatesArray = self.totalDict[@"templates"];
-             self.closeArray = [self.templatesArray valueForKey:@"Close"][0];
+             self.closeArray = [self.templatesArray valueForKey:@"Archive"][0];
              self.openArray = [self.templatesArray valueForKey:@"Open"][0];
              self.reviewArray = [self.templatesArray valueForKey:@"Review"][0];
 
@@ -203,7 +203,7 @@
              NSLog(@"My responseObject \n%@", responseObject);
              self.totalDict = (NSMutableDictionary *)responseObject;
              self.templatesArray = self.totalDict[@"templates"];
-             self.closeArray = [self.templatesArray valueForKey:@"Close"][0];
+             self.closeArray = [self.templatesArray valueForKey:@"Archive"][0];
              self.openArray = [self.templatesArray valueForKey:@"Open"][0];
              self.reviewArray = [self.templatesArray valueForKey:@"Review"][0];
              
@@ -278,7 +278,7 @@
              self.totalDict = (NSMutableDictionary *)responseObject;
              self.templatesArray = self.totalDict[@"templates"];
 //             self.closeArray = [self.templatesArray valueForKey:@"Close"][0];
-             self.openArray = [self.templatesArray valueForKey:@"Close"][0];
+             self.openArray = [self.templatesArray valueForKey:@"Archive"][0];
              self.reviewArray = [self.templatesArray valueForKey:@"Open"][0];
              
              //             self.myArray = (NSMutableArray *)[self.closeArray arrayByAddingObjectsFromArray:self.openArray];

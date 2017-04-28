@@ -31,7 +31,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *accountName;
 @property (weak, nonatomic) IBOutlet UITextField *dateTxtfield;
 @property (weak, nonatomic) IBOutlet UILabel *ownerNameLbl;
-@property (weak, nonatomic) IBOutlet UITextField *subjectTxtLbl;
+@property (weak, nonatomic) IBOutlet UITextView *subjectTxtLbl;
 @property (strong, nonatomic) NSMutableDictionary *openArray;
 @property (strong, nonatomic) NSMutableArray *templatesArray;
 @property (strong, nonatomic) NSMutableDictionary *totalDict;
@@ -203,7 +203,7 @@
     //         if (self.webViewStr == nil || [self.webViewStr isEqual:[NSNull null]])
 
     
-    
+
     
     
     if ([self.editDict[@"task_type_value"] isEqualToString:@"Send a Message"] || [self.editDict[@"task_type_value"] isEqualToString:@"Send a Document"] || [self.editDict[@"task_type_value"] isEqualToString:@"Request a Meeting"])
@@ -304,6 +304,10 @@
 -(IBAction)threeDotsBtnPressed:(id)sender
 {
     
+    [self.subjectTxtLbl resignFirstResponder];
+    [self.commentTxtFld resignFirstResponder];
+    [self.dateTxtfield resignFirstResponder];
+
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd/MM/yyyy"];
     NSDate *date = [dateFormatter dateFromString:self.dateTxtfield.text];
@@ -355,7 +359,7 @@
                  UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
                      //enter code here
                      
-                     [self.navigationController.tabBarController setSelectedIndex:0];
+                     [self.navigationController.tabBarController setSelectedIndex:1];
                      
                  }];
                  [alert addAction:defaultAction];
@@ -392,14 +396,14 @@
              
              if ([responseObject[@"status"] integerValue] == 200)
              {
-                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert" message:responseObject[@"message"] preferredStyle:UIAlertControllerStyleAlert];
+                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:responseObject[@"message"] preferredStyle:UIAlertControllerStyleAlert];
                  UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
                      //enter code here
                      
                      
                      //                                  [self.navigationController popViewControllerAnimated:YES];
                      
-                     [self.navigationController.tabBarController setSelectedIndex:0];
+                     [self.navigationController.tabBarController setSelectedIndex:1];
                      
                  }];
                  [alert addAction:defaultAction];

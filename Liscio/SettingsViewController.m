@@ -35,8 +35,8 @@
     self.updateBtn.layer.masksToBounds = true;
     self.updateBtn.layer.cornerRadius = 15.0;
     
-    [self.logoutBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:25]];
-    [self.logoutBtn setTitle:[NSString stringWithUTF8String:"\uE900"] forState:UIControlStateNormal];
+//    [self.logoutBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:25]];
+//    [self.logoutBtn setTitle:[NSString stringWithUTF8String:"\uE900"] forState:UIControlStateNormal];
     
     [self.teamBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:25]];
     [self.teamBtn setTitle:[NSString stringWithUTF8String:"\uE903"] forState:UIControlStateNormal];
@@ -103,6 +103,7 @@
 
 -(IBAction)updatePressed:(id)sender
 {
+    [self dismissKeyboard:self];
     
     if ([self.firstNameTxtFld.text isEqualToString:@""]|| [self.lastNameTxtFld.text isEqualToString:@""]) {
         

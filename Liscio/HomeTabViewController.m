@@ -121,9 +121,15 @@
 
 -(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
+    
+//    NSLog(@"venki controllers%@", self.viewControllers);
+
+
     if(item.tag==1)
     {
+
         NSLog(@"home pressed");
+        
         //your code
     }
     else  if(item.tag==2)
