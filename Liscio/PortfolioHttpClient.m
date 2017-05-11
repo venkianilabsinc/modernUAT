@@ -18,9 +18,9 @@
 
 //static NSString* const kBaseUrlStr = @"https://liscioapistage.herokuapp.com/api/v1/";//Dev
 
-//static NSString* const kBaseUrlStr = @"https://liscioapi.herokuapp.com/api/v1/"; // integration
+static NSString* const kBaseUrlStr = @"https://liscioapi.herokuapp.com/api/v1/"; // integration
 
-static NSString* const kBaseUrlStr = @"http://demoapi.liscio.me/api/v1/"; //UAT
+//static NSString* const kBaseUrlStr = @"http://demoapi.liscio.me/api/v1/"; //UAT
 
 //static NSString* const kBaseUrlStr = @"http://rootscpa.liscio.me/api/v1/"; //Roots UAT
 
@@ -328,7 +328,7 @@ static NSString* const kBaseUrlStr = @"http://demoapi.liscio.me/api/v1/"; //UAT
     
     [self.requestSerializer setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"auth_token"] forHTTPHeaderField:@"Authorization"];
     
-    [self GET:@"team_members/" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+    [self GET:@"get_accounts_of_contact_on_the_basis_of_user_id/" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         success(responseObject);
     } failure:^(NSURLSessionDataTask *task, NSError *error)
      {
@@ -402,20 +402,55 @@ static NSString* const kBaseUrlStr = @"http://demoapi.liscio.me/api/v1/"; //UAT
      }];
 
 }
-/*
-- (void)getMessage:(NSDictionary *)parameters success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure
+
+- (void)sendMagicLink:(NSDictionary *)parameters success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure
 {
-    [self POST:@"getmessage/" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-        success(responseObject);
-    } failure:^(NSURLSessionDataTask *task, NSError *error)
+    [self isReachableViaInternet];
+    
+//    NSString *mySTR = [NSString stringWithFormat:@"get_team_members_of_account/%@", parameters[@"account_id"]];
+    
+    [self POST:@"send_magic_link/" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject)
+     {
+         success(responseObject);
+     } failure:^(NSURLSessionDataTask *task, NSError *error)
+     {
+         failure(task, error);
+     }];
+
+}
+
+- (void)loginWithMagicLink:(NSDictionary *)parameters success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure
+{
+    [self isReachableViaInternet];
+    
+    //    NSString *mySTR = [NSString stringWithFormat:@"get_team_members_of_account/%@", parameters[@"account_id"]];
+    
+    [self POST:@"login_with_magic_link/" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject)
+     {
+         success(responseObject);
+     } failure:^(NSURLSessionDataTask *task, NSError *error)
+     {
+         failure(task, error);
+     }];
+
+}
+
+
+- (void)updateTaskStatus:(NSDictionary *)parameters success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure
+{
+    [self isReachableViaInternet];
+    
+    //    NSString *mySTR = [NSString stringWithFormat:@"get_team_members_of_account/%@", parameters[@"account_id"]];
+    
+    [self POST:@"update_task_status/" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject)
+     {
+         success(responseObject);
+     } failure:^(NSURLSessionDataTask *task, NSError *error)
      {
          failure(task, error);
      }];
     
-
 }
-*/
-
 
 - (void)setUserId:(NSString *)userId
 {

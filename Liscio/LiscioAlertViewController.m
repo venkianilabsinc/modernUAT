@@ -12,6 +12,8 @@
 @interface LiscioAlertViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *arrowMarkLbl;
 
+@property (weak, nonatomic) IBOutlet UILabel *titleLbl;
+
 @end
 
 @implementation LiscioAlertViewController
@@ -21,6 +23,18 @@
     // Do any additional setup after loading the view.
     [self.arrowMarkLbl setFont:[UIFont fontWithName:@"icomoon" size:25]];
     [self.arrowMarkLbl setText:[NSString stringWithUTF8String:"\ue628"]];
+    
+
+//    NSString *myStr = [NSString stringWithFormat:@" Hello!            %@", ];
+    
+    NSString *myStr = @"Hello!                ";
+    NSString *myStr1 = @"We just sent an email to ";
+    NSString *myStr2 = self.emailStr;
+    NSString *myStr3 = @". If this email is associated with an account, it will include a link to login to your account.";
+    
+    NSString *mainStr = [NSString stringWithFormat:@"%@\n%@%@%@", myStr,myStr1,myStr2, myStr3];
+
+    self.titleLbl.text = mainStr;
 
 }
 

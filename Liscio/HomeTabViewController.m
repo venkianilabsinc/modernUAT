@@ -36,35 +36,38 @@
     
 
     self.dataDic = [[NSMutableDictionary alloc] initWithCapacity:0];
-    [self.tabBar.items[0] setImage:[[UIImage imageNamed:@"home_40.png"]
+    //inactive item images
+
+    [self.tabBar.items[0] setImage:[[UIImage imageNamed:@"home_icon.png"]
                                  imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
-    [self.tabBar.items[1] setImage:[[UIImage imageNamed:@"tasklist_40.png"]
+    [self.tabBar.items[1] setImage:[[UIImage imageNamed:@"task_icon.png"]
                                     imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 
-    [self.tabBar.items[2] setImage:[[UIImage imageNamed:@"addtask_40x40_inactive.png"]
+    [self.tabBar.items[2] setImage:[[UIImage imageNamed:@"add_task_icon.png"]
                                     imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 
-    [self.tabBar.items[3] setImage:[[UIImage imageNamed:@"account_40.png"]
+    [self.tabBar.items[3] setImage:[[UIImage imageNamed:@"account_icon.png"]
                                     imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 
-    [self.tabBar.items[4] setImage:[[UIImage imageNamed:@"team_40x40_inactive.png"]
+    [self.tabBar.items[4] setImage:[[UIImage imageNamed:@"team_icon.png"]
                                     imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 
     
-    [self.tabBar.items[0] setSelectedImage:[[UIImage imageNamed:@"home_40_active.png"]
+    //active item images
+    [self.tabBar.items[0] setSelectedImage:[[UIImage imageNamed:@"home_icon_active.png"]
                                     imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
-    [self.tabBar.items[1] setSelectedImage:[[UIImage imageNamed:@"tasklist_40_active.png"]
+    [self.tabBar.items[1] setSelectedImage:[[UIImage imageNamed:@"task_icon_active.png"]
                                     imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
-    [self.tabBar.items[2] setSelectedImage:[[UIImage imageNamed:@"addtask_40x40_active.png"]
+    [self.tabBar.items[2] setSelectedImage:[[UIImage imageNamed:@"add_task_icon_active.png"]
                                     imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
-    [self.tabBar.items[3] setSelectedImage:[[UIImage imageNamed:@"account_40_active.png"]
+    [self.tabBar.items[3] setSelectedImage:[[UIImage imageNamed:@"account_icon_active.png"]
                                     imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
-    [self.tabBar.items[4] setSelectedImage:[[UIImage imageNamed:@"team_40x40_active.png"]
+    [self.tabBar.items[4] setSelectedImage:[[UIImage imageNamed:@"team_icon_active.png"]
                                     imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 
 

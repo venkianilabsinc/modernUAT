@@ -67,6 +67,15 @@
 - (void)updatePayRoll:(NSDictionary *)parameters success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure;
 // App user defaults
 
+- (void)sendMagicLink:(NSDictionary *)parameters success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure;
+
+- (void)loginWithMagicLink:(NSDictionary *)parameters success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure;
+
+- (void)updateTaskStatus:(NSDictionary *)parameters success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure;
+
+
+
+
 - (void)setUserId:(NSString *)userId;
 
 - (NSString *)userId;

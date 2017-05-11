@@ -39,6 +39,10 @@
 @property (weak,nonatomic) IBOutlet UIButton *loginBtn;
 @property CGFloat shiftForKeyboard;
 @property (weak, nonatomic) IBOutlet UIButton *eyeBtn;
+@property (weak, nonatomic) IBOutlet UIButton *forgotUrpasswrdBtn;
+@property (weak, nonatomic) IBOutlet UILabel *loginWthPassrd;
+@property (weak, nonatomic) IBOutlet UIView *lineView;
+@property (weak, nonatomic) IBOutlet UIView *lineView1;
 
 @end
 
@@ -52,7 +56,7 @@
 //    [self.arrowMarkLbl setText:[NSString stringWithUTF8String:"\ue628"]];
     
     self.loginBtn.layer.borderWidth = 2.0;
-    self.loginBtn.layer.borderColor = [[UIColor colorWithRed:139.0/255.0 green:221.0/255.0 blue:245.0/255.0 alpha:1.0] CGColor];
+    self.loginBtn.layer.borderColor = [[UIColor colorWithRed:81.0/255.0 green:122.0/255.0 blue:172.0/255.0 alpha:1.0] CGColor];
     self.loginBtn.layer.cornerRadius = 4;
     
     [self.eyeBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:15]];
@@ -64,6 +68,22 @@
     
     self.navigationController.navigationBarHidden = YES;
     
+    if ([self.emailTxtFld respondsToSelector:@selector(setAttributedPlaceholder:)]) {
+        UIColor *color = [UIColor colorWithRed:16.0/255.0 green:16.0/255.0 blue:16.0/255.0 alpha:1.0];
+        self.emailTxtFld.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Email" attributes:@{NSForegroundColorAttributeName: color}];
+    } else {
+        NSLog(@"Cannot set placeholder text's color, because deployment target is earlier than iOS 6.0");
+        // TODO: Add fall-back code to set placeholder color.
+    }
+
+    if ([self.passwordTxtFld respondsToSelector:@selector(setAttributedPlaceholder:)]) {
+        UIColor *color = [UIColor colorWithRed:16.0/255.0 green:16.0/255.0 blue:16.0/255.0 alpha:1.0];
+        self.passwordTxtFld.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: color}];
+    } else {
+        NSLog(@"Cannot set placeholder text's color, because deployment target is earlier than iOS 6.0");
+        // TODO: Add fall-back code to set placeholder color.
+    }
+
     
 //    NSMutableAttributedString * string = [[NSMutableAttributedString alloc] initWithString:self.titleLbl.text];
 //    [string addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0,10)];
@@ -80,8 +100,22 @@
 
     if (IS_IPHONE_5)
     {
-        self.enableTouchIDLbl.frame = CGRectMake(5, self.enableTouchIDLbl.frame.origin.y, self.enableTouchIDLbl.frame.size.width+35, self.enableTouchIDLbl.frame.size.height);
-        self.YourSwitch.frame = CGRectMake(CGRectGetMaxX(self.enableTouchIDLbl.frame)-2, self.YourSwitch.frame.origin.y, self.YourSwitch.frame.size.width, self.YourSwitch.frame.size.height);
+        self.emailTxtFld.frame = CGRectMake(10, self.emailTxtFld.frame.origin.y - 20, 300, self.emailTxtFld.frame.size.height);
+        self.passwordTxtFld.frame = CGRectMake(10, self.passwordTxtFld.frame.origin.y -20, 300, self.passwordTxtFld.frame.size.height);
+
+        self.lineView.frame = CGRectMake(10, self.lineView.frame.origin.y -20, 300, self.lineView.frame.size.height);
+        self.lineView1.frame = CGRectMake(10, self.lineView1.frame.origin.y -20, 300, self.lineView1.frame.size.height);
+
+        self.eyeBtn.frame = CGRectMake(self.eyeBtn.frame.origin.x, self.eyeBtn.frame.origin.y -20, self.eyeBtn.frame.size.width, self.eyeBtn.frame.size.height);
+
+        self.loginBtn.frame = CGRectMake(self.loginBtn.frame.origin.x, self.loginBtn.frame.origin.y -20, self.loginBtn.frame.size.width, self.loginBtn.frame.size.height);
+
+        self.forgotUrpasswrdBtn.frame = CGRectMake(self.forgotUrpasswrdBtn.frame.origin.x, self.forgotUrpasswrdBtn.frame.origin.y -20, self.forgotUrpasswrdBtn.frame.size.width, self.forgotUrpasswrdBtn.frame.size.height);
+
+        self.loginWthPassrd.frame = CGRectMake(self.loginWthPassrd.frame.origin.x, CGRectGetMaxY(self.forgotUrpasswrdBtn.frame) + 10, self.loginWthPassrd.frame.size.width, self.loginWthPassrd.frame.size.height);
+
+        self.enableTouchIDLbl.frame = CGRectMake(5, CGRectGetMaxY(self.loginWthPassrd.frame) + 20, self.enableTouchIDLbl.frame.size.width+35, self.enableTouchIDLbl.frame.size.height);
+        self.YourSwitch.frame = CGRectMake(CGRectGetMaxX(self.enableTouchIDLbl.frame)-2, CGRectGetMaxY(self.loginWthPassrd.frame) + 15, self.YourSwitch.frame.size.width, self.YourSwitch.frame.size.height);
     }
     
 

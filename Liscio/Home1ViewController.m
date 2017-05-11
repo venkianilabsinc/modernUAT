@@ -45,7 +45,7 @@
     [self.settingsBtn setTitle:[NSString stringWithUTF8String:"\uE626"] forState:UIControlStateNormal];
     
     self.moreBtn.layer.borderWidth = 1.0;
-    self.moreBtn.layer.borderColor = [[UIColor colorWithRed:118.0/255.0 green:231.0/255.0 blue:238.0/255.0 alpha:1.0] CGColor];
+    self.moreBtn.layer.borderColor = [[UIColor colorWithRed:81.0/255.0 green:122.0/255.0 blue:172.0/255.0 alpha:1.0] CGColor];
     self.moreBtn.layer.cornerRadius = 10;
     self.moreBtn.layer.masksToBounds = YES;
     

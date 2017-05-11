@@ -87,6 +87,11 @@
     self.subTitleBtn.layer.masksToBounds = YES;
 
     
+    self.subjectTxtLbl.layer.cornerRadius = 4;
+    self.subjectTxtLbl.layer.borderWidth = 0.5;
+    self.subjectTxtLbl.layer.borderColor = [[UIColor colorWithRed:212/255.0 green:218/250.0 blue:222/255.0 alpha:1.0] CGColor];
+    self.subjectTxtLbl.layer.masksToBounds = YES;
+
     self.datepicker = [[UIDatePicker alloc] init];
     self.datepicker.datePickerMode = UIDatePickerModeDate;
     
@@ -131,7 +136,7 @@
     self.lastName.layer.masksToBounds = YES;
     
     self.attachmentBtn.layer.borderWidth = 1;
-    self.attachmentBtn.layer.borderColor = [[UIColor colorWithRed:148/255.0 green:204/255.0 blue:225/255.0 alpha:1.0] CGColor];
+    self.attachmentBtn.layer.borderColor = [[UIColor colorWithRed:81/255.0 green:122/255.0 blue:172/255.0 alpha:1.0] CGColor];
     self.attachmentBtn.layer.cornerRadius = self.attachmentBtn.frame.size.height/2;
     self.attachmentBtn.layer.masksToBounds = YES;
     
@@ -193,7 +198,7 @@
     
     self.commentsArray = self.editDict[@"comments"];
 
-    [self.commentsTableView reloadData];
+//    self.commentsTableView.backgroundColor = [UIColor redColor];
     
 
 }
@@ -203,7 +208,7 @@
     //         if (self.webViewStr == nil || [self.webViewStr isEqual:[NSNull null]])
 
     
-
+    NSLog(@"screen height%f",[[UIScreen mainScreen] bounds].size.width);
     
     
     if ([self.editDict[@"task_type_value"] isEqualToString:@"Send a Message"] || [self.editDict[@"task_type_value"] isEqualToString:@"Send a Document"] || [self.editDict[@"task_type_value"] isEqualToString:@"Request a Meeting"])
@@ -213,8 +218,17 @@
         self.subTitleBtn.hidden = YES;
         self.dropDownLbl.hidden = YES;
         self.dropDownLbl1.hidden = YES;
+        if ([[UIScreen mainScreen] bounds].size.width == 320){
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.attachmentBtn.frame), self.commentsTableView.frame.size.width, 250);
 
-        self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.attachmentBtn.frame), self.commentsTableView.frame.size.width, 300);
+        }else if ([[UIScreen mainScreen] bounds].size.width == 375){
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.attachmentBtn.frame), self.commentsTableView.frame.size.width, 330);
+
+        }else{
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.attachmentBtn.frame), self.commentsTableView.frame.size.width, 400);
+
+        }
+
         return;
 
     }
@@ -227,6 +241,18 @@
         self.dropDownLbl.hidden = YES;
         self.dropDownLbl1.hidden = YES;
 
+        if ([[UIScreen mainScreen] bounds].size.width == 320){
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.attachmentBtn.frame), self.commentsTableView.frame.size.width, 250);
+
+        }else if([[UIScreen mainScreen] bounds].size.width == 375){
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.attachmentBtn.frame), self.commentsTableView.frame.size.width, 330);
+
+        }else{
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.attachmentBtn.frame), self.commentsTableView.frame.size.width, 400);
+            
+        }
+
+
 
     }else{
         self.isFromAddEmployee = YES;
@@ -235,8 +261,17 @@
         self.subTitleBtn.hidden = YES;
         self.dropDownLbl.hidden = NO;
         self.dropDownLbl1.hidden = YES;
+        if ([[UIScreen mainScreen] bounds].size.width == 320){
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.titleBtn.frame), self.commentsTableView.frame.size.width, 200);
 
-        self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.titleBtn.frame), self.commentsTableView.frame.size.width, 270);
+        }else if([[UIScreen mainScreen] bounds].size.width == 375){
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.titleBtn.frame), self.commentsTableView.frame.size.width, 290);
+
+        }else{
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.titleBtn.frame), self.commentsTableView.frame.size.width, 350);
+            
+        }
+
 
  
     }
@@ -256,10 +291,21 @@
         self.dropDownLbl.hidden = NO;
         self.dropDownLbl1.hidden = NO;
 
-        self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.subTitleBtn.frame), self.commentsTableView.frame.size.width, 210);
+        if ([[UIScreen mainScreen] bounds].size.width == 320){
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.subTitleBtn.frame), self.commentsTableView.frame.size.width, 210);
+
+        }else if([[UIScreen mainScreen] bounds].size.width == 375){
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.subTitleBtn.frame), self.commentsTableView.frame.size.width, 290);
+
+        }else{
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.subTitleBtn.frame), self.commentsTableView.frame.size.width, 350);
+            
+        }
 
         
     }
+//    [self.commentsTableView reloadData];
+
 
 }
 
@@ -273,7 +319,7 @@
     NSDate *birthdayDate = self.datepicker.date;
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"dd/MM/yy"];
+        [dateFormatter setDateFormat:@"MM/dd/yy"];
     
     NSString *birthdayText = [dateFormatter stringFromDate:birthdayDate];
     self.dateTxtfield.text = birthdayText;
@@ -296,8 +342,6 @@
 {
     SettingsViewController *teamVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"];
     [self.navigationController pushViewController:teamVC animated:YES];
-    
-    
 }
 
 
@@ -309,11 +353,10 @@
     [self.dateTxtfield resignFirstResponder];
 
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"dd/MM/yyyy"];
+    [dateFormatter setDateFormat:@"MM/dd/yyyy"];
     NSDate *date = [dateFormatter dateFromString:self.dateTxtfield.text];
 
     self.DateString = [dateFormatter stringFromDate:date];
-
 
     if ([self.DateString isEqualToString:@""] || [self.subjectTxtLbl.text isEqualToString:@""] || self.DateString == nil)  {
         
@@ -359,7 +402,14 @@
                  UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
                      //enter code here
                      
-                     [self.navigationController.tabBarController setSelectedIndex:1];
+                     if (self.navigationController.tabBarController.selectedIndex == 1)
+                     {
+                         [self.navigationController.tabBarController setSelectedIndex:0];
+                         
+                     }else{
+                         [self.navigationController.tabBarController setSelectedIndex:1];
+                         
+                     }
                      
                  }];
                  [alert addAction:defaultAction];
@@ -371,6 +421,8 @@
                  UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
                      //enter code here
                      
+                     
+                     
                  }];
                  [alert addAction:defaultAction];
                  //Present action where needed
@@ -381,8 +433,6 @@
              [self.activityIndicator stopAnimating];
          }];
 
-        
-        
     }
     else
     {
@@ -403,7 +453,14 @@
                      
                      //                                  [self.navigationController popViewControllerAnimated:YES];
                      
-                     [self.navigationController.tabBarController setSelectedIndex:1];
+                     if (self.navigationController.tabBarController.selectedIndex == 1)
+                     {
+                         [self.navigationController.tabBarController setSelectedIndex:0];
+                         
+                     }else{
+                         [self.navigationController.tabBarController setSelectedIndex:1];
+                         
+                     }
                      
                  }];
                  [alert addAction:defaultAction];
@@ -557,7 +614,17 @@
     {
         self.subTitleBtn.hidden = NO;
         self.dropDownLbl1.hidden= NO;
-        self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.subTitleBtn.frame), self.commentsTableView.frame.size.width, 270);
+
+        if ([[UIScreen mainScreen] bounds].size.width == 320){
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.subTitleBtn.frame), self.commentsTableView.frame.size.width, 160);
+            
+        }else if([[UIScreen mainScreen] bounds].size.width == 375){
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.subTitleBtn.frame), self.commentsTableView.frame.size.width, 240);
+            
+        }else{
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.subTitleBtn.frame), self.commentsTableView.frame.size.width, 300);
+            
+        }
 
         
 //        self.sub.frame = CGRectMake(self.modifyBtnDropDown.frame.origin.x, CGRectGetMaxY(self.typeChangeBtnDropDown.frame) + 10, self.modifyBtnDropDown.frame.size.width, self.modifyBtnDropDown.frame.size.height);
@@ -575,7 +642,17 @@
         
         self.subTitleBtn.hidden = YES;
         self.dropDownLbl1.hidden= YES;
-        self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.titleBtn.frame), self.commentsTableView.frame.size.width, 270);
+
+        if ([[UIScreen mainScreen] bounds].size.width == 320){
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.titleBtn.frame), self.commentsTableView.frame.size.width, 200);
+            
+        }else if([[UIScreen mainScreen] bounds].size.width == 375){
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.titleBtn.frame), self.commentsTableView.frame.size.width, 280);
+            
+        }else{
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.titleBtn.frame), self.commentsTableView.frame.size.width, 350);
+            
+        }
 
 //
 //        self.taskTitleTxtFld.frame = CGRectMake(self.taskTitleTxtFld.frame.origin.x, CGRectGetMaxY(self.typeChangeBtnDropDown.frame) + 10, self.taskTitleTxtFld.frame.size.width, self.taskTitleTxtFld.frame.size.height);
@@ -590,7 +667,16 @@
     {
         self.subTitleBtn.hidden = YES;
         self.dropDownLbl1.hidden= YES;
-        self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.titleBtn.frame), self.commentsTableView.frame.size.width, 270);
+        if ([[UIScreen mainScreen] bounds].size.width == 320){
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.titleBtn.frame), self.commentsTableView.frame.size.width, 200);
+            
+        }else if([[UIScreen mainScreen] bounds].size.width == 375){
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.titleBtn.frame), self.commentsTableView.frame.size.width, 280);
+            
+        }else{
+            self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.titleBtn.frame), self.commentsTableView.frame.size.width, 350);
+            
+        }
 
 //
 //

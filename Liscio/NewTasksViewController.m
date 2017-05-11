@@ -62,6 +62,7 @@
 @property (weak, nonatomic)    NSString *myStr;
 @property (weak, nonatomic)    NSString *myStrOne;
 
+@property (strong, nonatomic) NSString *taskTypeStrinmg;
 
 -(void)rel;
 
@@ -182,6 +183,12 @@
     self.contactListArray = [[NSMutableArray alloc] initWithCapacity:0];
     self.contactList1Array = [[NSMutableArray alloc] initWithCapacity:0];
     self.arrData = [NSMutableArray new];
+    
+    if ([[UIScreen mainScreen] bounds].size.width == 320)
+    {
+        NSLog(@"iphone 5");
+        self.firstNameBtn.frame = CGRectMake(self.firstNameBtn.frame.origin.x, self.firstNameBtn.frame.origin.y,150, self.firstNameBtn.frame.size.height);
+    }
 
 
 
@@ -236,6 +243,14 @@
 
 -(void) viewWillAppear:(BOOL)animated
 {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"MM/dd/yyyy";
+    NSString *dateString = [formatter stringFromDate:[NSDate date]];
+    
+    
+    self.birthdayDate.text = dateString;
+    [self.dropDwownBtn setTitle:@"Select a Task" forState:UIControlStateNormal];
+
     [self homeAPI];
     [self getCPAAPI];
     [self getContactsAPI];
@@ -361,10 +376,10 @@
 
 - (IBAction)sendBtnPressed:(UIButton *)sender
 {
-    if ([self.taskTitleTxtFld.text isEqualToString:@""] || [self.birthdayDate.text isEqualToString:@""] || [self.dropDwownBtn.titleLabel.text isEqualToString:@""])
+    if ([self.taskTitleTxtFld.text isEqualToString:@""] || [self.birthdayDate.text isEqualToString:@""] || [self.dropDwownBtn.titleLabel.text isEqualToString:@""] || [self.dropDwownBtn.titleLabel.text isEqualToString:@"Select a Task"] || [self.firstNameBtn.titleLabel.text isEqualToString:@""] || [self.firstNameBtn.titleLabel.text isEqualToString:@"Select Employee"])
     {
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!!" message:@"Please fill Date & Employee" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!!" message:@"Please fill Date, Task & Employee" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
         return;
     }
@@ -407,7 +422,7 @@
                                   @"due_by" : self.birthdayDate.text,
                                   @"assigne_type" : self.Dict[@"assigne_type"],
                                   @"description" : self.commentsTxtView.text,
-                                  @"task_type_key" : self.dropDwownBtn.titleLabel.text,
+                                  @"task_type_key" : self.taskTypeStrinmg,
                                   @"task_type_value" : self.dropDwownBtn.titleLabel.text};
     }
     
@@ -496,9 +511,9 @@
 
         self.typeChangeBtnDropDown.hidden = YES;
 
-        self.taskTitleTxtFld.frame = CGRectMake(self.taskTitleTxtFld.frame.origin.x, 235, self.taskTitleTxtFld.frame.size.width, self.taskTitleTxtFld.frame.size.height);
+        self.taskTitleTxtFld.frame = CGRectMake(self.taskTitleTxtFld.frame.origin.x, CGRectGetMaxY(self.dropDwownBtn.frame) + 10, self.taskTitleTxtFld.frame.size.width, self.taskTitleTxtFld.frame.size.height);
         
-        self.commentsTxtView.frame = CGRectMake(self.commentsTxtView.frame.origin.x, 285, self.commentsTxtView.frame.size.width, self.commentsTxtView.frame.size.height);
+        self.commentsTxtView.frame = CGRectMake(self.commentsTxtView.frame.origin.x, CGRectGetMaxY(self.taskTitleTxtFld.frame) + 10, self.commentsTxtView.frame.size.width, self.commentsTxtView.frame.size.height);
         
         self.sendBtn.frame = CGRectMake(self.sendBtn.frame.origin.x, 388, self.sendBtn.frame.size.width, self.sendBtn.frame.size.height);
 
@@ -512,9 +527,9 @@
         self.modifyBtnDropDown.hidden = YES;
 
         self.typeChangeBtnDropDown.hidden = YES;
-        self.taskTitleTxtFld.frame = CGRectMake(self.taskTitleTxtFld.frame.origin.x, 235, self.taskTitleTxtFld.frame.size.width, self.taskTitleTxtFld.frame.size.height);
+        self.taskTitleTxtFld.frame = CGRectMake(self.taskTitleTxtFld.frame.origin.x, CGRectGetMaxY(self.dropDwownBtn.frame) + 10, self.taskTitleTxtFld.frame.size.width, self.taskTitleTxtFld.frame.size.height);
         
-        self.commentsTxtView.frame = CGRectMake(self.commentsTxtView.frame.origin.x, 285, self.commentsTxtView.frame.size.width, self.commentsTxtView.frame.size.height);
+        self.commentsTxtView.frame = CGRectMake(self.commentsTxtView.frame.origin.x, CGRectGetMaxY(self.taskTitleTxtFld.frame) + 10, self.commentsTxtView.frame.size.width, self.commentsTxtView.frame.size.height);
         
         self.sendBtn.frame = CGRectMake(self.sendBtn.frame.origin.x, 388, self.sendBtn.frame.size.width, self.sendBtn.frame.size.height);
         
@@ -531,9 +546,9 @@
         self.modifyBtnDropDown.hidden = YES;
 
         self.typeChangeBtnDropDown.hidden = YES;
-        self.taskTitleTxtFld.frame = CGRectMake(self.taskTitleTxtFld.frame.origin.x, 235, self.taskTitleTxtFld.frame.size.width, self.taskTitleTxtFld.frame.size.height);
+        self.taskTitleTxtFld.frame = CGRectMake(self.taskTitleTxtFld.frame.origin.x, CGRectGetMaxY(self.dropDwownBtn.frame) + 10, self.taskTitleTxtFld.frame.size.width, self.taskTitleTxtFld.frame.size.height);
         
-        self.commentsTxtView.frame = CGRectMake(self.commentsTxtView.frame.origin.x, 285, self.commentsTxtView.frame.size.width, self.commentsTxtView.frame.size.height);
+        self.commentsTxtView.frame = CGRectMake(self.commentsTxtView.frame.origin.x, CGRectGetMaxY(self.taskTitleTxtFld.frame) + 10, self.commentsTxtView.frame.size.width, self.commentsTxtView.frame.size.height);
         
         self.sendBtn.frame = CGRectMake(self.sendBtn.frame.origin.x, 388, self.sendBtn.frame.size.width, self.sendBtn.frame.size.height);
     }
@@ -608,19 +623,27 @@
     
     if ([sender.venkistr isEqualToString:@"Send a Message"])
     {
+        self.taskTypeStrinmg = @"send_message";
+        
         self.taskTitleTxtFld.text = [NSString stringWithFormat:@"Message for %@", self.firstNameBtn.titleLabel.text];
     }
-   else if ([sender.venkistr isEqualToString:@"Send a Document"])
+    else if ([sender.venkistr isEqualToString:@"Send a Document"])
     {
+        self.taskTypeStrinmg = @"send_document";
+        
         self.taskTitleTxtFld.text = [NSString stringWithFormat:@"Send a Document to %@", self.firstNameBtn.titleLabel.text];
     }
     else if ([sender.venkistr isEqualToString:@"Request a Meeting"])
     {
+        self.taskTypeStrinmg = @"request_meeting";
+        
         self.taskTitleTxtFld.text = [NSString stringWithFormat:@"Request a Meeting with %@", self.firstNameBtn.titleLabel.text];
     }
     
     else if([sender.venkistr isEqualToString:@"Make Payroll Change"])
     {
+        self.taskTypeStrinmg = @"payroll_change";
+        
         self.taskTitleTxtFld.text = @"Request Payroll Change";
     }
 
@@ -718,9 +741,13 @@
 
 - (IBAction)firstNameBtnClicked:(UIButton *)sender;
 {
+    
+    [self.taskTitleTxtFld resignFirstResponder];
+    [self.commentsTxtView resignFirstResponder];
+
     self.isFromFirstName =YES;
     
-    [self.dropDwownBtn setTitle:@"Request a Meeting" forState:UIControlStateNormal];
+    [self.dropDwownBtn setTitle:@"Select a Task" forState:UIControlStateNormal];
     self.taskTitleTxtFld.text = @"";
 //    self.taskTitleTxtFld.placeholder = @"Task Title";
 //    NSArray * arr = [[NSArray alloc] init];
@@ -851,7 +878,7 @@
         self.shiftForKeyboard = bottomEdge - 280;
         if(!isiPhone5Device)
         {
-            self.shiftForKeyboard = bottomEdge - 235;
+            self.shiftForKeyboard = bottomEdge - 330;
         }
         viewFrame.origin.y -= self.shiftForKeyboard;
         [UIView beginAnimations:nil context:NULL];

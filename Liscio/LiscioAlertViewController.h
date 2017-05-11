@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LiscioAlertViewController : UIViewController
-
+@property (strong, nonatomic) NSString *emailStr;
 @end

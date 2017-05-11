@@ -52,7 +52,7 @@
     [self.activityIndicator startAnimating];
     __block PortfolioHttpClient *sharedObject = [PortfolioHttpClient portfolioSharedHttpClient];
     
-        NSDictionary *params1 = @{@"account_id" : self.teamDict[@"account_id"]};
+        NSDictionary *params1 = @{@"account_id" : self.teamDict[@"value"]};
     
     [sharedObject teamDetail:params1 success:^(NSDictionary *responseObject)
      {
@@ -94,7 +94,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"cellID";
+    
     NSMutableDictionary *dict = [self.teamDetailArray objectAtIndex:indexPath.row];
+    
     TeamDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
 //    cell.titleLbl.text  = [NSString stringWithFormat:@"%@ %@", dict[@"first_name"], dict[@"last_name"]];
@@ -127,8 +129,10 @@
 //    cell.imageView.center = cell.imageView.superview.center;
     cell.imageView.clipsToBounds = YES;
 
-    cell.nameLbl.text = [NSString stringWithFormat:@"%@ %@ - %@", dict[@"first_name"],dict[@"last_name"],dict[@"entity_type"]];
+//    cell.nameLbl.text = [NSString stringWithFormat:@"%@ %@ - %@", dict[@"first_name"],dict[@"last_name"],dict[@"entity_type"]];//job title
     
+        cell.nameLbl.text = [NSString stringWithFormat:@"%@ %@", dict[@"first_name"],dict[@"last_name"]];//job title
+
         cell.phoneBtn.layer.cornerRadius = cell.phoneBtn.frame.size.height/2;
         cell.phoneBtn.layer.masksToBounds = YES;
     

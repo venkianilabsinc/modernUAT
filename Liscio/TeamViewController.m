@@ -70,6 +70,17 @@
              
              self.teamArray = responseObject[@"data"];
              
+             if (self.teamArray.count)
+             {
+                 self.noRecrdsLbl.hidden = YES;
+                 self.teamTableView.hidden = NO;
+
+             }else{
+                 self.noRecrdsLbl.hidden = NO;
+                 self.teamTableView.hidden = YES;
+
+             }
+             
              [self.teamTableView reloadData];
          }else{
              
@@ -108,7 +119,7 @@
     NSMutableDictionary *dict = [self.teamArray objectAtIndex:indexPath.row];
     TeamTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    cell.titleLbl.text  = [NSString stringWithFormat:@"%@ %@", dict[@"first_name"], dict[@"last_name"]];
+    cell.titleLbl.text  = dict[@"label"];//[NSString stringWithFormat:@"%@ %@", dict[@"first_name"], dict[@"last_name"]];
 //    cell.subTitleLbl.text  = [NSString stringWithFormat:@"%@ %@", @"Entity Type :", dict[@"entity_type"]];
 
 //    [cell.phoneImgLbl setFont:[UIFont fontWithName:@"icomoon" size:25]];
@@ -128,8 +139,8 @@
     
 //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    TeamTableViewCell *cell = (TeamTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
-    cell.contentView.backgroundColor = [UIColor colorWithRed:0/255.0 green:191/255.0 blue:210/255.0 alpha:1.0];
+//    TeamTableViewCell *cell = (TeamTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+//    cell.contentView.backgroundColor = [UIColor colorWithRed:0/255.0 green:191/255.0 blue:210/255.0 alpha:1.0];
     
     TeamDetailViewController *teamDVC = [self.storyboard instantiateViewControllerWithIdentifier:@"TeamDetailViewController"];
     teamDVC.teamDict = [self.teamArray objectAtIndex:indexPath.row];

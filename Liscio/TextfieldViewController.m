@@ -45,6 +45,23 @@
     [self.loginBtn.layer setBorderColor:[[UIColor whiteColor] CGColor]];
     [[self.loginBtn layer] setCornerRadius:2.0f];
     
+    if ([self.userNameTxtFld respondsToSelector:@selector(setAttributedPlaceholder:)]) {
+        UIColor *color = [UIColor colorWithRed:16.0/255.0 green:16.0/255.0 blue:16.0/255.0 alpha:1.0];
+        self.userNameTxtFld.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Email" attributes:@{NSForegroundColorAttributeName: color}];
+    } else {
+        NSLog(@"Cannot set placeholder text's color, because deployment target is earlier than iOS 6.0");
+        // TODO: Add fall-back code to set placeholder color.
+    }
+    
+    if ([self.passWordTxtFld respondsToSelector:@selector(setAttributedPlaceholder:)]) {
+        UIColor *color = [UIColor colorWithRed:16.0/255.0 green:16.0/255.0 blue:16.0/255.0 alpha:1.0];
+        self.passWordTxtFld.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: color}];
+    } else {
+        NSLog(@"Cannot set placeholder text's color, because deployment target is earlier than iOS 6.0");
+        // TODO: Add fall-back code to set placeholder color.
+    }
+    
+
 //    [self.imgLbl setFont:[UIFont fontWithName:@"icomoon" size:15]];
 //    [self.imgLbl setText:[NSString stringWithUTF8String:"\ue608"]];
 //    

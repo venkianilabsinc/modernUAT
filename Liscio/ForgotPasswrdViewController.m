@@ -29,6 +29,15 @@
     UITapGestureRecognizer* tapBackground = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard:)];
     [tapBackground setNumberOfTapsRequired:1];
     [self.view addGestureRecognizer:tapBackground];
+    
+    if ([self.emailTxtFld respondsToSelector:@selector(setAttributedPlaceholder:)]) {
+        UIColor *color = [UIColor colorWithRed:16.0/255.0 green:16.0/255.0 blue:16.0/255.0 alpha:1.0];
+        self.emailTxtFld.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Email Address" attributes:@{NSForegroundColorAttributeName: color}];
+    } else {
+        NSLog(@"Cannot set placeholder text's color, because deployment target is earlier than iOS 6.0");
+        // TODO: Add fall-back code to set placeholder color.
+    }
+
 
 
 }
@@ -82,8 +91,59 @@
 
 - (IBAction)sendMagicBtnPressed:(id)sender
 {
-    LiscioAlertViewController *liscioalertVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LiscioAlertViewController"];
-    [self.navigationController pushViewController:liscioalertVC animated:YES];
+    
+    if ([self.emailTxtFld.text isEqualToString:@""])  {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!!" message:@"Please enter your Email" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+    
+    [self.activityIndicator startAnimating];
+    __block PortfolioHttpClient *sharedObject = [PortfolioHttpClient portfolioSharedHttpClient];
+    
+    NSDictionary *params1 = @{@"email" : self.emailTxtFld.text};
+    
+    [sharedObject sendMagicLink:params1 success:^(NSDictionary *responseObject)
+     {
+         [self.activityIndicator stopAnimating];
+         
+         if ([responseObject[@"status"] integerValue] == 200)
+         {
+//             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert" message:responseObject[@"message"] preferredStyle:UIAlertControllerStyleAlert];
+//             UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+                 //enter code here
+                 
+                 LiscioAlertViewController *liscioalertVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LiscioAlertViewController"];
+                liscioalertVC.emailStr = self.emailTxtFld.text;
+                 [self.navigationController pushViewController:liscioalertVC animated:YES];
+//                 
+//             }];
+//             [alert addAction:defaultAction];
+//             //Present action where needed
+//             [self presentViewController:alert animated:YES completion:nil];
+             
+         }else{
+             
+             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert" message:responseObject[@"message"] preferredStyle:UIAlertControllerStyleAlert];
+             UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+                 //enter code here
+                 
+                 
+             }];
+             [alert addAction:defaultAction];
+             //Present action where needed
+             [self presentViewController:alert animated:YES completion:nil];
+
+         }
+     }
+    failure:^(NSURLSessionDataTask *task, NSError *error)
+     {
+         [self.activityIndicator stopAnimating];
+         NSLog(@"error is \n%@", error.description);
+         
+     }];
+
 
 
 }

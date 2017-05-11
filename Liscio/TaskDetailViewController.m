@@ -24,7 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *dotsBtn;
 @property (weak, nonatomic) IBOutlet UIButton *attachmentBtn;
 
-@property (weak, nonatomic) IBOutlet UILabel *rightMarkLbl;
+@property (weak, nonatomic) IBOutlet UIButton *rightMarkLbl;
 @property (weak, nonatomic) IBOutlet UILabel *firstName;
 @property (weak, nonatomic) IBOutlet UILabel *lastName;
 @property (weak, nonatomic) IBOutlet UILabel *calenderLbl;
@@ -83,6 +83,15 @@
 
 
     NSLog(@"TaskDict is..\n%@", self.taskDict);
+    
+    if ([self.taskDict[@"status"] isEqualToString:@"Closed"])
+    {
+        [self.rightMarkLbl setEnabled:NO];
+    }else{
+        [self.rightMarkLbl setEnabled:YES];
+        
+    }
+
     // Do any additional setup after loading the view.
     [self.settingBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:25]];
     [self.settingBtn setTitle:[NSString stringWithUTF8String:"\uE626"] forState:UIControlStateNormal];
@@ -93,8 +102,8 @@
     [self.attachmentBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:20]];
     [self.attachmentBtn setTitle:[NSString stringWithUTF8String:"\uE92E"] forState:UIControlStateNormal];
 
-    [self.rightMarkLbl setFont:[UIFont fontWithName:@"icomoon" size:30]];
-    [self.rightMarkLbl setText:[NSString stringWithUTF8String:"\uE92F"]];
+    [self.rightMarkLbl.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:30]];
+    [self.rightMarkLbl setTitle:[NSString stringWithUTF8String:"\uE92F"]forState:UIControlStateNormal];
     
     self.firstName.layer.cornerRadius = self.firstName.frame.size.height/2;
     self.firstName.layer.masksToBounds = YES;
@@ -103,7 +112,7 @@
     self.lastName.layer.masksToBounds = YES;
 
     self.attachmentBtn.layer.borderWidth = 1;
-    self.attachmentBtn.layer.borderColor = [[UIColor colorWithRed:148/255.0 green:204/255.0 blue:225/255.0 alpha:1.0] CGColor];
+    self.attachmentBtn.layer.borderColor = [[UIColor colorWithRed:81/255.0 green:122/255.0 blue:172/255.0 alpha:1.0] CGColor];
     self.attachmentBtn.layer.cornerRadius = self.attachmentBtn.frame.size.height/2;
     self.attachmentBtn.layer.masksToBounds = YES;
     
@@ -135,6 +144,28 @@
     gestureRecognizer.cancelsTouchesInView = NO;
 
     [self.commentsTableView addGestureRecognizer:gestureRecognizer];
+    
+//    NSLog(@"%f", [[UIScreen mainScreen] bounds].size.width);
+
+//            self.commentsTableView.backgroundColor = [UIColor redColor];
+
+    if ([[UIScreen mainScreen] bounds].size.width == 320)
+    {
+        NSLog(@"iphone 5");
+        self.subjectTxtLbl.frame = CGRectMake(self.subjectTxtLbl.frame.origin.x, self.subjectTxtLbl.frame.origin.y,260, self.subjectTxtLbl.frame.size.height);
+        self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, self.commentsTableView.frame.origin.y,self.commentsTableView.frame.size.width, 200);
+
+    } else if ([[UIScreen mainScreen] bounds].size.width == 375)
+    {
+        NSLog(@"iphone 6");
+        self.subjectTxtLbl.frame = CGRectMake(self.subjectTxtLbl.frame.origin.x, self.subjectTxtLbl.frame.origin.y,260, self.subjectTxtLbl.frame.size.height);
+        self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, self.commentsTableView.frame.origin.y,self.commentsTableView.frame.size.width, 280);
+        
+    }
+    else{
+        self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, self.commentsTableView.frame.origin.y,self.commentsTableView.frame.size.width, 370);
+
+    }
 
     
 //    [self.parentViewController.tabBarController setSelectedIndex:1];
@@ -144,6 +175,7 @@
 -(void) viewWillAppear:(BOOL)animated
 {
     [self TaskDetailAPI];
+    
 }
 
 -(void) TaskDetailAPI
@@ -419,10 +451,10 @@
     CGFloat bottomEdge = textViewRect.origin.y + textViewRect.size.height;
     if (bottomEdge >= 260) {//250
         CGRect viewFrame = self.view.frame;
-        self.shiftForKeyboard = bottomEdge - 260;
+        self.shiftForKeyboard = bottomEdge - 285;
         if(!isiPhone5Device)
         {
-            self.shiftForKeyboard = bottomEdge - 400;
+            self.shiftForKeyboard = bottomEdge - 450;
         }
         viewFrame.origin.y -= self.shiftForKeyboard;
         [UIView beginAnimations:nil context:NULL];
@@ -628,7 +660,7 @@
                                                               picker.sourceType = UIImagePickerControllerSourceTypeCamera;
                                                               
                                                               [self presentViewController:picker animated:YES completion:NULL];
-
+                                                              
                                                               NSLog(@"You pressed button one");
                                                           }];
     UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"Choose from Existing"
@@ -641,22 +673,20 @@
                                                                
                                                                [self presentViewController:picker animated:YES completion:NULL];
                                                                
-
+                                                               
                                                            }];
     
     UIAlertAction *thirdAction = [UIAlertAction actionWithTitle:@"Cancel"
-                                                           style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
-                                                               NSLog(@"You pressed button two");
-                                                           }];
-
+                                                          style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
+                                                              NSLog(@"You pressed button two");
+                                                          }];
+    
     
     [alert addAction:firstAction];
     [alert addAction:secondAction];
     [alert addAction:thirdAction];
-
-    [self presentViewController:alert animated:YES completion:nil];
-
     
+    [self presentViewController:alert animated:YES completion:nil];
 }
 #pragma mark - Image Picker Controller delegate methods
 
@@ -684,7 +714,7 @@
     }
 //    NSURL *refURL = [info valueForKey:UIImagePickerControllerReferenceURL];
     
-    NSDateFormatter *format = [[NSDateFormatter alloc] init]; [format setDateFormat:@"dd/MM/yyyy"];
+    NSDateFormatter *format = [[NSDateFormatter alloc] init]; [format setDateFormat:@"MM/dd/yyyy"];
     
     NSDate *now = [[NSDate alloc] init];
     
@@ -752,5 +782,55 @@
         [self.navigationController pushViewController:webVC animated:YES];
 
     }
+}
+
+-(IBAction)rightMarkBtnPressed:(id)sender
+{
+    PortfolioHttpClient *sharedObject = [PortfolioHttpClient portfolioSharedHttpClient];
+    NSDictionary *params1 = @{@"task_id" : self.taskDict[@"id"]};
+    [sharedObject updateTaskStatus:params1 success:^(NSDictionary *responseObject)
+     {
+         [self.activityIndicator stopAnimating];
+         NSLog(@"My responseObject \n%@", responseObject);
+         
+         if ([responseObject[@"status"] integerValue] == 200)
+         {
+             UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:responseObject[@"message"] preferredStyle:UIAlertControllerStyleAlert];
+             UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+                 //enter code here
+                 
+                 if (self.navigationController.tabBarController.selectedIndex == 1)
+                 {
+                     [self.navigationController.tabBarController setSelectedIndex:0];
+                     
+                 }else{
+                     [self.navigationController.tabBarController setSelectedIndex:1];
+                     
+                 }
+                 
+             }];
+             [alert addAction:defaultAction];
+             //Present action where needed
+             [self presentViewController:alert animated:YES completion:nil];
+             
+         }else{
+             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert" message:responseObject[@"message"] preferredStyle:UIAlertControllerStyleAlert];
+             UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+                 //enter code here
+                 
+                 [self TaskDetailAPI];
+             }];
+             [alert addAction:defaultAction];
+             //Present action where needed
+             [self presentViewController:alert animated:YES completion:nil];
+             
+         }
+         
+         
+     } failure:^(NSURLSessionDataTask *task, NSError *error) {
+         [self.activityIndicator stopAnimating];
+     }];
+    
+
 }
 @end

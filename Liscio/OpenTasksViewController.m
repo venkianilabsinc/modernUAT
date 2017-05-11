@@ -176,7 +176,7 @@
 -(IBAction)opensBtnClicked:(id)sender
 {
     self.archieveLbl.backgroundColor = [UIColor colorWithRed:232.0/255.0 green:235.0/255.0 blue:240.0/255.0 alpha:1.0];
-    self.tasksCountLbl.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:159.0/255.0 blue:199.0/255.0 alpha:1.0];
+    self.tasksCountLbl.backgroundColor = [UIColor colorWithRed:81/255.0 green:122/255.0 blue:172/255.0 alpha:1.0];
     
     self.archieveLbl.textColor = [UIColor darkGrayColor];
     self.tasksCountLbl.textColor = [UIColor whiteColor];
@@ -250,7 +250,7 @@
 }
 -(IBAction)archieveBtnClicked:(id)sender
 {
-    self.archieveLbl.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:159.0/255.0 blue:199.0/255.0 alpha:1.0];
+    self.archieveLbl.backgroundColor = [UIColor colorWithRed:81.0/255.0 green:122.0/255.0 blue:172.0/255.0 alpha:1.0];
     self.tasksCountLbl.backgroundColor = [UIColor colorWithRed:232.0/255.0 green:235.0/255.0 blue:240.0/255.0 alpha:1.0];
     self.archieveLbl.textColor = [UIColor whiteColor];
     self.tasksCountLbl.textColor = [UIColor darkGrayColor];
