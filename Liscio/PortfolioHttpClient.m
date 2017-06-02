@@ -16,9 +16,9 @@
 #define klast_name @"last_name"
 
 
-//static NSString* const kBaseUrlStr = @"https://liscioapistage.herokuapp.com/api/v1/";//Dev
+static NSString* const kBaseUrlStr = @"https://liscioapistage.herokuapp.com/api/v1/";//Dev
 
-static NSString* const kBaseUrlStr = @"https://liscioapi.herokuapp.com/api/v1/"; // integration
+//static NSString* const kBaseUrlStr = @"https://liscioapi.herokuapp.com/api/v1/"; // integration
 
 //static NSString* const kBaseUrlStr = @"http://demoapi.liscio.me/api/v1/"; //UAT
 
@@ -182,25 +182,25 @@ static NSString* const kBaseUrlStr = @"https://liscioapi.herokuapp.com/api/v1/";
 
 }
 
-- (void)uploadImage:(NSDictionary *)parameters selectImage:(NSData*)image success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure;
-{
-    [self isReachableViaInternet];
-
-
-    self.requestSerializer = [AFJSONRequestSerializer serializer];
-    [self.requestSerializer setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"auth_token"] forHTTPHeaderField:@"Authorization"];
-
-    [self POST:@"documents" parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        [formData appendPartWithFileData:image name:@"file" fileName:@"avatar.png" mimeType:@"image/jpeg"];
-        
-        
-    } success:^(NSURLSessionDataTask *task, id responseObject) {
-        success(responseObject);
-    } failure:^(NSURLSessionDataTask* task, NSError* error) {
-        failure(task, error);
-    }];
-
-}
+//- (void)uploadImage:(NSDictionary *)parameters selectImage:(NSData*)image success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure;
+//{
+//    [self isReachableViaInternet];
+//
+//
+//    self.requestSerializer = [AFJSONRequestSerializer serializer];
+//    [self.requestSerializer setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"auth_token"] forHTTPHeaderField:@"Authorization"];
+//
+//    [self POST:@"documents" parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+//        [formData appendPartWithFileData:image name:@"file" fileName:@"avatar.png" mimeType:@"image/jpeg"];
+//        
+//        
+//    } success:^(NSURLSessionDataTask *task, id responseObject) {
+//        success(responseObject);
+//    } failure:^(NSURLSessionDataTask* task, NSError* error) {
+//        failure(task, error);
+//    }];
+//
+//}
 
 - (void)updateTaskField:(NSDictionary *)parameters success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure
 {
@@ -450,6 +450,21 @@ static NSString* const kBaseUrlStr = @"https://liscioapi.herokuapp.com/api/v1/";
          failure(task, error);
      }];
     
+}
+
+- (void)getInitialTaskData:(NSDictionary *)parameters success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure
+{
+    [self isReachableViaInternet];
+    
+    //    NSString *mySTR = [NSString stringWithFormat:@"get_team_members_of_account/%@", parameters[@"account_id"]];
+    
+    [self GET:@"get_initial_task_data/" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject)
+     {
+         success(responseObject);
+     } failure:^(NSURLSessionDataTask *task, NSError *error)
+     {
+         failure(task, error);
+     }];
 }
 
 - (void)setUserId:(NSString *)userId

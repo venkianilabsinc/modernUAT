@@ -10,4 +10,5 @@
 
 @interface CommentsTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *commentsLbl;
+@property (weak, nonatomic) IBOutlet UIImageView *thumbImg;
 @end

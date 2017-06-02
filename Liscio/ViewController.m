@@ -13,7 +13,7 @@
 #import "PortfolioHttpClient.h"
 #import <LocalAuthentication/LocalAuthentication.h>
 #import "TextfieldViewController.h"
-
+#import "UIFloatLabelTextField.h"
 
 
 #define IS_IPHONE ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
@@ -21,7 +21,7 @@
 #define DEVICE_WIDTH [[UIScreen mainScreen] bounds].size.width
 
 
-@interface ViewController ()
+@interface ViewController ()<UITextFieldDelegate>
 
 #define IS_IPHONE_5 (IS_IPHONE && DEVICE_HEIGHT == 568.0) ? YES : NO
 #define IS_IPHONE_6 (IS_IPHONE && DEVICE_HEIGHT == 667.0) ? YES : NO
@@ -29,8 +29,8 @@
 
 #define isiPhone5Device (DEVICE_HEIGHT == 568) ? YES : NO
 @property(weak, nonatomic) IBOutlet UILabel *titleLbl;
-@property (weak, nonatomic) IBOutlet UITextField *emailTxtFld;
-@property (weak, nonatomic) IBOutlet UITextField *passwordTxtFld;
+@property (weak, nonatomic) IBOutlet UIFloatLabelTextField *emailTxtFld;
+@property (weak, nonatomic) IBOutlet UIFloatLabelTextField *passwordTxtFld;
 @property (weak, nonatomic) IBOutlet UILabel *enableTouchIDLbl;
 
 @property (weak, nonatomic) IBOutlet UIButton *YourSwitch;
@@ -55,12 +55,21 @@
 //    [self.arrowMarkLbl setFont:[UIFont fontWithName:@"icomoon" size:25]];
 //    [self.arrowMarkLbl setText:[NSString stringWithUTF8String:"\ue628"]];
     
-    self.loginBtn.layer.borderWidth = 2.0;
+    self.loginBtn.layer.borderWidth = 1.0;
     self.loginBtn.layer.borderColor = [[UIColor colorWithRed:81.0/255.0 green:122.0/255.0 blue:172.0/255.0 alpha:1.0] CGColor];
     self.loginBtn.layer.cornerRadius = 4;
     
     [self.eyeBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:15]];
     [self.eyeBtn setTitle:[NSString stringWithUTF8String:"\uEC53"] forState:UIControlStateNormal];
+
+    self.emailTxtFld.floatLabelActiveColor = [UIColor colorWithRed:138/255.0 green:30/255.0 blue:144/255.0 alpha:1.0];
+    self.emailTxtFld.placeholder = @"Email";
+    self.emailTxtFld.delegate = self;
+//    self.emailTxtFld.textAlignment = NSTextAlignmentCenter;
+    
+    self.passwordTxtFld.floatLabelActiveColor = [UIColor colorWithRed:138/255.0 green:30/255.0 blue:144/255.0 alpha:1.0];
+    self.passwordTxtFld.placeholder = @"Password";
+    self.passwordTxtFld.delegate = self;
 
     
     [self.YourSwitch setImage:[UIImage imageNamed:@"toggle_off.png"] forState:UIControlStateNormal];
@@ -310,6 +319,15 @@
              [[NSUserDefaults standardUserDefaults] setObject:responseStr forKey:@"auth_token"];
                  HomeTabViewController *homeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeTabViewController"];
                  [self.navigationController pushViewController:homeVC animated:YES];
+         }else{
+             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Sorry" message:responseObject[@"message"] preferredStyle:UIAlertControllerStyleAlert];
+             UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+                 //enter code here
+             }];
+             [alert addAction:defaultAction];
+             //Present action where needed
+             [self presentViewController:alert animated:YES completion:nil];
+
          }
      }
     failure:^(NSURLSessionDataTask *task, NSError *error)

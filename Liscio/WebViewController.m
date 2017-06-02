@@ -257,15 +257,15 @@
     if (self.buttonCurrentStatus == NO)
     {
         self.buttonCurrentStatus = YES;
-        self.submitBtn.backgroundColor = [UIColor colorWithRed:47/255.0 green:159/255.0 blue:199/255.0 alpha:1.0];
-
+        self.submitBtn.backgroundColor = [UIColor colorWithRed:138/255.0 green:30/255.0 blue:144/255.0 alpha:1.0];
+        
         
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[1].style.color =\"Dark Gray\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[1].style.fontFamily =\"alwaysforever\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[1].style.fontWeight =\"always * forever\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[1].style.fontSize =\"25\""];
-
-
+        
+        
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[2].style.color =\"Dark Gray\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[2].style.fontFamily =\"alwaysforever\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[2].style.fontWeight =\"always * forever\""];
@@ -275,37 +275,60 @@
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[4].style.fontFamily =\"alwaysforever\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[4].style.fontWeight =\"always * forever\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[4].style.fontSize =\"25\""];
-
+        
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[3].style.color =\"Dark Gray\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[3].style.fontFamily =\"alwaysforever\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[3].style.fontWeight =\"always * forever\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[3].style.fontSize =\"25\""];
-
+        
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[0].style.color =\"Dark Gray\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[0].style.fontFamily =\"alwaysforever\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[0].style.fontWeight =\"always * forever\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[0].style.fontSize =\"25\""];
-
-
-        NSString *script = [NSString stringWithFormat:@"document.getElementById('sign').innerHTML = '%@';", _myDict[@"assigne"]];
+        
+        
+        NSString *string9 = _myDict[@"assigne"];
+        NSString *newString = [string9 stringByReplacingOccurrencesOfString:@" " withString:@""];
+        NSString *script;
+        
+        if ([[UIScreen mainScreen] bounds].size.width == 320)
+        {
+            script = [NSString stringWithFormat:@"document.getElementById('sign').innerHTML='%@';",newString];
+            
+        }else{
+            script = [NSString stringWithFormat:@"document.getElementById('sign').innerHTML='%@';",string9];
+            
+        }
+        
+        
+        //NSString *string99 = [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementById('sign').offsetWidth;"];
+        
+        
+        
         
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         formatter.dateFormat = @"MM/dd/yyyy";
         NSString *string = [formatter stringFromDate:[NSDate date]];
-
         
         
-        NSString *script1 = [NSString stringWithFormat:@"document.getElementById('currDate').innerHTML = '%@';", string];
-
+        
+        NSString *script1 = [NSString stringWithFormat:@"document.getElementById('currDate').innerHTML = '%@';",string];
+        
+        
+        
+        //        [self.htmlWebView stringByEvaluatingJavaScriptFromString:string99];
+        
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:script];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:script1];
-
-//        self.editedHtmlStr = [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('html')[0].innerHTML"];
-
-
+        
+        //        self.editedHtmlStr = [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('html')[0].innerHTML"];
+        
+        
         [sender setImage: [UIImage imageNamed:@"checked.png"] forState:UIControlStateNormal];
         self.submitBtn.enabled = YES;
         NSLog(@"checked");
+        
+        
         //[self performSomeAction:sender];
     }
     else
@@ -315,32 +338,32 @@
         
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[1].style.color =\"Dark Gray\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[1].style.fontFamily =\"Courier New\""];
-//        [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[1].style.fontWeight =\"always * forever\""];
+        //        [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[1].style.fontWeight =\"always * forever\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[1].style.fontSize =\"30\""];
         
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[0].style.color =\"Dark Gray\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[0].style.fontFamily =\"Courier New\""];
         //        [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[1].style.fontWeight =\"always * forever\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[0].style.fontSize =\"30\""];
-
         
-                [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[2].style.color =\"Dark Gray\""];
-                [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[2].style.fontFamily =\"Courier New\""];
-                [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[2].style.fontWeight =\"always * forever\""];
-                [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[2].style.fontSize =\"20\""];
+        
+        [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[2].style.color =\"Dark Gray\""];
+        [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[2].style.fontFamily =\"Courier New\""];
+        [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[2].style.fontWeight =\"always * forever\""];
+        [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[2].style.fontSize =\"20\""];
         
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[4].style.color =\"Dark Gray\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[4].style.fontFamily =\"Courier New\""];
-//        [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[4].style.fontWeight =\"always * forever\""];
+        //        [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[4].style.fontWeight =\"always * forever\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[4].style.fontSize =\"30\""];
         
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[3].style.color =\"Dark Gray\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[3].style.fontFamily =\"Courier New\""];
-//        [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[3].style.fontWeight =\"always * forever\""];
+        //        [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[3].style.fontWeight =\"always * forever\""];
         [self.htmlWebView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('span')[3].style.fontSize =\"30\""];
-
-
-        self.submitBtn.backgroundColor = [UIColor colorWithRed:47/255.0 green:159/255.0 blue:199/255.0 alpha:0.5];
+        
+        
+        self.submitBtn.backgroundColor = [UIColor colorWithRed:138/255.0 green:30/255.0 blue:144/255.0 alpha:0.5];
         [sender setImage:[UIImage imageNamed:@"unchecked.png"] forState:UIControlStateNormal];
         NSLog(@"unchecked");
         //[self performSomeAction:sender];

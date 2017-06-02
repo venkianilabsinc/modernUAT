@@ -10,6 +10,8 @@
 #import "SettingsViewController.h"
 #import "CommentsTableViewCell.h"
 #import "PortfolioHttpClient.h"
+#import <UIImageView+AFNetworking.h>
+
 #define IS_IPHONE ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
 #define DEVICE_HEIGHT [[UIScreen mainScreen] bounds].size.height
 #define DEVICE_WIDTH [[UIScreen mainScreen] bounds].size.width
@@ -53,7 +55,8 @@
 @property (weak, nonatomic)    NSString *myStrOne;
 
 @property (weak, nonatomic)  NSString *DateString;
-
+@property (strong, nonatomic) NSMutableArray *documentsArray;
+@property (strong, nonatomic) NSMutableArray *myArray;
 @end
 
 @implementation TaskEditViewController
@@ -66,7 +69,9 @@
     self.templatesArray = [[NSMutableArray alloc] initWithCapacity:0];
     self.totalDict = [[NSMutableDictionary alloc] initWithCapacity:0];
     self.commentsArray = [[NSMutableArray alloc] initWithCapacity:0];
-    
+    self.documentsArray = [[NSMutableArray alloc] initWithCapacity:0];
+    self.myArray = [[NSMutableArray alloc] initWithCapacity:0];
+
     [self.titleBtn setTitleEdgeInsets:UIEdgeInsetsMake(0.0, 5.0, 0.0, 0.0)];
     [self.subTitleBtn setTitleEdgeInsets:UIEdgeInsetsMake(0.0, 5.0, 0.0, 0.0)];
 
@@ -136,7 +141,7 @@
     self.lastName.layer.masksToBounds = YES;
     
     self.attachmentBtn.layer.borderWidth = 1;
-    self.attachmentBtn.layer.borderColor = [[UIColor colorWithRed:81/255.0 green:122/255.0 blue:172/255.0 alpha:1.0] CGColor];
+    self.attachmentBtn.layer.borderColor = [[UIColor colorWithRed:138/255.0 green:30/255.0 blue:144/255.0 alpha:1.0] CGColor];
     self.attachmentBtn.layer.cornerRadius = self.attachmentBtn.frame.size.height/2;
     self.attachmentBtn.layer.masksToBounds = YES;
     
@@ -197,6 +202,9 @@
     self.openArray = [self.templatesArray valueForKey:@"Open"][0][0];
     
     self.commentsArray = self.editDict[@"comments"];
+    self.documentsArray = self.editDict[@"documents"];
+    
+    self.myArray = (NSMutableArray *)[self.documentsArray arrayByAddingObjectsFromArray:self.commentsArray];
 
 //    self.commentsTableView.backgroundColor = [UIColor redColor];
     
@@ -355,8 +363,15 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MM/dd/yyyy"];
     NSDate *date = [dateFormatter dateFromString:self.dateTxtfield.text];
-
+    
     self.DateString = [dateFormatter stringFromDate:date];
+    
+    //NSString *dateString =  @"2014-10-07T07:29:55.850Z";
+    NSDateFormatter *dateFormatter1 = [[NSDateFormatter alloc] init];
+    [dateFormatter1 setDateFormat:@"dd/MM/yyyy"];
+    NSDate *date1 = [dateFormatter dateFromString:self.DateString];
+    
+    self.DateString = [dateFormatter1 stringFromDate:date1];
 
     if ([self.DateString isEqualToString:@""] || [self.subjectTxtLbl.text isEqualToString:@""] || self.DateString == nil)  {
         
@@ -408,7 +423,6 @@
                          
                      }else{
                          [self.navigationController.tabBarController setSelectedIndex:1];
-                         
                      }
                      
                  }];
@@ -421,13 +435,10 @@
                  UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
                      //enter code here
                      
-                     
-                     
                  }];
                  [alert addAction:defaultAction];
                  //Present action where needed
                  [self presentViewController:alert animated:YES completion:nil];
-                 
              }
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
              [self.activityIndicator stopAnimating];
@@ -449,18 +460,11 @@
                  UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:responseObject[@"message"] preferredStyle:UIAlertControllerStyleAlert];
                  UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
                      //enter code here
+                     NSMutableArray *updateArray = [[NSMutableArray alloc] initWithCapacity:0];
+                     updateArray = responseObject[@"data"][0];
+                     self.dateTxtfield.text = [updateArray valueForKey:@"due_date"];
+                     self.subjectTxtLbl.text = [updateArray valueForKey:@"subject"];
                      
-                     
-                     //                                  [self.navigationController popViewControllerAnimated:YES];
-                     
-                     if (self.navigationController.tabBarController.selectedIndex == 1)
-                     {
-                         [self.navigationController.tabBarController setSelectedIndex:0];
-                         
-                     }else{
-                         [self.navigationController.tabBarController setSelectedIndex:1];
-                         
-                     }
                      
                  }];
                  [alert addAction:defaultAction];
@@ -481,11 +485,7 @@
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
              [self.activityIndicator stopAnimating];
          }];
-        
-
-
     }
-//        NSDictionary *params1 = @{@"due_by" : newDateString,
 }
 
 
@@ -547,31 +547,215 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.commentsArray.count;
+    return self.myArray.count;
     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSMutableDictionary *dict = [self.myArray objectAtIndex:indexPath.row];
     static NSString *cellIdentifier = @"commentsCellID";
-    
     CommentsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    NSString *myStr = [[self.commentsArray valueForKey:@"comment"] objectAtIndex:indexPath.row];
+    NSString *myStr = [[self.myArray valueForKey:@"comment"] objectAtIndex:indexPath.row];
+    NSString *myStr5 = [[self.myArray valueForKey:@"file_name"] objectAtIndex:indexPath.row];
     
-    NSString *myStr1 = [NSString stringWithFormat:@" on %@", [[self.commentsArray valueForKey:@"tym"] objectAtIndex:indexPath.row]];
+    NSString *myStr3 = [[self.myArray valueForKey:@"tym"] objectAtIndex:indexPath.row];
+    if (myStr3 == nil || [myStr3 isEqual:[NSNull null]])
+    {
+        myStr3 = @"";
+    }
+    
+    
+    NSString *myStr1 = [NSString stringWithFormat:@" on %@",myStr3 ];
+    
+    if (myStr1 == nil || [myStr1 isEqual:[NSNull null]])
+    {
+        myStr1 = @"";
+    }
+    if (myStr == nil || [myStr isEqual:[NSNull null]])
+    {
+        myStr = @"Image";
+    }
     
     NSString *myStr2 = [NSString stringWithFormat:@"%@%@", myStr, myStr1];
     
+    
+    if ([myStr2 isEqualToString:@"Image on "])
+    {
+        cell.commentsLbl.frame = CGRectMake(cell.commentsLbl.frame.origin.x, 2, cell.commentsLbl.frame.size.width, cell.commentsLbl.frame.size.height);
+        
+        cell.thumbImg.hidden = NO;
+        
+        NSString *urlStr = [NSString stringWithFormat:@"https:%@", dict[@"aws_url"]];
+        NSURL *imageURL = [NSURL URLWithString:urlStr];
+        // NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+        
+        // UIImage *image = [UIImage imageWithData:imageData];
+        //cell.imageView.image = image;
+        
+        [cell.thumbImg setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"ThumbPlaceHolder.png"]];
+        //        myStr2 = @"Click to view Attached Image";
+        myStr2 = [NSString stringWithFormat:@"Click to view %@", myStr5];
+    }else{
+        
+        cell.commentsLbl.frame = CGRectMake(cell.commentsLbl.frame.origin.x, 5, cell.commentsLbl.frame.size.width, cell.commentsLbl.frame.size.height);
+        cell.thumbImg.hidden = YES;
+        
+    }
     cell.commentsLbl.text = myStr2;
     
     return cell;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     
+    NSString *myStr = [[self.myArray valueForKey:@"comment"] objectAtIndex:indexPath.row];
+    NSString *myStr5 = [[self.myArray valueForKey:@"file_name"] objectAtIndex:indexPath.row];
+    
+    NSString *myStr3 = [[self.myArray valueForKey:@"tym"] objectAtIndex:indexPath.row];
+    if (myStr3 == nil || [myStr3 isEqual:[NSNull null]])
+    {
+        myStr3 = @"";
+    }
+    
+    
+    NSString *myStr1 = [NSString stringWithFormat:@" on %@",myStr3 ];
+    
+    if (myStr1 == nil || [myStr1 isEqual:[NSNull null]])
+    {
+        myStr1 = @"";
+    }
+    if (myStr == nil || [myStr isEqual:[NSNull null]])
+    {
+        myStr = @"Image";
+    }
+    
+    NSString *myStr2 = [NSString stringWithFormat:@"%@%@", myStr, myStr1];
+    
+    
+    if ([myStr2 isEqualToString:@"Image on "])
+    {
+        return 100.0f;
+        
+        
+    }else{
+        return 45.0f;
+    }
+    return 45.0f;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //    NSURL *url = [NSURL URLWithString:[[self.myArray valueForKey:@"aws_url"] objectAtIndex:indexPath.row]];
+    NSString *newStr = [NSString stringWithFormat:@"https:%@", [[self.myArray valueForKey:@"aws_url_origional"] objectAtIndex:indexPath.row]];
+    
+    if (newStr == nil || [newStr isEqual:[NSNull null]] || [newStr isEqualToString:@""])
+    {
+        return;
+    }
+    NSURL *url = [NSURL URLWithString:newStr];
+    
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(openURL:options:completionHandler:)]) {
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:NULL];
+    }else{
+        // Fallback on earlier versions
+        [[UIApplication sharedApplication] openURL:url];
+    }
+    
+    
+    //    [[UIApplication sharedApplication] openURL:url];
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return YES if you want the specified item to be editable.
+    NSMutableDictionary *dict = [self.myArray objectAtIndex:indexPath.row];
+    NSString *mystr1  = dict[@"aws_url_origional"];
+    
+    if (mystr1 == nil || [mystr1 isEqual:[NSNull null]] || [mystr1 isEqualToString:@""])
+    {
+        //        [self.commentsTableView reloadData];
+        return NO;
+    }
+    
+    return YES;
+}
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSMutableDictionary *dict = [self.myArray objectAtIndex:indexPath.row];
+    NSString *mystr1  = dict[@"aws_url_origional"];
+    if (mystr1 == nil || [mystr1 isEqual:[NSNull null]] || [mystr1 isEqualToString:@""])
+    {
+        [self.commentsTableView reloadData];
+        return;
+    }
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        //add code here for when you hit delete
+        NSMutableDictionary *dict = [self.myArray objectAtIndex:indexPath.row];
+        NSString *mystr  = [dict[@"id"] stringValue];
+        [self.activityIndicator startAnimating];
+        
+        if (mystr == nil || [mystr isEqual:[NSNull null]] || [mystr isEqualToString:@""])
+        {
+            mystr= @"";
+            return;
+        }
+        
+        PortfolioHttpClient *sharedObject = [PortfolioHttpClient portfolioSharedHttpClient];
+        NSDictionary *params1 = @{@"task_id" : dict[@"id"],
+                                  @"id" : mystr};
+        [sharedObject deletingImgeFromMobile:params1 success:^(NSDictionary *responseObject)
+         {
+             [self.activityIndicator stopAnimating];
+             NSLog(@"My responseObject \n%@", responseObject);
+             
+             if ([responseObject[@"status"] integerValue] == 200)
+             {
+                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:responseObject[@"message"] preferredStyle:UIAlertControllerStyleAlert];
+                 UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+                     //enter code here
+                     
+                     if (self.navigationController.tabBarController.selectedIndex == 1)
+                     {
+                         [self.navigationController.tabBarController setSelectedIndex:0];
+                         
+                     }else{
+                         [self.navigationController.tabBarController setSelectedIndex:1];
+                         
+                     }
+                 }];
+                 [alert addAction:defaultAction];
+                 //Present action where needed
+                 [self presentViewController:alert animated:YES completion:nil];
+                 
+             }else{
+                 
+                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert" message:responseObject[@"message"] preferredStyle:UIAlertControllerStyleAlert];
+                 UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+                     //enter code here
+                     
+                     //                     [self TaskDetailAPI];
+                 }];
+                 [alert addAction:defaultAction];
+                 //Present action where needed
+                 [self presentViewController:alert animated:YES completion:nil];
+                 
+             }
+             
+             
+             
+             
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             [self.activityIndicator stopAnimating];
+         }];
+    }
 }
 
 - (IBAction)typeChangeBtnClicked:(UIButton *)sender;

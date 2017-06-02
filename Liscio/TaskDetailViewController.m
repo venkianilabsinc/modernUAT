@@ -13,6 +13,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "TaskEditViewController.h"
 #import "WebViewController.h"
+#import <UIImageView+AFNetworking.h>
 
 #define IS_IPHONE ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
 #define DEVICE_HEIGHT [[UIScreen mainScreen] bounds].size.height
@@ -51,6 +52,7 @@
 @property BOOL isFromPdfFile;
 
 
+@property (weak, nonatomic) IBOutlet UIView *alerLbl;
 
 
 @end
@@ -112,7 +114,7 @@
     self.lastName.layer.masksToBounds = YES;
 
     self.attachmentBtn.layer.borderWidth = 1;
-    self.attachmentBtn.layer.borderColor = [[UIColor colorWithRed:81/255.0 green:122/255.0 blue:172/255.0 alpha:1.0] CGColor];
+    self.attachmentBtn.layer.borderColor = [[UIColor colorWithRed:138/255.0 green:30/255.0 blue:144/255.0 alpha:1.0] CGColor];
     self.attachmentBtn.layer.cornerRadius = self.attachmentBtn.frame.size.height/2;
     self.attachmentBtn.layer.masksToBounds = YES;
     
@@ -145,27 +147,11 @@
 
     [self.commentsTableView addGestureRecognizer:gestureRecognizer];
     
+    
 //    NSLog(@"%f", [[UIScreen mainScreen] bounds].size.width);
 
 //            self.commentsTableView.backgroundColor = [UIColor redColor];
 
-    if ([[UIScreen mainScreen] bounds].size.width == 320)
-    {
-        NSLog(@"iphone 5");
-        self.subjectTxtLbl.frame = CGRectMake(self.subjectTxtLbl.frame.origin.x, self.subjectTxtLbl.frame.origin.y,260, self.subjectTxtLbl.frame.size.height);
-        self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, self.commentsTableView.frame.origin.y,self.commentsTableView.frame.size.width, 200);
-
-    } else if ([[UIScreen mainScreen] bounds].size.width == 375)
-    {
-        NSLog(@"iphone 6");
-        self.subjectTxtLbl.frame = CGRectMake(self.subjectTxtLbl.frame.origin.x, self.subjectTxtLbl.frame.origin.y,260, self.subjectTxtLbl.frame.size.height);
-        self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, self.commentsTableView.frame.origin.y,self.commentsTableView.frame.size.width, 280);
-        
-    }
-    else{
-        self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, self.commentsTableView.frame.origin.y,self.commentsTableView.frame.size.width, 370);
-
-    }
 
     
 //    [self.parentViewController.tabBarController setSelectedIndex:1];
@@ -174,7 +160,26 @@
 
 -(void) viewWillAppear:(BOOL)animated
 {
+//    
+//    if ([[UIScreen mainScreen] bounds].size.width == 320)
+//    {
+//        NSLog(@"iphone 5");
+//        self.subjectTxtLbl.frame = CGRectMake(self.subjectTxtLbl.frame.origin.x, self.subjectTxtLbl.frame.origin.y,260, self.subjectTxtLbl.frame.size.height);
+//        self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, self.commentsTableView.frame.origin.y,self.commentsTableView.frame.size.width, 150);
+//        
+//    } else if ([[UIScreen mainScreen] bounds].size.width == 375)
+//    {
+//        NSLog(@"iphone 6");
+//        self.subjectTxtLbl.frame = CGRectMake(self.subjectTxtLbl.frame.origin.x, self.subjectTxtLbl.frame.origin.y,260, self.subjectTxtLbl.frame.size.height);
+//        self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, self.commentsTableView.frame.origin.y,self.commentsTableView.frame.size.width, 229);
+//        
+//    }
+//    else{
+//        self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, self.commentsTableView.frame.origin.y,self.commentsTableView.frame.size.width, 320);
+//        
+//    }
     [self TaskDetailAPI];
+
     
 }
 
@@ -213,8 +218,48 @@
          if (self.webViewStr == nil || [self.webViewStr isEqual:[NSNull null]])
          {
              self.documentBtn.hidden = YES;
+             
+             if ([[UIScreen mainScreen] bounds].size.width == 320)
+             {
+                 NSLog(@"iphone 5");
+                 self.subjectTxtLbl.frame = CGRectMake(self.subjectTxtLbl.frame.origin.x, self.subjectTxtLbl.frame.origin.y,260, self.subjectTxtLbl.frame.size.height);
+                 self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.attachmentBtn.frame) +5 ,self.commentsTableView.frame.size.width, 190);
+                 
+             } else if ([[UIScreen mainScreen] bounds].size.width == 375)
+             {
+                 NSLog(@"iphone 6");
+                 self.subjectTxtLbl.frame = CGRectMake(self.subjectTxtLbl.frame.origin.x, self.subjectTxtLbl.frame.origin.y,260, self.subjectTxtLbl.frame.size.height);
+                 self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.attachmentBtn.frame) +5,self.commentsTableView.frame.size.width, 275);
+                 
+             }
+             else{
+                 self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.attachmentBtn.frame) +5,self.commentsTableView.frame.size.width, 360);
+                 
+             }
+
+             
+             
          }else{
              self.documentBtn.hidden = NO;
+             
+             if ([[UIScreen mainScreen] bounds].size.width == 320)
+             {
+                 NSLog(@"iphone 5");
+                 self.subjectTxtLbl.frame = CGRectMake(self.subjectTxtLbl.frame.origin.x, self.subjectTxtLbl.frame.origin.y,260, self.subjectTxtLbl.frame.size.height);
+                 self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.documentBtn.frame) +5 ,self.commentsTableView.frame.size.width, 155);
+                 
+             } else if ([[UIScreen mainScreen] bounds].size.width == 375)
+             {
+                 NSLog(@"iphone 6");
+                 self.subjectTxtLbl.frame = CGRectMake(self.subjectTxtLbl.frame.origin.x, self.subjectTxtLbl.frame.origin.y,260, self.subjectTxtLbl.frame.size.height);
+                 self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.documentBtn.frame) +5,self.commentsTableView.frame.size.width, 235);
+                 
+             }
+             else{
+                 self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, CGRectGetMaxY(self.documentBtn.frame) +5,self.commentsTableView.frame.size.width, 325);
+                 
+             }
+
              
          }
 
@@ -422,12 +467,7 @@
              [alert addAction:defaultAction];
              //Present action where needed
              [self presentViewController:alert animated:YES completion:nil];
-             
-
-
              NSLog(@"My responseObject \n%@", responseObject);
-             
-             
          }
          else
          {
@@ -501,6 +541,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSMutableDictionary *dict = [self.myArray objectAtIndex:indexPath.row];
     static NSString *cellIdentifier = @"commentsCellID";
     CommentsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
@@ -530,11 +571,27 @@
     
     if ([myStr2 isEqualToString:@"Image on "])
     {
+        cell.commentsLbl.frame = CGRectMake(cell.commentsLbl.frame.origin.x, 2, cell.commentsLbl.frame.size.width, cell.commentsLbl.frame.size.height);
+
+        cell.thumbImg.hidden = NO;
+        
+        NSString *urlStr = [NSString stringWithFormat:@"https:%@", dict[@"aws_url"]];
+        NSURL *imageURL = [NSURL URLWithString:urlStr];
+       // NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+        
+       // UIImage *image = [UIImage imageWithData:imageData];
+        //cell.imageView.image = image;
+        
+        [cell.thumbImg setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"ThumbPlaceHolder.png"]];
 //        myStr2 = @"Click to view Attached Image";
         myStr2 = [NSString stringWithFormat:@"Click to view %@", myStr5];
+    }else{
+        
+        cell.commentsLbl.frame = CGRectMake(cell.commentsLbl.frame.origin.x, 5, cell.commentsLbl.frame.size.width, cell.commentsLbl.frame.size.height);
+        cell.thumbImg.hidden = YES;
+
     }
-    
-        cell.commentsLbl.text = myStr2;
+    cell.commentsLbl.text = myStr2;
     
         return cell;
 }
@@ -542,7 +599,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 //    NSURL *url = [NSURL URLWithString:[[self.myArray valueForKey:@"aws_url"] objectAtIndex:indexPath.row]];
-    NSString *newStr = [NSString stringWithFormat:@"https:%@", [[self.myArray valueForKey:@"aws_url"] objectAtIndex:indexPath.row]];
+    NSString *newStr = [NSString stringWithFormat:@"https:%@", [[self.myArray valueForKey:@"aws_url_origional"] objectAtIndex:indexPath.row]];
 
     if (newStr == nil || [newStr isEqual:[NSNull null]] || [newStr isEqualToString:@""])
     {
@@ -563,11 +620,51 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSString *myStr = [[self.myArray valueForKey:@"comment"] objectAtIndex:indexPath.row];
+    NSString *myStr5 = [[self.myArray valueForKey:@"file_name"] objectAtIndex:indexPath.row];
+    
+    NSString *myStr3 = [[self.myArray valueForKey:@"tym"] objectAtIndex:indexPath.row];
+    if (myStr3 == nil || [myStr3 isEqual:[NSNull null]])
+    {
+        myStr3 = @"";
+    }
+    
+    
+    NSString *myStr1 = [NSString stringWithFormat:@" on %@",myStr3 ];
+    
+    if (myStr1 == nil || [myStr1 isEqual:[NSNull null]])
+    {
+        myStr1 = @"";
+    }
+    if (myStr == nil || [myStr isEqual:[NSNull null]])
+    {
+        myStr = @"Image";
+    }
+    
+    NSString *myStr2 = [NSString stringWithFormat:@"%@%@", myStr, myStr1];
+    
+    
+    if ([myStr2 isEqualToString:@"Image on "])
+    {
+        return 100.0f;
+ 
+        
+    }else{
+        return 47.0f;
+    }
+    return 47.0f;
+}
+
+# pragma mark - Cell Setup
+
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return YES if you want the specified item to be editable.
     NSMutableDictionary *dict = [self.myArray objectAtIndex:indexPath.row];
-    NSString *mystr1  = dict[@"aws_url"];
+    NSString *mystr1  = dict[@"aws_url_origional"];
 
     if (mystr1 == nil || [mystr1 isEqual:[NSNull null]] || [mystr1 isEqualToString:@""])
     {
@@ -582,7 +679,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSMutableDictionary *dict = [self.myArray objectAtIndex:indexPath.row];
-    NSString *mystr1  = dict[@"aws_url"];
+    NSString *mystr1  = dict[@"aws_url_origional"];
     if (mystr1 == nil || [mystr1 isEqual:[NSNull null]] || [mystr1 isEqualToString:@""])
     {
         [self.commentsTableView reloadData];
@@ -612,7 +709,7 @@
              
              if ([responseObject[@"status"] integerValue] == 200)
              {
-                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert" message:responseObject[@"message"] preferredStyle:UIAlertControllerStyleAlert];
+                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:responseObject[@"message"] preferredStyle:UIAlertControllerStyleAlert];
                  UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
                      //enter code here
                      
@@ -734,7 +831,7 @@
          [self.activityIndicator stopAnimating];
          NSLog(@"My responseObject \n%@", responseObject);
          
-         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert" message:responseObject[@"message"] preferredStyle:UIAlertControllerStyleAlert];
+         UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:responseObject[@"message"] preferredStyle:UIAlertControllerStyleAlert];
          UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
              //enter code here
              
@@ -795,9 +892,16 @@
          
          if ([responseObject[@"status"] integerValue] == 200)
          {
-             UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:responseObject[@"message"] preferredStyle:UIAlertControllerStyleAlert];
-             UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
-                 //enter code here
+             self.firstName.hidden = YES;
+             self.dateTxtLbl.hidden = YES;
+             self.name.hidden = YES;
+             self.calenderLbl.hidden = YES;
+             self.alerLbl.hidden = NO;
+             
+             int duration = 3; // duration in seconds
+             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, duration * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                 
+                 self.alerLbl.hidden = YES;
                  
                  if (self.navigationController.tabBarController.selectedIndex == 1)
                  {
@@ -808,10 +912,32 @@
                      
                  }
                  
-             }];
-             [alert addAction:defaultAction];
-             //Present action where needed
-             [self presentViewController:alert animated:YES completion:nil];
+                 self.firstName.hidden = NO;
+                 self.dateTxtLbl.hidden = NO;
+                 self.name.hidden = NO;
+                 self.calenderLbl.hidden = NO;
+                 
+                 
+                 
+             });
+             
+             /* UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:responseObject[@"message"] preferredStyle:UIAlertControllerStyleAlert];
+              UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+              //enter code here
+              
+              if (self.navigationController.tabBarController.selectedIndex == 1)
+              {
+              [self.navigationController.tabBarController setSelectedIndex:0];
+              
+              }else{
+              [self.navigationController.tabBarController setSelectedIndex:1];
+              
+              }
+              
+              }];
+              [alert addAction:defaultAction];
+              //Present action where needed
+              [self presentViewController:alert animated:YES completion:nil];*/
              
          }else{
              UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert" message:responseObject[@"message"] preferredStyle:UIAlertControllerStyleAlert];

@@ -46,7 +46,7 @@
     
     self.moreBtn.layer.borderWidth = 1.0;
     self.moreBtn.layer.borderColor = [[UIColor colorWithRed:81.0/255.0 green:122.0/255.0 blue:172.0/255.0 alpha:1.0] CGColor];
-    self.moreBtn.layer.cornerRadius = 10;
+    self.moreBtn.layer.cornerRadius = 3.0;
     self.moreBtn.layer.masksToBounds = YES;
     
     self.countLbl.layer.cornerRadius = self.countLbl.frame.size.height/2;

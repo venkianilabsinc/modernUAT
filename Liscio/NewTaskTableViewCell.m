@@ -1,20 +1,21 @@
 //
-//  CommentsTableViewCell.m
-//  Liscio
+//  NewTaskTableViewCell.m
+//  ModernAdvisors
 //
-//  Created by Anilabs Inc on 30/03/17.
+//  Created by Anilabs - Venki on 5/17/17.
 //  Copyright © 2017 anilabsinc. All rights reserved.
 //
 
-#import "CommentsTableViewCell.h"
+#import "NewTaskTableViewCell.h"
 
-@implementation CommentsTableViewCell
+@implementation NewTaskTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    // Initialization code
+    
     
 
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
