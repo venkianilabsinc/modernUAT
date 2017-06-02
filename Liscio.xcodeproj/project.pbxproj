@@ -13,12 +13,10 @@
 		5E11A44C1EA8EDB7005588CC /* TeamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E11A44B1EA8EDB7005588CC /* TeamDetailViewController.m */; };
 		5E11A44F1EA8EDCE005588CC /* TeamDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E11A44E1EA8EDCE005588CC /* TeamDetailTableViewCell.m */; };
 		5E19ACE31EDDDDB700913C04 /* ThumbPlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E19ACE21EDDDDB700913C04 /* ThumbPlaceHolder.png */; };
-		5E37F9B41EAE74D400E3F308 /* root_advisor_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E37F9B31EAE74D400E3F308 /* root_advisor_logo.png */; };
 		5E3F54F71EB7060E00BCAC87 /* 00_login_screen_640x1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E3F54F61EB7060E00BCAC87 /* 00_login_screen_640x1136.png */; };
 		5E45E3981EBC60200085DE4A /* login_logo_liscio.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E45E3971EBC60200085DE4A /* login_logo_liscio.png */; };
 		5E57BA391E9FD82E007C0DDD /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E57BA371E9FD82E007C0DDD /* checked.png */; };
 		5E57BA3A1E9FD82E007C0DDD /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E57BA381E9FD82E007C0DDD /* unchecked.png */; };
-		5E63E0DA1EDBEF3A007C6720 /* avatar40*40.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E63E0D91EDBEF3A007C6720 /* avatar40*40.png */; };
 		5E63E0E11EDD2DE8007C6720 /* NewTaskCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E63E0E01EDD2DE8007C6720 /* NewTaskCollectionViewCell.m */; };
 		5EBC21551EC99C9B00C232D8 /* contact_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EBC21541EC99C9B00C232D8 /* contact_placeholder.png */; };
 		5EBC21621EC9A2F400C232D8 /* account_icon_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EBC21561EC9A2F400C232D8 /* account_icon_active.png */; };
@@ -111,12 +109,10 @@
 		5E11A44E1EA8EDCE005588CC /* TeamDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamDetailTableViewCell.m; sourceTree = "<group>"; };
 		5E19ACE21EDDDDB700913C04 /* ThumbPlaceHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThumbPlaceHolder.png; sourceTree = "<group>"; };
 		5E1FD85C1EE010A1002D8001 /* Liscio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Liscio.entitlements; sourceTree = "<group>"; };
-		5E37F9B31EAE74D400E3F308 /* root_advisor_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = root_advisor_logo.png; sourceTree = "<group>"; };
 		5E3F54F61EB7060E00BCAC87 /* 00_login_screen_640x1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 00_login_screen_640x1136.png; sourceTree = "<group>"; };
 		5E45E3971EBC60200085DE4A /* login_logo_liscio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_logo_liscio.png; sourceTree = "<group>"; };
 		5E57BA371E9FD82E007C0DDD /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
 		5E57BA381E9FD82E007C0DDD /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
-		5E63E0D91EDBEF3A007C6720 /* avatar40*40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar40*40.png"; sourceTree = "<group>"; };
 		5E63E0DF1EDD2DE8007C6720 /* NewTaskCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTaskCollectionViewCell.h; sourceTree = "<group>"; };
 		5E63E0E01EDD2DE8007C6720 /* NewTaskCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTaskCollectionViewCell.m; sourceTree = "<group>"; };
 		5EBC21541EC99C9B00C232D8 /* contact_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact_placeholder.png; sourceTree = "<group>"; };
@@ -348,7 +344,6 @@
 				5EBC21E61ECAF04B00C232D8 /* UIFloatLabelTextField.h */,
 				5EBC21E71ECAF04B00C232D8 /* UIFloatLabelTextField.m */,
 				8FE7321B1E366728007A6B1F /* Main.storyboard */,
-				5E63E0D91EDBEF3A007C6720 /* avatar40*40.png */,
 				5E08A7611EA9051E008219DB /* avatar.png */,
 				8F836D971E40F330009E4499 /* toggle_off.png */,
 				8F836D981E40F330009E4499 /* toggle_on.png */,
@@ -362,7 +357,6 @@
 				8F4DD5E41E84D0C50034D9E8 /* TextfieldViewController.h */,
 				8F4DD5E31E84D0C50034D9E8 /* TextfieldViewController.m */,
 				5E19ACE21EDDDDB700913C04 /* ThumbPlaceHolder.png */,
-				5E37F9B31EAE74D400E3F308 /* root_advisor_logo.png */,
 				5EF54E661E9DFD880029CF1E /* always.ttf */,
 				5EBC21541EC99C9B00C232D8 /* contact_placeholder.png */,
 				5EBC21561EC9A2F400C232D8 /* account_icon_active.png */,
@@ -566,7 +560,6 @@
 				5EBC216B1EC9A2F400C232D8 /* task_icon.png in Resources */,
 				5E57BA391E9FD82E007C0DDD /* checked.png in Resources */,
 				5EBC21651EC9A2F400C232D8 /* add_task_icon.png in Resources */,
-				5E37F9B41EAE74D400E3F308 /* root_advisor_logo.png in Resources */,
 				8FE7321F1E366728007A6B1F /* Assets.xcassets in Resources */,
 				5EBC21671EC9A2F400C232D8 /* contact_icon.png in Resources */,
 				5EBC216C1EC9A2F400C232D8 /* team_icon_active.png in Resources */,
@@ -578,7 +571,6 @@
 				5EBC21621EC9A2F400C232D8 /* account_icon_active.png in Resources */,
 				5EBC21641EC9A2F400C232D8 /* add_task_icon_active.png in Resources */,
 				8FE7324C1E366796007A6B1F /* icomoon.woff in Resources */,
-				5E63E0DA1EDBEF3A007C6720 /* avatar40*40.png in Resources */,
 				8F836D9A1E40F330009E4499 /* toggle_on.png in Resources */,
 				5E08A7621EA9051E008219DB /* avatar.png in Resources */,
 				5E19ACE31EDDDDB700913C04 /* ThumbPlaceHolder.png in Resources */,
