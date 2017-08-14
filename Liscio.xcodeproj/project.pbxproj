@@ -76,7 +76,6 @@
 		8FE732561E36762E007A6B1F /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE732551E36762E007A6B1F /* AlertViewController.m */; };
 		8FE732591E367781007A6B1F /* LiscioAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE732581E367781007A6B1F /* LiscioAlertViewController.m */; };
 		8FE7325B1E367E3B007A6B1F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FE7325A1E367E3B007A6B1F /* Images.xcassets */; };
-		8FF27F571E93FA8F002D48AC /* TaskEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF27F561E93FA8F002D48AC /* TaskEditViewController.m */; };
 		C83E66A06A7CB0D821BDDF6A /* libPods-LiscioTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7E02705D682FB152CA2092 /* libPods-LiscioTests.a */; };
 /* End PBXBuildFile section */
 
@@ -207,8 +206,6 @@
 		8FE732571E367781007A6B1F /* LiscioAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiscioAlertViewController.h; sourceTree = "<group>"; };
 		8FE732581E367781007A6B1F /* LiscioAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = LiscioAlertViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8FE7325A1E367E3B007A6B1F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8FF27F551E93FA8F002D48AC /* TaskEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskEditViewController.h; sourceTree = "<group>"; };
-		8FF27F561E93FA8F002D48AC /* TaskEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TaskEditViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		94FA0DE0A835E1015E28B07E /* Pods-LiscioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiscioUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiscioUITests/Pods-LiscioUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AD7E02705D682FB152CA2092 /* libPods-LiscioTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LiscioTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2EF4699C6B7F537681E2CFB /* libPods-Liscio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Liscio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -309,8 +306,6 @@
 				8FDD395D1E3BA97E006E9222 /* TaskDetailViewController.m */,
 				5EF54E621E9D4F680029CF1E /* WebViewController.h */,
 				5EF54E631E9D4F680029CF1E /* WebViewController.m */,
-				8FF27F551E93FA8F002D48AC /* TaskEditViewController.h */,
-				8FF27F561E93FA8F002D48AC /* TaskEditViewController.m */,
 				8F1D72551E8D4B5100A55E61 /* CommentsTableViewCell.h */,
 				8F1D72561E8D4B5100A55E61 /* CommentsTableViewCell.m */,
 				8F789C771E39FDB4006375C8 /* NewTasksViewController.h */,
@@ -763,7 +758,6 @@
 				8F3482591E3A77DF00D0AD71 /* NewsTableViewCell.m in Sources */,
 				8F4DD5E51E84D0C50034D9E8 /* TextfieldViewController.m in Sources */,
 				8F34824F1E3A6B6A00D0AD71 /* TeamTableViewCell.m in Sources */,
-				8FF27F571E93FA8F002D48AC /* TaskEditViewController.m in Sources */,
 				8F34825C1E3A796200D0AD71 /* MyRelatedTableViewCell.m in Sources */,
 				8F34825F1E3A808900D0AD71 /* OpenTasksTableViewCell.m in Sources */,
 				5E11A44C1EA8EDB7005588CC /* TeamDetailViewController.m in Sources */,
