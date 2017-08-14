@@ -13,4 +13,6 @@
 @property (strong, nonatomic) NSString *taskString;
 @property BOOL isfromPdf;
 @property (strong, nonatomic) NSMutableDictionary *myDict;
+@property (strong, nonatomic) NSMutableDictionary *reviewDict;
+
 @end

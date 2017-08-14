@@ -41,6 +41,9 @@
 @property (strong, nonatomic) NSMutableDictionary *accountsDict;
 
 @property (strong, nonatomic) NSMutableArray *dependantArray;
+@property (weak, nonatomic) IBOutlet UIButton *backBtn;
+
+
 
 @end
 
@@ -49,8 +52,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.settingBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:25]];
-    [self.settingBtn setTitle:[NSString stringWithUTF8String:"\uE626"] forState:UIControlStateNormal];
+    [self.settingBtn.titleLabel setFont:[UIFont fontWithName:@"liscio" size:25]];
+    [self.settingBtn setTitle:[NSString stringWithUTF8String:"\ue94f"] forState:UIControlStateNormal];
     
     self.accountsDict  = [[NSMutableDictionary alloc] initWithCapacity:0];
     self.dependantArray  = [[NSMutableArray alloc] initWithCapacity:0];
@@ -61,8 +64,23 @@
 
     }
 
+    
+    [self.backBtn.titleLabel setFont:[UIFont fontWithName:@"liscio" size:20]];
+    [self.backBtn setTitle:[NSString stringWithUTF8String:"\uE752"] forState:UIControlStateNormal];
+    
+    self.backBtn.layer.borderWidth = 1;
+    self.backBtn.layer.borderColor = [[UIColor darkGrayColor] CGColor];
+    self.backBtn.layer.cornerRadius = self.backBtn.frame.size.height/2;
+    self.backBtn.layer.masksToBounds = YES;
+
+
 
 }
+-(IBAction)backBtnPressed:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 -(void) viewWillAppear:(BOOL)animated
 {

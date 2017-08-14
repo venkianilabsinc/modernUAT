@@ -13,8 +13,14 @@
 		5E11A44C1EA8EDB7005588CC /* TeamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E11A44B1EA8EDB7005588CC /* TeamDetailViewController.m */; };
 		5E11A44F1EA8EDCE005588CC /* TeamDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E11A44E1EA8EDCE005588CC /* TeamDetailTableViewCell.m */; };
 		5E19ACE31EDDDDB700913C04 /* ThumbPlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E19ACE21EDDDDB700913C04 /* ThumbPlaceHolder.png */; };
-		5E3F54F71EB7060E00BCAC87 /* 00_login_screen_640x1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E3F54F61EB7060E00BCAC87 /* 00_login_screen_640x1136.png */; };
-		5E45E3981EBC60200085DE4A /* login_logo_liscio.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E45E3971EBC60200085DE4A /* login_logo_liscio.png */; };
+		5E21438C1F273980001F6317 /* team_icon_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E21438A1F273980001F6317 /* team_icon_active.png */; };
+		5E21438D1F273980001F6317 /* team_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E21438B1F273980001F6317 /* team_icon.png */; };
+		5E270DB71F062DE300DD1E82 /* liscio.eot in Resources */ = {isa = PBXBuildFile; fileRef = 5E270DB21F062DE200DD1E82 /* liscio.eot */; };
+		5E270DB81F062DE300DD1E82 /* liscio.svg in Resources */ = {isa = PBXBuildFile; fileRef = 5E270DB31F062DE200DD1E82 /* liscio.svg */; };
+		5E270DB91F062DE300DD1E82 /* liscio.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E270DB41F062DE300DD1E82 /* liscio.ttf */; };
+		5E270DBA1F062DE300DD1E82 /* liscio.woff in Resources */ = {isa = PBXBuildFile; fileRef = 5E270DB51F062DE300DD1E82 /* liscio.woff */; };
+		5E270DBB1F062DE300DD1E82 /* liscio.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 5E270DB61F062DE300DD1E82 /* liscio.woff2 */; };
+		5E53363F1F34529500FC71C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E53363E1F34529500FC71C7 /* GoogleService-Info.plist */; };
 		5E57BA391E9FD82E007C0DDD /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E57BA371E9FD82E007C0DDD /* checked.png */; };
 		5E57BA3A1E9FD82E007C0DDD /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E57BA381E9FD82E007C0DDD /* unchecked.png */; };
 		5E63E0E11EDD2DE8007C6720 /* NewTaskCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E63E0E01EDD2DE8007C6720 /* NewTaskCollectionViewCell.m */; };
@@ -29,10 +35,12 @@
 		5EBC21691EC9A2F400C232D8 /* home_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EBC215D1EC9A2F400C232D8 /* home_icon.png */; };
 		5EBC216A1EC9A2F400C232D8 /* task_icon_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EBC215E1EC9A2F400C232D8 /* task_icon_active.png */; };
 		5EBC216B1EC9A2F400C232D8 /* task_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EBC215F1EC9A2F400C232D8 /* task_icon.png */; };
-		5EBC216C1EC9A2F400C232D8 /* team_icon_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EBC21601EC9A2F400C232D8 /* team_icon_active.png */; };
-		5EBC216D1EC9A2F400C232D8 /* team_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EBC21611EC9A2F400C232D8 /* team_icon.png */; };
-		5EBC21E81ECAF04B00C232D8 /* UIFloatLabelTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBC21E71ECAF04B00C232D8 /* UIFloatLabelTextField.m */; };
-		5ED7274E1EADCE7F00918968 /* login_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ED7274D1EADCE7F00918968 /* login_logo.png */; };
+		5EBF77E31F2F97DB0036E6C3 /* send_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EBF77E11F2F97DB0036E6C3 /* send_btn.png */; };
+		5EBF77E51F2F99400036E6C3 /* attachment_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EBF77E41F2F99400036E6C3 /* attachment_ico.png */; };
+		5EE4E16E1F13978E00FE9903 /* modern_footer.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE4E16C1F13978E00FE9903 /* modern_footer.png */; };
+		5EE4E16F1F13978E00FE9903 /* modern_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE4E16D1F13978E00FE9903 /* modern_header.png */; };
+		5EE4E8A31F07ABB7008C887F /* bg_modernadvisor.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE4E8A21F07ABB7008C887F /* bg_modernadvisor.png */; };
+		5EE4E8A51F07ACC8008C887F /* login_logo_modern.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE4E8A41F07ACC8008C887F /* login_logo_modern.png */; };
 		5EED8A911ED27D7F00D6EFA1 /* NewTaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EED8A901ED27D7F00D6EFA1 /* NewTaskTableViewCell.m */; };
 		5EF54E641E9D4F680029CF1E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF54E631E9D4F680029CF1E /* WebViewController.m */; };
 		5EF54E671E9DFD880029CF1E /* always.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF54E661E9DFD880029CF1E /* always.ttf */; };
@@ -42,7 +50,6 @@
 		8F34824C1E3A6ACC00D0AD71 /* TeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F34824B1E3A6ACC00D0AD71 /* TeamViewController.m */; };
 		8F34824F1E3A6B6A00D0AD71 /* TeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F34824E1E3A6B6A00D0AD71 /* TeamTableViewCell.m */; };
 		8F3482541E3A73AB00D0AD71 /* HomeTasksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3482531E3A73AB00D0AD71 /* HomeTasksTableViewCell.m */; };
-		8F3482561E3A77AA00D0AD71 /* news_bullete.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3482551E3A77AA00D0AD71 /* news_bullete.png */; };
 		8F3482591E3A77DF00D0AD71 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3482581E3A77DF00D0AD71 /* NewsTableViewCell.m */; };
 		8F34825C1E3A796200D0AD71 /* MyRelatedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F34825B1E3A796200D0AD71 /* MyRelatedTableViewCell.m */; };
 		8F34825F1E3A808900D0AD71 /* OpenTasksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F34825E1E3A808900D0AD71 /* OpenTasksTableViewCell.m */; };
@@ -55,8 +62,6 @@
 		8F789C7F1E39FDDD006375C8 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F789C7E1E39FDDD006375C8 /* NewsViewController.m */; };
 		8F789C821E3A0533006375C8 /* MainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F789C811E3A0533006375C8 /* MainTabViewController.m */; };
 		8F789C851E3A0972006375C8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F789C841E3A0972006375C8 /* SettingsViewController.m */; };
-		8F836D991E40F330009E4499 /* toggle_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F836D971E40F330009E4499 /* toggle_off.png */; };
-		8F836D9A1E40F330009E4499 /* toggle_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F836D981E40F330009E4499 /* toggle_on.png */; };
 		8FDD395E1E3BA97E006E9222 /* TaskDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDD395D1E3BA97E006E9222 /* TaskDetailViewController.m */; };
 		8FDD39751E3BB962006E9222 /* Home1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDD39741E3BB962006E9222 /* Home1ViewController.m */; };
 		8FE732141E366728007A6B1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE732131E366728007A6B1F /* main.m */; };
@@ -67,11 +72,6 @@
 		8FE732221E366728007A6B1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE732201E366728007A6B1F /* LaunchScreen.storyboard */; };
 		8FE7322D1E366728007A6B1F /* LiscioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE7322C1E366728007A6B1F /* LiscioTests.m */; };
 		8FE732381E366728007A6B1F /* LiscioUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE732371E366728007A6B1F /* LiscioUITests.m */; };
-		8FE7324B1E366796007A6B1F /* icomoon.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 8FE732451E366796007A6B1F /* icomoon.woff2 */; };
-		8FE7324C1E366796007A6B1F /* icomoon.woff in Resources */ = {isa = PBXBuildFile; fileRef = 8FE732461E366796007A6B1F /* icomoon.woff */; };
-		8FE7324D1E366796007A6B1F /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FE732471E366796007A6B1F /* icomoon.ttf */; };
-		8FE7324E1E366796007A6B1F /* icomoon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8FE732481E366796007A6B1F /* icomoon.svg */; };
-		8FE7324F1E366796007A6B1F /* icomoon.eot in Resources */ = {isa = PBXBuildFile; fileRef = 8FE732491E366796007A6B1F /* icomoon.eot */; };
 		8FE732531E366F73007A6B1F /* ForgotPasswrdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE732521E366F73007A6B1F /* ForgotPasswrdViewController.m */; };
 		8FE732561E36762E007A6B1F /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE732551E36762E007A6B1F /* AlertViewController.m */; };
 		8FE732591E367781007A6B1F /* LiscioAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE732581E367781007A6B1F /* LiscioAlertViewController.m */; };
@@ -104,13 +104,19 @@
 		3348A559F865237720C85765 /* Pods-LiscioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiscioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiscioTests/Pods-LiscioTests.release.xcconfig"; sourceTree = "<group>"; };
 		5E08A7611EA9051E008219DB /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		5E11A44A1EA8EDB7005588CC /* TeamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamDetailViewController.h; sourceTree = "<group>"; };
-		5E11A44B1EA8EDB7005588CC /* TeamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamDetailViewController.m; sourceTree = "<group>"; };
+		5E11A44B1EA8EDB7005588CC /* TeamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TeamDetailViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5E11A44D1EA8EDCE005588CC /* TeamDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamDetailTableViewCell.h; sourceTree = "<group>"; };
 		5E11A44E1EA8EDCE005588CC /* TeamDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamDetailTableViewCell.m; sourceTree = "<group>"; };
 		5E19ACE21EDDDDB700913C04 /* ThumbPlaceHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThumbPlaceHolder.png; sourceTree = "<group>"; };
 		5E1FD85C1EE010A1002D8001 /* Liscio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Liscio.entitlements; sourceTree = "<group>"; };
-		5E3F54F61EB7060E00BCAC87 /* 00_login_screen_640x1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 00_login_screen_640x1136.png; sourceTree = "<group>"; };
-		5E45E3971EBC60200085DE4A /* login_logo_liscio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_logo_liscio.png; sourceTree = "<group>"; };
+		5E21438A1F273980001F6317 /* team_icon_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = team_icon_active.png; sourceTree = "<group>"; };
+		5E21438B1F273980001F6317 /* team_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = team_icon.png; sourceTree = "<group>"; };
+		5E270DB21F062DE200DD1E82 /* liscio.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = liscio.eot; sourceTree = "<group>"; };
+		5E270DB31F062DE200DD1E82 /* liscio.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = liscio.svg; sourceTree = "<group>"; };
+		5E270DB41F062DE300DD1E82 /* liscio.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = liscio.ttf; sourceTree = "<group>"; };
+		5E270DB51F062DE300DD1E82 /* liscio.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = liscio.woff; sourceTree = "<group>"; };
+		5E270DB61F062DE300DD1E82 /* liscio.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = liscio.woff2; sourceTree = "<group>"; };
+		5E53363E1F34529500FC71C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E57BA371E9FD82E007C0DDD /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
 		5E57BA381E9FD82E007C0DDD /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
 		5E63E0DF1EDD2DE8007C6720 /* NewTaskCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTaskCollectionViewCell.h; sourceTree = "<group>"; };
@@ -126,15 +132,16 @@
 		5EBC215D1EC9A2F400C232D8 /* home_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_icon.png; sourceTree = "<group>"; };
 		5EBC215E1EC9A2F400C232D8 /* task_icon_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = task_icon_active.png; sourceTree = "<group>"; };
 		5EBC215F1EC9A2F400C232D8 /* task_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = task_icon.png; sourceTree = "<group>"; };
-		5EBC21601EC9A2F400C232D8 /* team_icon_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = team_icon_active.png; sourceTree = "<group>"; };
-		5EBC21611EC9A2F400C232D8 /* team_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = team_icon.png; sourceTree = "<group>"; };
-		5EBC21E61ECAF04B00C232D8 /* UIFloatLabelTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFloatLabelTextField.h; sourceTree = "<group>"; };
-		5EBC21E71ECAF04B00C232D8 /* UIFloatLabelTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFloatLabelTextField.m; sourceTree = "<group>"; };
-		5ED7274D1EADCE7F00918968 /* login_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_logo.png; sourceTree = "<group>"; };
+		5EBF77E11F2F97DB0036E6C3 /* send_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = send_btn.png; sourceTree = "<group>"; };
+		5EBF77E41F2F99400036E6C3 /* attachment_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attachment_ico.png; sourceTree = "<group>"; };
+		5EE4E16C1F13978E00FE9903 /* modern_footer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modern_footer.png; sourceTree = "<group>"; };
+		5EE4E16D1F13978E00FE9903 /* modern_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modern_header.png; sourceTree = "<group>"; };
+		5EE4E8A21F07ABB7008C887F /* bg_modernadvisor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_modernadvisor.png; sourceTree = "<group>"; };
+		5EE4E8A41F07ACC8008C887F /* login_logo_modern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_logo_modern.png; sourceTree = "<group>"; };
 		5EED8A8F1ED27D7F00D6EFA1 /* NewTaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTaskTableViewCell.h; sourceTree = "<group>"; };
 		5EED8A901ED27D7F00D6EFA1 /* NewTaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTaskTableViewCell.m; sourceTree = "<group>"; };
 		5EF54E621E9D4F680029CF1E /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		5EF54E631E9D4F680029CF1E /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		5EF54E631E9D4F680029CF1E /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = WebViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5EF54E661E9DFD880029CF1E /* always.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = always.ttf; sourceTree = "<group>"; };
 		67105DE2975E624C047EC4E1 /* Pods-LiscioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiscioUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiscioUITests/Pods-LiscioUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F17D43D1E82EAA900D64211 /* PortfolioHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortfolioHttpClient.m; sourceTree = "<group>"; };
@@ -144,12 +151,11 @@
 		8F1F47ED1E3D0EFA002461E4 /* NIDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIDropDown.h; sourceTree = "<group>"; };
 		8F1F47EE1E3D0EFA002461E4 /* NIDropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIDropDown.m; sourceTree = "<group>"; };
 		8F34824A1E3A6ACC00D0AD71 /* TeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamViewController.h; sourceTree = "<group>"; };
-		8F34824B1E3A6ACC00D0AD71 /* TeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamViewController.m; sourceTree = "<group>"; };
+		8F34824B1E3A6ACC00D0AD71 /* TeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TeamViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8F34824D1E3A6B6A00D0AD71 /* TeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamTableViewCell.h; sourceTree = "<group>"; };
 		8F34824E1E3A6B6A00D0AD71 /* TeamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamTableViewCell.m; sourceTree = "<group>"; };
 		8F3482521E3A73AB00D0AD71 /* HomeTasksTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTasksTableViewCell.h; sourceTree = "<group>"; };
 		8F3482531E3A73AB00D0AD71 /* HomeTasksTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTasksTableViewCell.m; sourceTree = "<group>"; };
-		8F3482551E3A77AA00D0AD71 /* news_bullete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news_bullete.png; sourceTree = "<group>"; };
 		8F3482571E3A77DF00D0AD71 /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
 		8F3482581E3A77DF00D0AD71 /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
 		8F34825A1E3A796200D0AD71 /* MyRelatedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRelatedTableViewCell.h; sourceTree = "<group>"; };
@@ -157,35 +163,33 @@
 		8F34825D1E3A808900D0AD71 /* OpenTasksTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenTasksTableViewCell.h; sourceTree = "<group>"; };
 		8F34825E1E3A808900D0AD71 /* OpenTasksTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenTasksTableViewCell.m; sourceTree = "<group>"; };
 		8F3482601E3A832D00D0AD71 /* AccountInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountInformationViewController.h; sourceTree = "<group>"; };
-		8F3482611E3A832D00D0AD71 /* AccountInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountInformationViewController.m; sourceTree = "<group>"; };
-		8F4DD5E31E84D0C50034D9E8 /* TextfieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextfieldViewController.m; sourceTree = "<group>"; };
+		8F3482611E3A832D00D0AD71 /* AccountInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AccountInformationViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8F4DD5E31E84D0C50034D9E8 /* TextfieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TextfieldViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8F4DD5E41E84D0C50034D9E8 /* TextfieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextfieldViewController.h; sourceTree = "<group>"; };
 		8F789C711E39FD70006375C8 /* HomeTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTabViewController.h; sourceTree = "<group>"; };
-		8F789C721E39FD70006375C8 /* HomeTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTabViewController.m; sourceTree = "<group>"; };
+		8F789C721E39FD70006375C8 /* HomeTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = HomeTabViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8F789C741E39FD9A006375C8 /* OpenTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenTasksViewController.h; sourceTree = "<group>"; };
-		8F789C751E39FD9A006375C8 /* OpenTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenTasksViewController.m; sourceTree = "<group>"; };
+		8F789C751E39FD9A006375C8 /* OpenTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = OpenTasksViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8F789C771E39FDB4006375C8 /* NewTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTasksViewController.h; sourceTree = "<group>"; };
-		8F789C781E39FDB4006375C8 /* NewTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTasksViewController.m; sourceTree = "<group>"; };
+		8F789C781E39FDB4006375C8 /* NewTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NewTasksViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8F789C7A1E39FDCB006375C8 /* MyRelatedAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRelatedAccountsViewController.h; sourceTree = "<group>"; };
-		8F789C7B1E39FDCB006375C8 /* MyRelatedAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRelatedAccountsViewController.m; sourceTree = "<group>"; };
+		8F789C7B1E39FDCB006375C8 /* MyRelatedAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MyRelatedAccountsViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8F789C7D1E39FDDD006375C8 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
-		8F789C7E1E39FDDD006375C8 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		8F789C7E1E39FDDD006375C8 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NewsViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8F789C801E3A0533006375C8 /* MainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabViewController.h; sourceTree = "<group>"; };
 		8F789C811E3A0533006375C8 /* MainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabViewController.m; sourceTree = "<group>"; };
 		8F789C831E3A0972006375C8 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		8F789C841E3A0972006375C8 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		8F836D971E40F330009E4499 /* toggle_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle_off.png; sourceTree = "<group>"; };
-		8F836D981E40F330009E4499 /* toggle_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle_on.png; sourceTree = "<group>"; };
+		8F789C841E3A0972006375C8 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SettingsViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8FDD395C1E3BA97E006E9222 /* TaskDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskDetailViewController.h; sourceTree = "<group>"; };
-		8FDD395D1E3BA97E006E9222 /* TaskDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskDetailViewController.m; sourceTree = "<group>"; };
+		8FDD395D1E3BA97E006E9222 /* TaskDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TaskDetailViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8FDD39731E3BB962006E9222 /* Home1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home1ViewController.h; sourceTree = "<group>"; };
-		8FDD39741E3BB962006E9222 /* Home1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home1ViewController.m; sourceTree = "<group>"; };
+		8FDD39741E3BB962006E9222 /* Home1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Home1ViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8FE7320F1E366728007A6B1F /* Liscio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liscio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE732131E366728007A6B1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8FE732151E366728007A6B1F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8FE732161E366728007A6B1F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8FE732181E366728007A6B1F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8FE732191E366728007A6B1F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8FE732191E366728007A6B1F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8FE7321C1E366728007A6B1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FE7321E1E366728007A6B1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FE732211E366728007A6B1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -196,20 +200,15 @@
 		8FE732331E366728007A6B1F /* LiscioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiscioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE732371E366728007A6B1F /* LiscioUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiscioUITests.m; sourceTree = "<group>"; };
 		8FE732391E366728007A6B1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8FE732451E366796007A6B1F /* icomoon.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.woff2; sourceTree = "<group>"; };
-		8FE732461E366796007A6B1F /* icomoon.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.woff; sourceTree = "<group>"; };
-		8FE732471E366796007A6B1F /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
-		8FE732481E366796007A6B1F /* icomoon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = icomoon.svg; sourceTree = "<group>"; };
-		8FE732491E366796007A6B1F /* icomoon.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.eot; sourceTree = "<group>"; };
 		8FE732511E366F73007A6B1F /* ForgotPasswrdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswrdViewController.h; sourceTree = "<group>"; };
-		8FE732521E366F73007A6B1F /* ForgotPasswrdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswrdViewController.m; sourceTree = "<group>"; };
+		8FE732521E366F73007A6B1F /* ForgotPasswrdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ForgotPasswrdViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8FE732541E36762E007A6B1F /* AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
 		8FE732551E36762E007A6B1F /* AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
 		8FE732571E367781007A6B1F /* LiscioAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiscioAlertViewController.h; sourceTree = "<group>"; };
-		8FE732581E367781007A6B1F /* LiscioAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiscioAlertViewController.m; sourceTree = "<group>"; };
+		8FE732581E367781007A6B1F /* LiscioAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = LiscioAlertViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8FE7325A1E367E3B007A6B1F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8FF27F551E93FA8F002D48AC /* TaskEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskEditViewController.h; sourceTree = "<group>"; };
-		8FF27F561E93FA8F002D48AC /* TaskEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskEditViewController.m; sourceTree = "<group>"; };
+		8FF27F561E93FA8F002D48AC /* TaskEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TaskEditViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		94FA0DE0A835E1015E28B07E /* Pods-LiscioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiscioUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiscioUITests/Pods-LiscioUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AD7E02705D682FB152CA2092 /* libPods-LiscioTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LiscioTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2EF4699C6B7F537681E2CFB /* libPods-Liscio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Liscio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				5E1FD85C1EE010A1002D8001 /* Liscio.entitlements */,
+				5E53363E1F34529500FC71C7 /* GoogleService-Info.plist */,
 				8FE732151E366728007A6B1F /* AppDelegate.h */,
 				8FE732161E366728007A6B1F /* AppDelegate.m */,
 				8FE732181E366728007A6B1F /* ViewController.h */,
@@ -341,23 +341,21 @@
 				8F3482611E3A832D00D0AD71 /* AccountInformationViewController.m */,
 				8F1F47ED1E3D0EFA002461E4 /* NIDropDown.h */,
 				8F1F47EE1E3D0EFA002461E4 /* NIDropDown.m */,
-				5EBC21E61ECAF04B00C232D8 /* UIFloatLabelTextField.h */,
-				5EBC21E71ECAF04B00C232D8 /* UIFloatLabelTextField.m */,
 				8FE7321B1E366728007A6B1F /* Main.storyboard */,
 				5E08A7611EA9051E008219DB /* avatar.png */,
-				8F836D971E40F330009E4499 /* toggle_off.png */,
-				8F836D981E40F330009E4499 /* toggle_on.png */,
+				5EBF77E41F2F99400036E6C3 /* attachment_ico.png */,
+				5EBF77E11F2F97DB0036E6C3 /* send_btn.png */,
 				5E57BA371E9FD82E007C0DDD /* checked.png */,
 				5E57BA381E9FD82E007C0DDD /* unchecked.png */,
-				8F3482551E3A77AA00D0AD71 /* news_bullete.png */,
-				5ED7274D1EADCE7F00918968 /* login_logo.png */,
 				8F17D43E1E82EAA900D64211 /* PortfolioHttpClient.h */,
 				8F17D43D1E82EAA900D64211 /* PortfolioHttpClient.m */,
-				5E45E3971EBC60200085DE4A /* login_logo_liscio.png */,
 				8F4DD5E41E84D0C50034D9E8 /* TextfieldViewController.h */,
 				8F4DD5E31E84D0C50034D9E8 /* TextfieldViewController.m */,
 				5E19ACE21EDDDDB700913C04 /* ThumbPlaceHolder.png */,
 				5EF54E661E9DFD880029CF1E /* always.ttf */,
+				5EE4E16C1F13978E00FE9903 /* modern_footer.png */,
+				5EE4E16D1F13978E00FE9903 /* modern_header.png */,
+				5EE4E8A41F07ACC8008C887F /* login_logo_modern.png */,
 				5EBC21541EC99C9B00C232D8 /* contact_placeholder.png */,
 				5EBC21561EC9A2F400C232D8 /* account_icon_active.png */,
 				5EBC21571EC9A2F400C232D8 /* account_icon.png */,
@@ -369,17 +367,17 @@
 				5EBC215D1EC9A2F400C232D8 /* home_icon.png */,
 				5EBC215E1EC9A2F400C232D8 /* task_icon_active.png */,
 				5EBC215F1EC9A2F400C232D8 /* task_icon.png */,
-				5EBC21601EC9A2F400C232D8 /* team_icon_active.png */,
-				5EBC21611EC9A2F400C232D8 /* team_icon.png */,
+				5EE4E8A21F07ABB7008C887F /* bg_modernadvisor.png */,
+				5E21438A1F273980001F6317 /* team_icon_active.png */,
+				5E21438B1F273980001F6317 /* team_icon.png */,
+				5E270DB21F062DE200DD1E82 /* liscio.eot */,
+				5E270DB31F062DE200DD1E82 /* liscio.svg */,
+				5E270DB41F062DE300DD1E82 /* liscio.ttf */,
+				5E270DB51F062DE300DD1E82 /* liscio.woff */,
+				5E270DB61F062DE300DD1E82 /* liscio.woff2 */,
 				8FE7321E1E366728007A6B1F /* Assets.xcassets */,
 				8FE732201E366728007A6B1F /* LaunchScreen.storyboard */,
-				8FE732451E366796007A6B1F /* icomoon.woff2 */,
-				8FE732461E366796007A6B1F /* icomoon.woff */,
-				8FE732471E366796007A6B1F /* icomoon.ttf */,
-				8FE732481E366796007A6B1F /* icomoon.svg */,
-				8FE732491E366796007A6B1F /* icomoon.eot */,
 				8FE732231E366728007A6B1F /* Info.plist */,
-				5E3F54F61EB7060E00BCAC87 /* 00_login_screen_640x1136.png */,
 				8FE7325A1E367E3B007A6B1F /* Images.xcassets */,
 				8FE732121E366728007A6B1F /* Supporting Files */,
 			);
@@ -498,11 +496,14 @@
 				TargetAttributes = {
 					8FE7320E1E366727007A6B1F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = X855M4Y35Z;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = XP88HE26B2;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -549,34 +550,35 @@
 				8FE732221E366728007A6B1F /* LaunchScreen.storyboard in Resources */,
 				5EBC21661EC9A2F400C232D8 /* contact_icon_active.png in Resources */,
 				5E57BA3A1E9FD82E007C0DDD /* unchecked.png in Resources */,
+				5EE4E16E1F13978E00FE9903 /* modern_footer.png in Resources */,
 				5EBC21551EC99C9B00C232D8 /* contact_placeholder.png in Resources */,
-				5EBC216D1EC9A2F400C232D8 /* team_icon.png in Resources */,
+				5E270DB71F062DE300DD1E82 /* liscio.eot in Resources */,
+				5E21438D1F273980001F6317 /* team_icon.png in Resources */,
+				5E270DB81F062DE300DD1E82 /* liscio.svg in Resources */,
 				8FE7325B1E367E3B007A6B1F /* Images.xcassets in Resources */,
-				5ED7274E1EADCE7F00918968 /* login_logo.png in Resources */,
-				8FE7324E1E366796007A6B1F /* icomoon.svg in Resources */,
+				5E270DB91F062DE300DD1E82 /* liscio.ttf in Resources */,
+				5EE4E8A31F07ABB7008C887F /* bg_modernadvisor.png in Resources */,
 				5EBC21681EC9A2F400C232D8 /* home_icon_active.png in Resources */,
-				8F3482561E3A77AA00D0AD71 /* news_bullete.png in Resources */,
+				5E270DBB1F062DE300DD1E82 /* liscio.woff2 in Resources */,
 				5EF54E671E9DFD880029CF1E /* always.ttf in Resources */,
 				5EBC216B1EC9A2F400C232D8 /* task_icon.png in Resources */,
 				5E57BA391E9FD82E007C0DDD /* checked.png in Resources */,
+				5EBF77E31F2F97DB0036E6C3 /* send_btn.png in Resources */,
 				5EBC21651EC9A2F400C232D8 /* add_task_icon.png in Resources */,
 				8FE7321F1E366728007A6B1F /* Assets.xcassets in Resources */,
+				5EE4E8A51F07ACC8008C887F /* login_logo_modern.png in Resources */,
 				5EBC21671EC9A2F400C232D8 /* contact_icon.png in Resources */,
-				5EBC216C1EC9A2F400C232D8 /* team_icon_active.png in Resources */,
 				8FE7321D1E366728007A6B1F /* Main.storyboard in Resources */,
-				5E45E3981EBC60200085DE4A /* login_logo_liscio.png in Resources */,
-				8FE7324D1E366796007A6B1F /* icomoon.ttf in Resources */,
-				8FE7324F1E366796007A6B1F /* icomoon.eot in Resources */,
-				8FE7324B1E366796007A6B1F /* icomoon.woff2 in Resources */,
+				5E21438C1F273980001F6317 /* team_icon_active.png in Resources */,
 				5EBC21621EC9A2F400C232D8 /* account_icon_active.png in Resources */,
 				5EBC21641EC9A2F400C232D8 /* add_task_icon_active.png in Resources */,
-				8FE7324C1E366796007A6B1F /* icomoon.woff in Resources */,
-				8F836D9A1E40F330009E4499 /* toggle_on.png in Resources */,
 				5E08A7621EA9051E008219DB /* avatar.png in Resources */,
+				5EBF77E51F2F99400036E6C3 /* attachment_ico.png in Resources */,
 				5E19ACE31EDDDDB700913C04 /* ThumbPlaceHolder.png in Resources */,
-				5E3F54F71EB7060E00BCAC87 /* 00_login_screen_640x1136.png in Resources */,
-				8F836D991E40F330009E4499 /* toggle_off.png in Resources */,
+				5E270DBA1F062DE300DD1E82 /* liscio.woff in Resources */,
+				5EE4E16F1F13978E00FE9903 /* modern_header.png in Resources */,
 				5EBC21631EC9A2F400C232D8 /* account_icon.png in Resources */,
+				5E53363F1F34529500FC71C7 /* GoogleService-Info.plist in Resources */,
 				5EBC216A1EC9A2F400C232D8 /* task_icon_active.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,7 +642,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		7ABD1343E06129BD6B411120 /* [CP] Copy Pods Resources */ = {
@@ -715,7 +717,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FBF665345A642841E83C931A /* [CP] Check Pods Manifest.lock */ = {
@@ -730,7 +732,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -749,7 +751,6 @@
 				8FE732561E36762E007A6B1F /* AlertViewController.m in Sources */,
 				8F3482541E3A73AB00D0AD71 /* HomeTasksTableViewCell.m in Sources */,
 				8F789C761E39FD9A006375C8 /* OpenTasksViewController.m in Sources */,
-				5EBC21E81ECAF04B00C232D8 /* UIFloatLabelTextField.m in Sources */,
 				8F789C7F1E39FDDD006375C8 /* NewsViewController.m in Sources */,
 				8F34824C1E3A6ACC00D0AD71 /* TeamViewController.m in Sources */,
 				8FDD39751E3BB962006E9222 /* Home1ViewController.m in Sources */,
@@ -927,16 +928,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = Liscio/Liscio.entitlements;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = X855M4Y35Z;
+				DEVELOPMENT_TEAM = XP88HE26B2;
 				INFOPLIST_FILE = Liscio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.anilabsinc.liscio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anilabs.modern;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8e30d4c9-0b41-4a36-84de-0d0826ef7e51";
-				PROVISIONING_PROFILE_SPECIFIER = "liscio Enterprise Dev";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -946,16 +948,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = Liscio/Liscio.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ani Labs, Inc.";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = X855M4Y35Z;
+				DEVELOPMENT_TEAM = XP88HE26B2;
 				INFOPLIST_FILE = Liscio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.anilabsinc.liscio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anilabs.modern;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8e30d4c9-0b41-4a36-84de-0d0826ef7e51";
-				PROVISIONING_PROFILE_SPECIFIER = "liscio Enterprise Dev";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

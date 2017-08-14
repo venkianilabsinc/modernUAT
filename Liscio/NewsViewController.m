@@ -21,8 +21,8 @@
     // Do any additional setup after loading the view.
     
     self.navigationController.navigationBarHidden = YES;
-    [self.settingBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:25]];
-    [self.settingBtn setTitle:[NSString stringWithUTF8String:"\uE626"] forState:UIControlStateNormal];
+    [self.settingBtn.titleLabel setFont:[UIFont fontWithName:@"liscio" size:25]];
+    [self.settingBtn setTitle:[NSString stringWithUTF8String:"\ue94f"] forState:UIControlStateNormal];
 
 }
 

@@ -30,9 +30,12 @@
 - (void)addComment:(NSDictionary *)parameters success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure;
 
 
-- (void)uploadImage:(NSDictionary *)parameters selectImage:(NSData*)image success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure;
+//- (void)uploadImage:(NSDictionary *)parameters selectImage:(NSData*)image success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure;
 
 - (void)uploadImgeFromMobile:(NSDictionary *)parameters success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure;
+
+- (void)removeDevice:(NSDictionary *)parameters success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure;
+
 
 - (void)deletingImgeFromMobile:(NSDictionary *)parameters success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure;
 

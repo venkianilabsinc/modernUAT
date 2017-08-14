@@ -19,6 +19,10 @@
 @property (strong, nonatomic) NSMutableArray *teamDetailArray;
 @property (weak, nonatomic) IBOutlet UITableView *teamDetailTableView;
 @property (weak, nonatomic) IBOutlet UIButton *settingBtn;
+@property (weak, nonatomic) IBOutlet UIButton *backBtn;
+
+
+
 @end
 
 @implementation TeamDetailViewController
@@ -29,11 +33,24 @@
     self.navigationController.navigationBarHidden = YES;
     self.teamDetailArray = [[NSMutableArray alloc] initWithCapacity:0];
     self.teamDetailTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    [self.settingBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:25]];
-    [self.settingBtn setTitle:[NSString stringWithUTF8String:"\uE626"] forState:UIControlStateNormal];
+    [self.settingBtn.titleLabel setFont:[UIFont fontWithName:@"liscio" size:25]];
+    [self.settingBtn setTitle:[NSString stringWithUTF8String:"\ue94f"] forState:UIControlStateNormal];
 
     
+    [self.backBtn.titleLabel setFont:[UIFont fontWithName:@"liscio" size:20]];
+    [self.backBtn setTitle:[NSString stringWithUTF8String:"\uE752"] forState:UIControlStateNormal];
+    self.backBtn.layer.borderWidth = 1;
+    self.backBtn.layer.borderColor = [[UIColor darkGrayColor] CGColor];
+    self.backBtn.layer.cornerRadius = self.backBtn.frame.size.height/2;
+    self.backBtn.layer.masksToBounds = YES;
 
+
+
+}
+
+-(IBAction)backBtnPressed:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -62,6 +79,8 @@
          {
              NSLog(@"%@", responseObject);
              self.teamDetailArray = responseObject[@"data"];
+             
+             
              
              [self.teamDetailTableView reloadData];
          }else{
@@ -97,22 +116,32 @@
     
     NSMutableDictionary *dict = [self.teamDetailArray objectAtIndex:indexPath.row];
     
+    
+    NSMutableDictionary *prunedDictionary = [NSMutableDictionary dictionary];
+    for (NSString * key in [dict allKeys])
+    {
+        if (![[dict objectForKey:key] isKindOfClass:[NSNull class]])
+            [prunedDictionary setObject:[dict objectForKey:key] forKey:key];
+    }
+
+    
+    
     TeamDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
 //    cell.titleLbl.text  = [NSString stringWithFormat:@"%@ %@", dict[@"first_name"], dict[@"last_name"]];
 //    cell.subTitleLbl.text  = [NSString stringWithFormat:@"%@ %@", @"Entity Type :", dict[@"entity_type"]];
     
-    [cell.phoneBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:25]];
+    [cell.phoneBtn.titleLabel setFont:[UIFont fontWithName:@"liscio" size:25]];
     [cell.phoneBtn setTitle:[NSString stringWithUTF8String:"\ue933"] forState:UIControlStateNormal];
 
-    [cell.mailBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:20]];
+    [cell.mailBtn.titleLabel setFont:[UIFont fontWithName:@"liscio" size:20]];
     [cell.mailBtn setTitle:[NSString stringWithUTF8String:"\uE935"] forState:UIControlStateNormal];
     
-    if ([dict[@"avatar"] isEqualToString:@""])
+    if ([prunedDictionary[@"avatar"] isEqualToString:@""])
     {
         cell.imageView.image = [UIImage imageNamed:@"avatar.png"];
     }else{
-        NSString *urlStr = [NSString stringWithFormat:@"https:%@", dict[@"avatar"]];
+        NSString *urlStr = [NSString stringWithFormat:@"https:%@", prunedDictionary[@"avatar"]];
         NSURL *imageURL = [NSURL URLWithString:urlStr];
         NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
 
@@ -131,13 +160,24 @@
 
 //    cell.nameLbl.text = [NSString stringWithFormat:@"%@ %@ - %@", dict[@"first_name"],dict[@"last_name"],dict[@"entity_type"]];//job title
     
-        cell.nameLbl.text = [NSString stringWithFormat:@"%@ %@", dict[@"first_name"],dict[@"last_name"]];//job title
+        cell.nameLbl.text = [NSString stringWithFormat:@"%@ %@", prunedDictionary[@"first_name"],prunedDictionary[@"last_name"]];//job title
 
         cell.phoneBtn.layer.cornerRadius = cell.phoneBtn.frame.size.height/2;
         cell.phoneBtn.layer.masksToBounds = YES;
     
         cell.mailBtn.layer.cornerRadius = cell.mailBtn.frame.size.height/2;
         cell.mailBtn.layer.masksToBounds = YES;
+    
+    if ([prunedDictionary[@"phone"] isEqualToString:@""] || prunedDictionary[@"phone"] == nil || [prunedDictionary[@"phone"] isEqual:[NSNull null]] || [prunedDictionary[@"phone"] isEqualToString:@"null"])
+    {
+        cell.phoneBtn.backgroundColor = [UIColor colorWithRed:180/255.0 green:130/255.0 blue:185/255.0 alpha:1.0];
+    }
+    else
+    {
+        cell.phoneBtn.backgroundColor = [UIColor colorWithRed:138/255.0 green:30/255.0 blue:144/255.0 alpha:1.0];
+        
+    }
+
     
     return cell;
 }
@@ -176,11 +216,13 @@
     
     NSLog(@"indexpath is%@", indexPath);
     
+    
+    
     NSString *phoneStr = [[self.teamDetailArray valueForKey:@"phone"] objectAtIndex:indexPath.row];
     
-    if (phoneStr == nil || [phoneStr isEqual:[NSNull null]])
+    if (phoneStr == nil || [phoneStr isEqual:[NSNull null]] || [phoneStr isEqualToString:@""])
     {
-        phoneStr = @"";
+        return;
     }
 
     
@@ -219,9 +261,10 @@
     
     NSString *mailStr = [[self.teamDetailArray valueForKey:@"email"] objectAtIndex:indexPath.row];
     
-    if (mailStr == nil || [mailStr isEqual:[NSNull null]])
+    if (mailStr == nil || [mailStr isEqual:[NSNull null]] || [mailStr isEqualToString:@""])
     {
         mailStr = @"";
+        return;
     }
     
 

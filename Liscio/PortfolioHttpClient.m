@@ -16,13 +16,15 @@
 #define klast_name @"last_name"
 
 
-static NSString* const kBaseUrlStr = @"https://liscioapistage.herokuapp.com/api/v1/";//Dev
+//static NSString* const kBaseUrlStr = @"https://liscioapistage.herokuapp.com/api/v1/";//Dev
 
 //static NSString* const kBaseUrlStr = @"https://liscioapi.herokuapp.com/api/v1/"; // integration
 
-//static NSString* const kBaseUrlStr = @"http://demoapi.liscio.me/api/v1/"; //UAT
+static NSString* const kBaseUrlStr = @"https://demoapi.liscio.me/api/v1/"; //UAT
 
 //static NSString* const kBaseUrlStr = @"http://rootscpa.liscio.me/api/v1/"; //Roots UAT
+
+
 
 
 @implementation PortfolioHttpClient
@@ -47,13 +49,13 @@ static NSString* const kBaseUrlStr = @"https://liscioapistage.herokuapp.com/api/
 
     self.requestSerializer = [AFJSONRequestSerializer serializer];
 
-
     [self POST:@"sign_in/" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         success(responseObject);
     } failure:^(NSURLSessionDataTask *task, NSError *error)
      {
          failure(task, error);
     }];
+    
 }
 
 - (void)home:(NSDictionary *)parameters success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure
@@ -79,6 +81,7 @@ static NSString* const kBaseUrlStr = @"https://liscioapistage.herokuapp.com/api/
 - (void)openTasks:(NSDictionary *)parameters success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure
 {
     [self isReachableViaInternet];
+    [self.requestSerializer setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"auth_token"] forHTTPHeaderField:@"Authorization"];
 
     [self GET:@"tasks.json/" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         success(responseObject);
@@ -172,8 +175,8 @@ static NSString* const kBaseUrlStr = @"https://liscioapistage.herokuapp.com/api/
     [self isReachableViaInternet];
     
     NSString *mySTR = [NSString stringWithFormat:@"documents/%@", parameters[@"id"]];
-
-    [self DELETE:mySTR parameters:parameters[@"task_id"] success:^(NSURLSessionDataTask *task, id responseObject) {
+    
+    [self DELETE:mySTR parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         success(responseObject);
     } failure:^(NSURLSessionDataTask *task, NSError *error)
      {
@@ -321,6 +324,24 @@ static NSString* const kBaseUrlStr = @"https://liscioapistage.herokuapp.com/api/
      }];
 
 }
+
+- (void)removeDevice:(NSDictionary *)parameters success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure
+{
+    self.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    
+    [self.requestSerializer setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"auth_token"] forHTTPHeaderField:@"Authorization"];
+    
+    [self POST:@"remove_device/" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask *task, NSError *error)
+     {
+         failure(task, error);
+     }];
+    
+}
+
+
 - (void)team:(NSDictionary *)parameters success:(void(^)(NSDictionary *responseObject))success failure:(void(^)(NSURLSessionDataTask *task,NSError *error))failure
 {
     self.requestSerializer = [AFJSONRequestSerializer serializer];

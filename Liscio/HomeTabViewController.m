@@ -37,6 +37,9 @@
 
     self.dataDic = [[NSMutableDictionary alloc] initWithCapacity:0];
     //inactive item images
+    
+    self.tabBar.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"modern_footer.png"]];
+
 
     [self.tabBar.items[0] setImage:[[UIImage imageNamed:@"home_icon.png"]
                                  imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
@@ -69,12 +72,9 @@
     
     [self.tabBar.items[4] setSelectedImage:[[UIImage imageNamed:@"team_icon_active.png"]
                                     imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-
-
-
     
 
-    [self.settingsBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:25]];
+    [self.settingsBtn.titleLabel setFont:[UIFont fontWithName:@"liscio" size:25]];
     [self.settingsBtn setTitle:[NSString stringWithUTF8String:"\uE942"] forState:UIControlStateNormal];
 
         self.moreBtn.layer.cornerRadius = 10;
@@ -84,7 +84,7 @@
 
 -(void) viewWillAppear:(BOOL)animated
 {
-    [self homeAPI];
+//    [self homeAPI];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -95,7 +95,6 @@
 {
     [self.activityIndicator startAnimating];
     __block PortfolioHttpClient *sharedObject = [PortfolioHttpClient portfolioSharedHttpClient];
-    
     
 //    NSDictionary *params1 = @{@"authorization" : [[NSUserDefaults standardUserDefaults] stringForKey:@"auth_token"]};
     
@@ -108,7 +107,6 @@
              NSLog(@"My responseObject \n%@", responseObject);
              
              self.dataDic = responseObject[@"data"];
-             
              NSLog(@"dataDict is.... \n%@", self.dataDic);
 
          }
@@ -130,34 +128,33 @@
 
     if(item.tag==1)
     {
-
         NSLog(@"home pressed");
-        
+        [(UITabBarController*)self.navigationController.topViewController setSelectedIndex:0];
         //your code
     }
     else  if(item.tag==2)
     {
         NSLog(@"open tasks pressed");
-
+        [(UITabBarController*)self.navigationController.topViewController setSelectedIndex:1];
         //your code
     }
     else  if(item.tag==3)
     {
         NSLog(@"NEW TASKS PRESSED");
-        
         //your code
     }
     else  if(item.tag==4)
     {
         NSLog(@"MY RELATED pressed");
-        
+        [(UITabBarController*)self.navigationController.topViewController setSelectedIndex:3];
         //your code
     }else{
         
         NSLog(@"NEWS PRESSED");
-
+        [(UITabBarController*)self.navigationController.topViewController setSelectedIndex:4];
     }
 }
+
 /*
 #pragma mark - Navigation
 

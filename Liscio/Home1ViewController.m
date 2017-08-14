@@ -29,7 +29,9 @@
 @property (strong, nonatomic) NSMutableDictionary *totalDict;
 @property (strong, nonatomic) NSMutableArray *templatesArray;
 @property (weak, nonatomic) IBOutlet UILabel *noRecrdsLbl;
+@property (strong, nonatomic) NSMutableDictionary *dataDic;
 @end
+
 
 @implementation Home1ViewController
 
@@ -41,11 +43,12 @@
     //    [self.adminImgLbl setFont:[UIFont fontWithName:@"liscio" size:25]];
     //    [self.adminImgLbl setText:[NSString stringWithUTF8String:"\uEC02"]];
     
-    [self.settingsBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:25]];
-    [self.settingsBtn setTitle:[NSString stringWithUTF8String:"\uE626"] forState:UIControlStateNormal];
+    self.dataDic = [[NSMutableDictionary alloc] initWithCapacity:0];
+    [self.settingsBtn.titleLabel setFont:[UIFont fontWithName:@"liscio" size:25]];
+    [self.settingsBtn setTitle:[NSString stringWithUTF8String:"\ue94f"] forState:UIControlStateNormal];
     
-    self.moreBtn.layer.borderWidth = 1.0;
-    self.moreBtn.layer.borderColor = [[UIColor colorWithRed:81.0/255.0 green:122.0/255.0 blue:172.0/255.0 alpha:1.0] CGColor];
+//    self.moreBtn.layer.borderWidth = 1.0;
+//    self.moreBtn.layer.borderColor = [[UIColor colorWithRed:81.0/255.0 green:122.0/255.0 blue:172.0/255.0 alpha:1.0] CGColor];
     self.moreBtn.layer.cornerRadius = 3.0;
     self.moreBtn.layer.masksToBounds = YES;
     
@@ -60,12 +63,84 @@
     self.openArray = [[NSMutableArray alloc] initWithCapacity:0];
     self.templatesArray = [[NSMutableArray alloc] initWithCapacity:0];
     self.totalDict = [[NSMutableDictionary alloc] initWithCapacity:0];
+    
+    [self appWillEnterForeground]; //register For Application Will enterForeground
+
+}
+
+- (id)appWillEnterForeground{ //Application will enter foreground.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(allFunctions)
+                                                 name:UIApplicationWillEnterForegroundNotification
+                                               object:nil];
+    return self;
+}
+
+
+-(void) allFunctions{ //call any functions that need to be run when application will enter foreground
+    NSLog(@"calling all functions...application just came back from foreground");
+    
+    [self openTaskAPI];
+    [self homeAPI];
+
+    
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    NSString* textField1Text = @"Home1";
+    [defaults setObject:textField1Text forKey:@"isFromViewCtrl"];
+    
 }
 
 -(void) viewWillAppear:(BOOL)animated
 {
     [self openTaskAPI];
+    [self homeAPI];
+    
+    
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    NSString* textField1Text = @"Home1";
+    [defaults setObject:textField1Text forKey:@"isFromViewCtrl"];
+
+    
 }
+-(void) homeAPI
+{
+    [self.activityIndicator startAnimating];
+    __block PortfolioHttpClient *sharedObject = [PortfolioHttpClient portfolioSharedHttpClient];
+    
+    
+    //    NSDictionary *params1 = @{@"authorization" : [[NSUserDefaults standardUserDefaults] stringForKey:@"auth_token"]};
+    
+    [sharedObject home:nil success:^(NSDictionary *responseObject)
+     {
+         [self.activityIndicator stopAnimating];
+         
+         if([responseObject[@"success"] boolValue] == 1)
+         {
+             NSLog(@"My responseObject \n%@", responseObject);
+             
+             
+             self.dataDic = responseObject[@"data"];
+             
+             NSString *responseStr = self.dataDic[@"uname"];
+             [[NSUserDefaults standardUserDefaults] setObject:responseStr forKey:@"uname"];
+             
+             
+             NSLog(@"dataDict is.... \n%@", self.dataDic);
+             
+//             NSLog(@"venki username %@", [[NSUserDefaults standardUserDefaults] valueForKey:@"uname"]);
+
+             
+         }
+     }
+               failure:^(NSURLSessionDataTask *task, NSError *error)
+     {
+         [self.activityIndicator stopAnimating];
+         NSLog(@"error is \n%@", error.description);
+         
+     }];
+}
+
 -(void) openTaskAPI
 {
     [self.activityIndicator startAnimating];
@@ -112,9 +187,6 @@
              
          }
 
-         
-         
-         
      } failure:^(NSURLSessionDataTask *task, NSError *error) {
          [self.activityIndicator stopAnimating];
      }];

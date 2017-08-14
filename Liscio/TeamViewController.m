@@ -32,8 +32,8 @@
     self.navigationController.navigationBarHidden = YES;
     self.teamArray = [[NSMutableArray alloc] initWithCapacity:0];
     
-    [self.settingBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:25]];
-    [self.settingBtn setTitle:[NSString stringWithUTF8String:"\uE626"] forState:UIControlStateNormal];
+    [self.settingBtn.titleLabel setFont:[UIFont fontWithName:@"liscio" size:25]];
+    [self.settingBtn setTitle:[NSString stringWithUTF8String:"\ue94f"] forState:UIControlStateNormal];
     
     
     self.teamTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -48,6 +48,10 @@
 -(void) viewWillAppear:(BOOL)animated
 {
     [self teamAPI];
+    
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    NSString* textField1Text = @"Team";
+    [defaults setObject:textField1Text forKey:@"isFromViewCtrl"];
 
 }
 
@@ -122,7 +126,7 @@
     cell.titleLbl.text  = dict[@"label"];//[NSString stringWithFormat:@"%@ %@", dict[@"first_name"], dict[@"last_name"]];
 //    cell.subTitleLbl.text  = [NSString stringWithFormat:@"%@ %@", @"Entity Type :", dict[@"entity_type"]];
 
-//    [cell.phoneImgLbl setFont:[UIFont fontWithName:@"icomoon" size:25]];
+//    [cell.phoneImgLbl setFont:[UIFont fontWithName:@"liscio" size:25]];
 //    [cell.phoneImgLbl setText:[NSString stringWithUTF8String:"\ue933"]];
 //    
 //    cell.phoneImgLbl.layer.cornerRadius = cell.phoneImgLbl.frame.size.height/2;

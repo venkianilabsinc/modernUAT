@@ -75,10 +75,10 @@
     [self.titleBtn setTitleEdgeInsets:UIEdgeInsetsMake(0.0, 5.0, 0.0, 0.0)];
     [self.subTitleBtn setTitleEdgeInsets:UIEdgeInsetsMake(0.0, 5.0, 0.0, 0.0)];
 
-    [self.dropDownLbl setFont:[UIFont fontWithName:@"icomoon" size:25]];
+    [self.dropDownLbl setFont:[UIFont fontWithName:@"liscio" size:25]];
     [self.dropDownLbl setText:[NSString stringWithUTF8String:"\uE753"]];
     
-    [self.dropDownLbl1 setFont:[UIFont fontWithName:@"icomoon" size:25]];
+    [self.dropDownLbl1 setFont:[UIFont fontWithName:@"liscio" size:25]];
     [self.dropDownLbl1 setText:[NSString stringWithUTF8String:"\uE753"]];
 
     self.titleBtn.layer.cornerRadius = 4;
@@ -119,19 +119,20 @@
     
     self.dateTxtfield.inputView = self.datepicker;
     self.dateTxtfield.inputAccessoryView = toolbar;
+    [self.datepicker setMinimumDate: [NSDate date]];
 
     
     // Do any additional setup after loading the view.
-    [self.settingBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:25]];
-    [self.settingBtn setTitle:[NSString stringWithUTF8String:"\uE626"] forState:UIControlStateNormal];
+    [self.settingBtn.titleLabel setFont:[UIFont fontWithName:@"liscio" size:25]];
+    [self.settingBtn setTitle:[NSString stringWithUTF8String:"\ue94f"] forState:UIControlStateNormal];
     
-//    [self.saveBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:20]];
+//    [self.saveBtn.titleLabel setFont:[UIFont fontWithName:@"liscio" size:20]];
 //    [self.saveBtn setTitle:[NSString stringWithUTF8String:"\uE75B"] forState:UIControlStateNormal];
     
-    [self.attachmentBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:20]];
+    [self.attachmentBtn.titleLabel setFont:[UIFont fontWithName:@"liscio" size:20]];
     [self.attachmentBtn setTitle:[NSString stringWithUTF8String:"\uE92E"] forState:UIControlStateNormal];
     
-    [self.rightMarkLbl setFont:[UIFont fontWithName:@"icomoon" size:30]];
+    [self.rightMarkLbl setFont:[UIFont fontWithName:@"liscio" size:30]];
     [self.rightMarkLbl setText:[NSString stringWithUTF8String:"\uE92F"]];
     
     self.firstName.layer.cornerRadius = self.firstName.frame.size.height/2;
@@ -150,7 +151,7 @@
 //    self.saveBtn.layer.cornerRadius = self.saveBtn.frame.size.height/2;
 //    self.saveBtn.layer.masksToBounds = YES;
     
-    [self.calenderLbl setFont:[UIFont fontWithName:@"icomoon" size:18]];
+    [self.calenderLbl setFont:[UIFont fontWithName:@"liscio" size:18]];
     [self.calenderLbl setText:[NSString stringWithUTF8String:"\uE93E"]];
 //    
 //    

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Liscio.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,20 +29,35 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Protobuf.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1C4CF139E4BB75022AA9360E193E1FB2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2A8BE81A1F3393068FDAC96AB1623B19</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C7141D97FF7A5555E4624557EAEFDBF9</key>
+		<key>9D877802847A18F903E4AAFAAD3BE50E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C95C45974D77E3E41FE9D2A80E093179</key>
+		<key>9E033EDB5EC0819481B0546434FA577B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA9D13261AF395CF5D54BB3203DF2A6E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -57,7 +57,8 @@
         table.separatorInset = UIEdgeInsetsMake(0.f, 0.f, 0.f, 0.f);
 
         table.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-        table.separatorColor = [UIColor grayColor];
+        table.separatorColor = [UIColor colorWithRed:233.0/255.0 green:235.0/255.0 blue:241.0/255.0 alpha:1.0];
+;
         table.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 
         [UIView beginAnimations:nil context:nil];
@@ -136,7 +137,8 @@
 //        }
 //    }
 //    
-    cell.textLabel.textColor = [UIColor blackColor];
+    cell.textLabel.textColor = [UIColor colorWithRed:62.0/255.0 green:78.0/255.0 blue:104.0/255.0 alpha:1.0];
+;
     
     UIView * v = [[UIView alloc] init];
     v.backgroundColor = [UIColor grayColor];

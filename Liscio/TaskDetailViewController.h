@@ -11,5 +11,6 @@
 @interface TaskDetailViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) NSMutableDictionary *taskDict;
+@property (weak, nonatomic) NSString *receiveTaskTpeStr;
 
 @end

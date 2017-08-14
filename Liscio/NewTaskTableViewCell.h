@@ -12,4 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *attamentImgLbl;
 @property (weak, nonatomic) IBOutlet UILabel *titleLbl;
 @property (strong, nonatomic) IBOutlet UIImageView *thumbImgView;
+@property (weak, nonatomic) IBOutlet UIButton *delBtn;
+
 @end

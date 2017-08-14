@@ -29,8 +29,8 @@
     self.navigationController.navigationBarHidden = YES;
     
     self.accountsArray = [[NSMutableArray alloc] initWithCapacity:0];
-    [self.settingBtn.titleLabel setFont:[UIFont fontWithName:@"icomoon" size:25]];
-    [self.settingBtn setTitle:[NSString stringWithUTF8String:"\uE626"] forState:UIControlStateNormal];
+    [self.settingBtn.titleLabel setFont:[UIFont fontWithName:@"liscio" size:25]];
+    [self.settingBtn setTitle:[NSString stringWithUTF8String:"\ue94f"] forState:UIControlStateNormal];
     
     self.myRelativesTable.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 
@@ -41,6 +41,11 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [self getRelatedAccountsAPI];
+    
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    NSString* textField1Text = @"MyRelated";
+    [defaults setObject:textField1Text forKey:@"isFromViewCtrl"];
+
 
 }
 
